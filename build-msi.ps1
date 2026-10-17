@@ -3,14 +3,14 @@
 param([string]$WixPath,[string]$Destination)
 $ErrorActionPreference='Stop'
 if(-not$WixPath){$WixPath=Join-Path $PSScriptRoot '.tools/wix/wix.exe'}
-if(-not$Destination){$Destination=Join-Path $PSScriptRoot 'dist/EasyHotspot-1.2.1-x64.msi'}
+if(-not$Destination){$Destination=Join-Path $PSScriptRoot 'dist/EasyHotspot-1.2.2-x64.msi'}
 $payload=Join-Path $PSScriptRoot 'artifacts/app'
 foreach($required in @('EasyHotspot.exe','EasyHotspot.Service.exe','App.xbf','EasyHotspot.pri','Assets/app.ico','Native/WinDivert.dll','Native/WinDivert64.sys','ThirdParty/WinDivert/LICENSE','ThirdParty/WinDivert/WinDivert-2.2.2-source.tar.gz')){if(-not(Test-Path -LiteralPath (Join-Path $payload $required))){throw "Missing published file: $required. Run build.ps1 first."}}
 $namespace='http://wixtoolset.org/schemas/v4/wxs'
 $doc=[Xml.XmlDocument]::new()
 function Node([string]$name,[hashtable]$attributes=@{},[Xml.XmlElement]$parent=$null){$node=$doc.CreateElement($name,$namespace);foreach($key in $attributes.Keys){$node.SetAttribute($key,[string]$attributes[$key])};if($null-ne$parent){[void]$parent.AppendChild($node)};return $node}
 $root=Node 'Wix';[void]$doc.AppendChild($root)
-$package=Node 'Package' @{Name='EasyHotspot';Manufacturer='EasyHotspot';Version='1.2.1';UpgradeCode='{2B76D1B8-CE68-462F-8E9B-B62F1C2BE89A}';Language='2052';Codepage='936';Scope='perMachine'} $root
+$package=Node 'Package' @{Name='EasyHotspot';Manufacturer='EasyHotspot';Version='1.2.2';UpgradeCode='{2B76D1B8-CE68-462F-8E9B-B62F1C2BE89A}';Language='2052';Codepage='936';Scope='perMachine'} $root
 $null=Node 'SummaryInformation' @{Description='EasyHotspot WinUI 3 桌面应用';Manufacturer='EasyHotspot';Codepage='936'} $package
 $null=Node 'MajorUpgrade' @{DowngradeErrorMessage='已经安装了较新版本的EasyHotspot。'} $package
 $null=Node 'MediaTemplate' @{EmbedCab='yes';CompressionLevel='high'} $package
@@ -39,7 +39,7 @@ foreach($file in Get-ChildItem -LiteralPath $payload -File -Recurse | Sort-Objec
 }
 $marker=Node 'Component' @{Id='InstallMarker';Guid='*';Bitness='always64'} $install
 $key=Node 'RegistryKey' @{Root='HKLM';Key='Software\EasyHotspot';ForceDeleteOnUninstall='yes'} $marker
-$null=Node 'RegistryValue' @{Name='InstallerVersion';Value='1.2.1';Type='string';KeyPath='yes'} $key
+$null=Node 'RegistryValue' @{Name='InstallerVersion';Value='1.2.2';Type='string';KeyPath='yes'} $key
 $null=Node 'ComponentRef' @{Id='InstallMarker'} $feature
 $null=Node 'CustomAction' @{Id='CleanupOwnedSettings';FileRef='ServiceExe';ExeCommand='--cleanup';Execute='deferred';Impersonate='no';Return='check'} $package
 $sequence=Node 'InstallExecuteSequence' @{} $package

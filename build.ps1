@@ -22,7 +22,7 @@ try {
     Copy-Item -Path artifacts/service/* -Destination artifacts/app -Recurse -Force
     Copy-Item -LiteralPath README-zh-CN.txt -Destination artifacts/app -Force
     Copy-Item -LiteralPath ThirdParty -Destination artifacts/app -Recurse -Force
-    & ./build-msi.ps1 -WixPath $WixPath -Destination (Join-Path $Destination 'EasyHotspot-1.2.1-x64.msi')
-    & ./verify-msi.ps1 -Path (Join-Path $Destination 'EasyHotspot-1.2.1-x64.msi') -Report (Join-Path $Destination 'MSI-verification.txt')
+    & ./build-msi.ps1 -WixPath $WixPath -Destination (Join-Path $Destination 'EasyHotspot-1.2.2-x64.msi')
+    & ./verify-msi.ps1 -Path (Join-Path $Destination 'EasyHotspot-1.2.2-x64.msi') -Report (Join-Path $Destination 'MSI-verification.txt')
     Copy-Item -LiteralPath README-zh-CN.txt -Destination $Destination -Force
 } finally {Pop-Location}

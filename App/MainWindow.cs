@@ -16,7 +16,7 @@ public sealed class MainWindow:Window
     readonly Backend local=new();readonly Grid root=new();readonly NavigationView nav=new();readonly Grid host=new();
     readonly Dictionary<string,ScrollViewer> pages=new();
     readonly InfoBar notice=new(){IsOpen=false,IsClosable=true,Margin=new(0,0,0,16)};
-    readonly ComboBox mode=new(){MinWidth=320,SelectedIndex=0};
+    readonly ComboBox mode=new(){SelectedIndex=0,HorizontalAlignment=HorizontalAlignment.Stretch};
     readonly TextBox ssid=new(){MaxLength=32};
     readonly PasswordBox password=new(){PasswordRevealMode=PasswordRevealMode.Peek,FlowDirection=FlowDirection.LeftToRight};
     readonly TextBlock status=new(){FontSize=24,FontWeight=Microsoft.UI.Text.FontWeights.SemiBold};
@@ -28,8 +28,8 @@ public sealed class MainWindow:Window
     readonly ToggleSwitch dhcp=new();
     readonly TextBlock dhcpStatus=new(){TextWrapping=TextWrapping.Wrap};
     readonly TextBlock tunStatus=new(){TextWrapping=TextWrapping.Wrap};
-    readonly ComboBox bootMode=new(){MinWidth=260,SelectedIndex=0};
-    readonly ComboBox language=new(){MinWidth=260};
+    readonly ComboBox bootMode=new(){SelectedIndex=0,HorizontalAlignment=HorizontalAlignment.Stretch};
+    readonly ComboBox language=new(){HorizontalAlignment=HorizontalAlignment.Stretch};
     readonly Button start=new(),stop=new();
     readonly DispatcherTimer timer=new(){Interval=TimeSpan.FromSeconds(5)};
     bool busy,refreshing,initial=true,updatingStartup,updatingDhcp,updatingMode;BackendState? latest;string page="hotspot";
@@ -43,11 +43,9 @@ public sealed class MainWindow:Window
         root.RowDefinitions.Add(new(){Height=new GridLength(48)});root.RowDefinitions.Add(new(){Height=new GridLength(1,GridUnitType.Star)});
         var title=new StackPanel{Orientation=Orientation.Horizontal,Spacing=12,Margin=new(16,0,140,0),VerticalAlignment=VerticalAlignment.Center};
         title.Children.Add(Picture("app",28));title.Children.Add(Text(L("AppName"),14));root.Children.Add(title);
-        nav.IsSettingsVisible=false;nav.IsBackButtonVisible=NavigationViewBackButtonVisible.Collapsed;nav.PaneDisplayMode=NavigationViewPaneDisplayMode.Left;nav.OpenPaneLength=220;nav.IsPaneOpen=true;nav.IsTitleBarAutoPaddingEnabled=false;
+        nav.IsSettingsVisible=false;nav.IsBackButtonVisible=NavigationViewBackButtonVisible.Collapsed;nav.PaneDisplayMode=NavigationViewPaneDisplayMode.Auto;nav.OpenPaneLength=220;nav.ExpandedModeThresholdWidth=1008;nav.CompactModeThresholdWidth=640;nav.IsTitleBarAutoPaddingEnabled=false;
         foreach(var item in new[]{("hotspot",L("NavHotspot")),("proxy",L("NavProxy")),("settings",L("NavSettings"))}) {
-            // Keep the native icon slot; compensate for the generated images' transparent margins.
-            var iconScale=item.Item1=="proxy"?1.75:2.25;
-            var n=new NavigationViewItem{Content=item.Item2,Tag=item.Item1,Icon=new BitmapIcon{UriSource=new Uri(Path.Combine(AppContext.BaseDirectory,"Assets",item.Item1+".png")),ShowAsMonochrome=true,RenderTransformOrigin=new(0.5,0.5),RenderTransform=new ScaleTransform{ScaleX=iconScale,ScaleY=iconScale}}};
+            var n=new NavigationViewItem{Content=item.Item2,Tag=item.Item1,Icon=NavigationIcons.Create(item.Item1)};
             AutomationProperties.SetAutomationId(n,"Nav"+item.Item1);nav.MenuItems.Add(n);
         }
         var shell=new Grid();shell.RowDefinitions.Add(new(){Height=GridLength.Auto});shell.RowDefinitions.Add(new(){Height=new(1,GridUnitType.Star)});notice.Margin=new(32,16,32,0);shell.Children.Add(notice);Grid.SetRow(host,1);shell.Children.Add(host);
@@ -71,6 +69,7 @@ public sealed class MainWindow:Window
         root.Loaded+=(_,_)=>{
             var scale=root.XamlRoot.RasterizationScale;
             var area=Microsoft.UI.Windowing.DisplayArea.GetFromWindowId(AppWindow.Id,Microsoft.UI.Windowing.DisplayAreaFallback.Primary).WorkArea;
+            if(AppWindow.Presenter is Microsoft.UI.Windowing.OverlappedPresenter presenter){presenter.PreferredMinimumWidth=(int)(360*scale);presenter.PreferredMinimumHeight=(int)(300*scale);}
             AppWindow.Resize(new(Math.Min(area.Width,(int)(1120*scale)),Math.Min(area.Height,(int)(820*scale))));
         };
         mode.Items.Add(L("ModeOffline"));mode.Items.Add(L("ModeProxy"));mode.Items.Add(L("ModeSharing"));
@@ -117,27 +116,38 @@ public sealed class MainWindow:Window
     static TextBlock Secondary(string value)=>new(){Text=value,FontSize=14,TextWrapping=TextWrapping.Wrap,Foreground=Brush("TextFillColorSecondaryBrush")};
     static Border Card(UIElement child)=>new(){Child=child,Padding=new(20),CornerRadius=new(8),BorderThickness=new(1),BorderBrush=Brush("CardStrokeColorDefaultBrush"),Background=Brush("CardBackgroundFillColorDefaultBrush")};
     static StackPanel Stack(params UIElement[] items){var s=new StackPanel{Spacing=12};foreach(var i in items)s.Children.Add(i);return s;}
-    static StackPanel Row(params UIElement[] items){var s=new StackPanel{Orientation=Orientation.Horizontal,Spacing=12};foreach(var i in items)s.Children.Add(i);return s;}
+    static ActionPanel Row(params UIElement[] items){var s=new ActionPanel();foreach(var i in items)s.Children.Add(i);return s;}
+    static Grid Columns(double minimumWidth,int maximumColumns,double gap,params FrameworkElement[] items)
+    {
+        var grid=new Grid{ColumnSpacing=gap,RowSpacing=gap};foreach(var item in items)grid.Children.Add(item);
+        int previous=0;
+        void Reflow(double width){int columns=Math.Clamp((int)((width+gap)/(minimumWidth+gap)),1,maximumColumns);if(columns==previous)return;previous=columns;grid.ColumnDefinitions.Clear();grid.RowDefinitions.Clear();for(int n=0;n<columns;n++)grid.ColumnDefinitions.Add(new(){Width=new(1,GridUnitType.Star)});for(int n=0;n<(items.Length+columns-1)/columns;n++)grid.RowDefinitions.Add(new(){Height=GridLength.Auto});for(int n=0;n<items.Length;n++){Grid.SetColumn(items[n],n%columns);Grid.SetRow(items[n],n/columns);}}
+        Reflow(0);grid.SizeChanged+=(_,e)=>Reflow(e.NewSize.Width);return grid;
+    }
+    static Grid SettingRow(FrameworkElement description,FrameworkElement toggle){var row=Columns(300,2,24,description,toggle);row.SizeChanged+=(_,e)=>toggle.HorizontalAlignment=e.NewSize.Width>=624?HorizontalAlignment.Right:HorizontalAlignment.Left;return row;}
     Button Button(string label,Func<Task> action){var b=new Button{Content=label};b.Click+=async(_,_)=>await Action(action);return b;}
     public void ShowPage(string name)
     {
         page=name;host.Children.Clear();
         if(pages.TryGetValue(name,out var cached)){host.Children.Add(cached);return;}
-        var content=new StackPanel{Spacing=16,MaxWidth=880,HorizontalAlignment=HorizontalAlignment.Stretch,Margin=new(32,24,32,32)};
+        var content=new StackPanel{Spacing=16,HorizontalAlignment=HorizontalAlignment.Left,Margin=new(32,24,32,32)};
+        AutomationProperties.SetAutomationId(content,"PageContent-"+name);
         var header=name switch{"proxy"=>L("PageProxy"),"settings"=>L("PageSettings"),_=>L("PageHotspot")};
         content.Children.Add(new TextBlock{Text=header,FontSize=28,FontWeight=Microsoft.UI.Text.FontWeights.SemiBold,Margin=new(0,0,0,4)});
         if(name=="hotspot")BuildHotspot(content);else if(name=="proxy")BuildProxy(content);else BuildSettings(content);
-        var scroll=new ScrollViewer{Content=content,VerticalScrollBarVisibility=ScrollBarVisibility.Auto,HorizontalScrollBarVisibility=ScrollBarVisibility.Disabled};pages[name]=scroll;host.Children.Add(scroll);
+        var scroll=new ScrollViewer{Content=content,HorizontalContentAlignment=HorizontalAlignment.Left,VerticalScrollBarVisibility=ScrollBarVisibility.Auto,HorizontalScrollBarVisibility=ScrollBarVisibility.Disabled};
+        void ResizePage(){double padding=scroll.ActualWidth<640?16:32;content.Margin=new(padding,24,padding,32);content.Width=Math.Max(0,Math.Min(1200,scroll.ActualWidth-2*padding-4));notice.Margin=new(padding,16,padding,0);}
+        scroll.SizeChanged+=(_,_)=>ResizePage();scroll.Loaded+=(_,_)=>ResizePage();pages[name]=scroll;host.Children.Add(scroll);
     }
     void BuildHotspot(StackPanel content)
     {
-        Detach(status);Detach(clients);Detach(ip);var stats=new Grid{ColumnSpacing=12};for(int n=0;n<3;n++)stats.ColumnDefinitions.Add(new(){Width=new(1,GridUnitType.Star)});
+        Detach(status);Detach(clients);Detach(ip);
         var panels=new[]{Card(Stack(Secondary(L("StatusLabel")),status)),Card(Stack(Secondary(L("ClientsLabel")),clients)),Card(Stack(Secondary(L("AddressLabel")),ip))};
-        for(int n=0;n<3;n++){Grid.SetColumn(panels[n],n);stats.Children.Add(panels[n]);}content.Children.Add(stats);
+        var stats=Columns(230,3,12,panels);AutomationProperties.SetAutomationId(stats,"HotspotStats");content.Children.Add(stats);
         Detach(mode);Detach(start);Detach(stop);
         content.Children.Add(Card(Stack(mode,Row(start,stop,Button(L("RefreshStatus"),Refresh)))));
         Detach(ssid);Detach(password);
-        var fields=new Grid{ColumnSpacing=16};fields.ColumnDefinitions.Add(new(){Width=new(1,GridUnitType.Star)});fields.ColumnDefinitions.Add(new(){Width=new(1,GridUnitType.Star)});fields.Children.Add(ssid);Grid.SetColumn(password,1);fields.Children.Add(password);
+        var fields=Columns(260,2,16,ssid,password);AutomationProperties.SetAutomationId(fields,"HotspotFields");
         content.Children.Add(Card(Stack(fields,Button(L("SaveHotspotInfo"),()=>Command(new("configure",Ssid:ssid.Text,Password:password.Password))))));
         Detach(deviceList);content.Children.Add(Card(Stack(Text(L("DevicesHeading"),16),deviceList)));
         Detach(diagnostic);content.Children.Add(new Expander{Header=L("DiagnosticsHeading"),HorizontalAlignment=HorizontalAlignment.Stretch,Content=diagnostic});
@@ -153,16 +163,14 @@ public sealed class MainWindow:Window
         var url=$"http://{addr}:18080/wpad.dat";
         var pacAddress=new TextBox{Text=url,IsReadOnly=true,FlowDirection=FlowDirection.LeftToRight};
         content.Children.Add(Card(Stack(Text(L("PacHeading"),16),pacAddress,Secondary(L("PacUrlHelp")),Button(L("CopyPacAddress"),()=>Copy(url)))));
-        var discoveryRow=new Grid{ColumnSpacing=24};discoveryRow.ColumnDefinitions.Add(new(){Width=new(1,GridUnitType.Star)});discoveryRow.ColumnDefinitions.Add(new(){Width=GridLength.Auto});
-        discoveryRow.Children.Add(Stack(Text(L("DhcpDiscoveryTitle"),16),Secondary(L("DhcpDiscoveryNote"))));Grid.SetColumn(dhcp,1);dhcp.VerticalAlignment=VerticalAlignment.Center;discoveryRow.Children.Add(dhcp);
+        var discoveryRow=SettingRow(Stack(Text(L("DhcpDiscoveryTitle"),16),Secondary(L("DhcpDiscoveryNote"))),dhcp);dhcp.VerticalAlignment=VerticalAlignment.Center;
         content.Children.Add(Card(Stack(discoveryRow,dhcpStatus,Secondary(L("DhcpCompatibility")))));
         content.Children.Add(Card(Stack(Text(L("MobileDevicesHeading"),16),Secondary(L("MobileDevicesHelp")),Button(L("ExportMobileProfile"),ExportMobile))));
     }
     void BuildSettings(StackPanel content)
     {
         Detach(startup);Detach(bootMode);
-        var row=new Grid{ColumnSpacing=24};row.ColumnDefinitions.Add(new(){Width=new(1,GridUnitType.Star)});row.ColumnDefinitions.Add(new(){Width=GridLength.Auto});
-        row.Children.Add(Stack(Text(L("StartupHeading"),16),Secondary(L("StartupHelp"))));Grid.SetColumn(startup,1);startup.VerticalAlignment=VerticalAlignment.Center;row.Children.Add(startup);
+        var row=SettingRow(Stack(Text(L("StartupHeading"),16),Secondary(L("StartupHelp"))),startup);startup.VerticalAlignment=VerticalAlignment.Center;
         content.Children.Add(Card(Stack(row)));
         content.Children.Add(Card(Stack(Text(L("StartupActionHeading"),16),Secondary(L("StartupActionHelp")),bootMode)));
         content.Children.Add(Card(Stack(Text(L("LanguageHeading"),16),language,Secondary(L("LanguageHelp")))));
