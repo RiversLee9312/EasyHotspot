@@ -127,7 +127,7 @@
     <value>Автоматичне виявлення DHCP</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>Параметр DHCP 252 не налаштовано. Деякі пристрої або програми можуть ігнорувати адресу PAC, введену вручну.</value>
+    <value>Повідомляйте пристроям точки доступу адресу проксі. Змінюйте цей параметр, коли точку доступу вимкнено. Застосовується лише в режимі проксі.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Телефони й планшети</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>Не вдалося налаштувати брандмауер.</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Увімкнено · очікування точки доступу в режимі проксі</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Потрібен клієнт із підтримкою DHCP WPAD. На Android, iPhone та iPad може знадобитися вручну налаштувати URL-адресу PAC. Програми без підтримки проксі не використовуватимуть цю адресу.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>Помилка обробки пакета DHCP: {0}</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Вимкнено</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>Автоматичне виявлення DHCP зупинено: {0}</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Вимкніть точку доступу, перш ніж змінювати автоматичне виявлення DHCP.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>Шлях драйвера DHCP не відповідає цій інсталяції. Перевстановіть EasyHotspot.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>Не вдалося зупинити драйвер DHCP. Перезапустіть Windows і повторіть спробу.</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>Компонент DHCP недоступний. Якщо його заблоковано, дозвольте Native\WinDivert.dll і Native\WinDivert64.sys у Безпеці Windows, а потім повторіть спробу.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Адресу проксі оголошено · кількість надісланих відповідей: {0}</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>Активний адаптер точки доступу не знайдено.</value>
   </data>
 </root>

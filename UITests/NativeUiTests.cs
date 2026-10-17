@@ -23,11 +23,11 @@ public sealed class NativeUiTests
     }
     [UITestMethod] public void ProxyPageShowsPacAndCompatibilityLimits()
     {
-        Show("proxy");var nodes=Elements(Window.Content).ToList();Assert.IsTrue(nodes.OfType<TextBox>().Any(x=>x.Text.Contains(":18080/wpad.dat")));Assert.IsTrue(nodes.OfType<InfoBar>().Any(x=>x.Message==Localization.Get("DhcpDiscoveryNote")));
+        Show("proxy");var nodes=Elements(Window.Content).ToList();Assert.IsTrue(nodes.OfType<TextBox>().Any(x=>x.Text.Contains(":18080/wpad.dat")));Assert.IsTrue(nodes.OfType<TextBlock>().Any(x=>x.Text==Localization.Get("DhcpCompatibility")));var toggle=nodes.OfType<ToggleSwitch>().Single(x=>AutomationProperties.GetAutomationId(x)=="DhcpAutoDiscovery");Assert.AreEqual(ServiceSettings.Read().DhcpDiscovery,toggle.IsOn);
     }
     [UITestMethod] public void StartupIsExplicitAndMatchesSystemState()
     {
-        Show("settings");var toggle=Elements(Window.Content).OfType<ToggleSwitch>().Single(x=>AutomationProperties.GetAutomationId(x)=="HighPriorityStartup");Assert.AreEqual(ServiceSetup.Installed,toggle.IsOn);var picker=Elements(Window.Content).OfType<ComboBox>().Single(x=>AutomationProperties.GetAutomationId(x)=="AppLanguage");Assert.AreEqual(24,picker.Items.Count);Assert.AreEqual(Localization.CurrentLanguage,((ComboBoxItem)picker.SelectedItem).Tag);
+        Show("settings");var toggle=Elements(Window.Content).OfType<ToggleSwitch>().Single(x=>AutomationProperties.GetAutomationId(x)=="HighPriorityStartup");Assert.AreEqual(ServiceSetup.AutoStartEnabled,toggle.IsOn);var picker=Elements(Window.Content).OfType<ComboBox>().Single(x=>AutomationProperties.GetAutomationId(x)=="AppLanguage");Assert.AreEqual(24,picker.Items.Count);Assert.AreEqual(Localization.CurrentLanguage,((ComboBoxItem)picker.SelectedItem).Tag);
     }
     [UITestMethod] public void MrtResolvesEveryLocaleAndFallsBackToEnglish()
     {

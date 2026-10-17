@@ -127,7 +127,7 @@
     <value>DHCP auto-discovery</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>DHCP option 252 is not configured. Some devices or apps may ignore a manual PAC address.</value>
+    <value>Advertise the proxy address to hotspot devices. Change this while the hotspot is off. Applies in proxy mode only.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Phones and tablets</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>Could not configure the firewall.</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Requires a client that supports DHCP WPAD. Android, iPhone, and iPad may still need a manually configured PAC URL. Apps without proxy support will not use it.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Advertising proxy address · {0} replies sent</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Enabled · waiting for a proxy hotspot</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>The DHCP component is unavailable. If blocked, allow Native\WinDivert.dll and Native\WinDivert64.sys in Windows Security, then try again.</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>No active hotspot adapter was found.</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Turn off the hotspot before changing DHCP auto-discovery.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>The DHCP driver path does not match this installation. Reinstall EasyHotspot.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>The DHCP driver could not be stopped. Restart Windows and try again.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>DHCP packet processing failed: {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>DHCP auto-discovery stopped: {0}</value>
   </data>
 </root>

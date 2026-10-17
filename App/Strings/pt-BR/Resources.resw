@@ -127,7 +127,7 @@
     <value>Descoberta automática por DHCP</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>A opção 252 do DHCP não está configurada. Alguns dispositivos ou aplicativos podem ignorar um endereço PAC manual.</value>
+    <value>Anuncia o endereço do proxy aos dispositivos do hotspot. Altere essa opção com o hotspot desligado. Aplica-se apenas ao modo proxy.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Celulares e tablets</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>Não foi possível configurar o firewall.</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Requer um cliente compatível com DHCP WPAD. Em Android, iPhone e iPad, talvez ainda seja necessário configurar manualmente a URL PAC. Aplicativos sem suporte a proxy não usarão o endereço.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Divulgando o endereço do proxy · {0} respostas enviadas</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Ativado · aguardando um hotspot no modo proxy</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Desativado</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>O componente DHCP está indisponível. Se estiver bloqueado, permita Native\WinDivert.dll e Native\WinDivert64.sys na Segurança do Windows e tente novamente.</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>Nenhum adaptador ativo do hotspot foi encontrado.</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Desligue o hotspot antes de alterar a descoberta automática por DHCP.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>O caminho do driver DHCP não corresponde a esta instalação. Reinstale EasyHotspot.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>Não foi possível parar o driver DHCP. Reinicie o Windows e tente novamente.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>Falha ao processar o pacote DHCP: {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>A descoberta automática por DHCP foi interrompida: {0}</value>
   </data>
 </root>

@@ -127,7 +127,7 @@
     <value>Automatische DHCP-Erkennung</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>DHCP-Option 252 ist nicht konfiguriert. Einige Geräte oder Apps ignorieren möglicherweise eine manuell angegebene PAC-Adresse.</value>
+    <value>Gibt die Proxyadresse an Hotspotgeräte bekannt. Ändern Sie diese Einstellung bei ausgeschaltetem Hotspot. Gilt nur im Proxy-Modus.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Smartphones und Tablets</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>Die Firewall konnte nicht konfiguriert werden.</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Erfordert einen Client mit Unterstützung für DHCP-WPAD. Auf Android, iPhone und iPad muss die PAC-URL möglicherweise weiterhin manuell konfiguriert werden. Apps ohne Proxy-Unterstützung verwenden diese Funktion nicht.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Proxyadresse wird bekannt gegeben · {0} Antworten gesendet</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Aktiviert · wartet auf einen Proxy-Hotspot</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Aus</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>Die DHCP-Komponente ist nicht verfügbar. Falls sie blockiert wird, lassen Sie Native\WinDivert.dll und Native\WinDivert64.sys in Windows-Sicherheit zu und versuchen Sie es erneut.</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>Kein aktiver Hotspot-Netzwerkadapter gefunden.</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Schalten Sie den Hotspot aus, bevor Sie die DHCP-Autoerkennung ändern.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>Der Pfad des DHCP-Treibers stimmt nicht mit dieser Installation überein. Installieren Sie EasyHotspot neu.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>Der DHCP-Treiber konnte nicht beendet werden. Starten Sie Windows neu und versuchen Sie es erneut.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>Fehler bei der Verarbeitung des DHCP-Pakets: {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>DHCP-Autoerkennung beendet: {0}</value>
   </data>
 </root>

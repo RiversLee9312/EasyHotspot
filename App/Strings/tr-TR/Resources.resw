@@ -127,7 +127,7 @@
     <value>DHCP otomatik keşfi</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>DHCP 252 seçeneği yapılandırılmadı. Bazı cihazlar veya uygulamalar elle girilen PAC adresini yok sayabilir.</value>
+    <value>Proxy adresini etkin nokta cihazlarına duyurun. Bu ayarı etkin nokta kapalıyken değiştirin. Yalnızca proxy modunda geçerlidir.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Telefonlar ve tabletler</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>Güvenlik duvarı yapılandırılamadı.</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Etkin · proxy etkin noktası bekleniyor</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>DHCP WPAD desteği olan bir istemci gerekir. Android, iPhone ve iPad cihazlarında PAC URL adresinin yine de elle yapılandırılması gerekebilir. Proxy desteği olmayan uygulamalar bu adresi kullanmaz.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>DHCP paketi işlenemedi: {0}</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Kapalı</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>DHCP otomatik keşfi durdu: {0}</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>DHCP otomatik keşfini değiştirmeden önce etkin noktayı kapatın.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>DHCP sürücüsünün yolu bu yüklemeyle eşleşmiyor. EasyHotspot uygulamasını yeniden yükleyin.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>DHCP sürücüsü durdurulamadı. Windows işletim sistemini yeniden başlatıp tekrar deneyin.</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>DHCP bileşeni kullanılamıyor. Engellendiyse Windows Güvenliği içinde Native\WinDivert.dll ve Native\WinDivert64.sys dosyalarına izin verip yeniden deneyin.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Proxy adresi duyuruluyor · gönderilen yanıt sayısı: {0}</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>Etkin bir etkin nokta bağdaştırıcısı bulunamadı.</value>
   </data>
 </root>

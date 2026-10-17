@@ -50,6 +50,7 @@ public static class ControlProtocol
                     case "stop": await backend.StopAsync();break;
                     case "configure": await backend.Hotspot.ConfigureAsync(req.Ssid ?? "",req.Password ?? "");break;
                     case "startup": ServiceSettings.Save(req.Mode??"none");break;
+                    case "dhcp": if(req.Mode is not ("on" or "off"))throw new ArgumentException("Error_InvalidRequest");await backend.SetDhcpAsync(req.Mode=="on");break;
                     default: throw new InvalidOperationException("Error_UnknownCommand");
                 }
                 reply=new(true,backend.Read());

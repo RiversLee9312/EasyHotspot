@@ -124,10 +124,10 @@
     <value>PAC पता कॉपी करें</value>
   </data>
   <data name="DhcpDiscoveryTitle" xml:space="preserve">
-    <value>DHCP ऑटो-डिस्कवरी</value>
+    <value>DHCP स्वतः खोज</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>DHCP विकल्प 252 कॉन्फ़िगर नहीं है। कुछ डिवाइस या ऐप मैन्युअल PAC पते को अनदेखा कर सकते हैं।</value>
+    <value>हॉटस्पॉट उपकरणों को प्रॉक्सी पता बताएं। इसे बदलने से पहले हॉटस्पॉट बंद करें। यह केवल प्रॉक्सी मोड में लागू होता है।</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>फ़ोन और टैबलेट</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>फ़ायरवॉल कॉन्फ़िगर नहीं हो सका।</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>DHCP WPAD समर्थित क्लाइंट आवश्यक है। Android, iPhone और iPad पर PAC URL को मैन्युअल रूप से सेट करना पड़ सकता है। प्रॉक्सी का समर्थन न करने वाले ऐप इसका उपयोग नहीं करेंगे।</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>प्रॉक्सी पता बताया जा रहा है · {0} जवाब भेजे गए</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>सक्षम · प्रॉक्सी हॉटस्पॉट की प्रतीक्षा में</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>DHCP घटक उपलब्ध नहीं है। यदि इसे ब्लॉक किया गया हो, तो Windows सुरक्षा में Native\WinDivert.dll और Native\WinDivert64.sys को अनुमति दें, फिर दोबारा प्रयास करें।</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>कोई सक्रिय हॉटस्पॉट अडैप्टर नहीं मिला।</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>DHCP स्वतः खोज बदलने से पहले हॉटस्पॉट बंद करें।</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>DHCP ड्राइवर का पथ इस इंस्टॉलेशन से मेल नहीं खाता। EasyHotspot फिर से इंस्टॉल करें।</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>DHCP ड्राइवर बंद नहीं किया जा सका। Windows रीस्टार्ट करें और फिर प्रयास करें।</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>DHCP पैकेट प्रोसेसिंग विफल हुई: {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>DHCP स्वतः खोज रुक गई: {0}</value>
   </data>
 </root>

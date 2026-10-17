@@ -127,7 +127,7 @@
     <value>Automatyczne wykrywanie DHCP</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>Opcja DHCP 252 nie jest skonfigurowana. Niektóre urządzenia lub aplikacje mogą ignorować ręcznie podany adres PAC.</value>
+    <value>Rozgłaszaj adres proxy urządzeniom hotspotu. Zmień to ustawienie, gdy hotspot jest wyłączony. Dotyczy tylko trybu proxy.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Telefony i tablety</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>Nie można skonfigurować zapory.</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Wymagany jest klient obsługujący DHCP WPAD. Na Androidzie, iPhonie i iPadzie nadal może być konieczne ręczne skonfigurowanie adresu URL PAC. Aplikacje bez obsługi proxy nie będą z niego korzystać.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Rozgłaszanie adresu proxy · wysłano odpowiedzi: {0}</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Włączono · oczekiwanie na hotspot w trybie proxy</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Wyłączono</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>Składnik DHCP jest niedostępny. Jeśli został zablokowany, zezwól na Native\WinDivert.dll i Native\WinDivert64.sys w Zabezpieczeniach Windows, a następnie spróbuj ponownie.</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>Nie znaleziono aktywnej karty sieciowej hotspotu.</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Wyłącz hotspot przed zmianą automatycznego wykrywania DHCP.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>Ścieżka sterownika DHCP nie pasuje do tej instalacji. Zainstaluj ponownie EasyHotspot.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>Nie można zatrzymać sterownika DHCP. Uruchom ponownie system Windows i spróbuj ponownie.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>Błąd przetwarzania pakietu DHCP: {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>Automatyczne wykrywanie DHCP zostało zatrzymane: {0}</value>
   </data>
 </root>

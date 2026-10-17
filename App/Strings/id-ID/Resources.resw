@@ -127,7 +127,7 @@
     <value>Penemuan otomatis DHCP</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>Opsi DHCP 252 belum dikonfigurasi. Beberapa perangkat atau aplikasi mungkin mengabaikan alamat PAC yang dimasukkan secara manual.</value>
+    <value>Umumkan alamat proxy ke perangkat hotspot. Ubah saat hotspot mati. Hanya berlaku dalam mode proxy.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Ponsel dan tablet</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>Tidak dapat mengonfigurasi firewall.</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Memerlukan klien yang mendukung DHCP WPAD. Android, iPhone, dan iPad mungkin tetap perlu dikonfigurasi dengan URL PAC secara manual. Aplikasi yang tidak mendukung proxy tidak akan menggunakannya.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Mengumumkan alamat proxy · {0} balasan terkirim</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Aktif · menunggu hotspot proxy</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Mati</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>Komponen DHCP tidak tersedia. Jika diblokir, izinkan Native\WinDivert.dll dan Native\WinDivert64.sys di Keamanan Windows, lalu coba lagi.</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>Adaptor hotspot aktif tidak ditemukan.</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Matikan hotspot sebelum mengubah penemuan otomatis DHCP.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>Path driver DHCP tidak cocok dengan instalasi ini. Instal ulang EasyHotspot.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>Driver DHCP tidak dapat dihentikan. Mulai ulang Windows lalu coba lagi.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>Pemrosesan paket DHCP gagal: {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>Penemuan otomatis DHCP berhenti: {0}</value>
   </data>
 </root>

@@ -16,12 +16,12 @@ function Query([string]$sql,[string[]]$columns){
 try {
     $properties=@{};Query 'SELECT `Property`,`Value` FROM `Property`' @('Name','Value') | ForEach-Object {$properties[$_.Name]=$_.Value}
     Check ($properties.ProductName-eq'EasyHotspot') 'Product name'
-    Check ($properties.ProductVersion-eq'1.1.0') 'Product version'
+    Check ($properties.ProductVersion-eq'1.2.0') 'Product version'
     Check ($properties.ALLUSERS-eq'1') 'Per-machine installation'
     $summary=$database.SummaryInformation(0)
     Check ($summary.Property(7)-like'x64;*') 'x64 package template'
     $files=@(Query 'SELECT `File`,`FileName`,`FileSize` FROM `File`' @('Id','Name','Size'))
-    foreach($name in @('EasyHotspot.exe','EasyHotspot.Service.exe','App.xbf','EasyHotspot.pri','app.ico','Mobile-Relay.json')){
+    foreach($name in @('EasyHotspot.exe','EasyHotspot.Service.exe','App.xbf','EasyHotspot.pri','app.ico','Mobile-Relay.json','WinDivert.dll','WinDivert64.sys','WinDivert-2.2.2-source.tar.gz')){
         Check (@($files | Where-Object {($_.Name-split'\|')[-1]-eq$name}).Count-eq1) "Required payload: $name"
     }
     $tables=@(Query 'SELECT `Name` FROM `_Tables`' @('Name'))

@@ -25,11 +25,13 @@ public sealed class MainWindow:Window
     readonly TextBlock deviceList=new(){TextWrapping=TextWrapping.Wrap,IsTextSelectionEnabled=true};
     readonly TextBlock diagnostic=new(){FontSize=12,FontFamily=new("Consolas"),TextWrapping=TextWrapping.Wrap,IsTextSelectionEnabled=true,FlowDirection=FlowDirection.LeftToRight};
     readonly ToggleSwitch startup=new();
+    readonly ToggleSwitch dhcp=new();
+    readonly TextBlock dhcpStatus=new(){TextWrapping=TextWrapping.Wrap};
     readonly ComboBox bootMode=new(){MinWidth=260,SelectedIndex=0};
     readonly ComboBox language=new(){MinWidth=260};
     readonly Button start=new(),stop=new();
     readonly DispatcherTimer timer=new(){Interval=TimeSpan.FromSeconds(5)};
-    bool busy,refreshing,initial=true,updatingStartup;BackendState? latest;string page="hotspot";
+    bool busy,refreshing,initial=true,updatingStartup,updatingDhcp;BackendState? latest;string page="hotspot";
     public NavigationView Navigation=>nav;
     public MainWindow()
     {
@@ -50,6 +52,18 @@ public sealed class MainWindow:Window
         Content=root;SetTitleBar(title);AutomationProperties.SetAutomationId(root,"AppRoot");
         mode.Header=L("ModeLabel");ssid.Header=L("HotspotName");password.Header=L("HotspotPassword");
         startup.OffContent=L("ToggleOff");startup.OnContent=L("ToggleOn");
+        dhcp.OffContent=L("ToggleOff");dhcp.OnContent=L("ToggleOn");dhcp.IsOn=ServiceSettings.Read().DhcpDiscovery;
+        AutomationProperties.SetAutomationId(dhcp,"DhcpAutoDiscovery");AutomationProperties.SetAutomationId(dhcpStatus,"DhcpDiscoveryStatus");
+        AutomationProperties.SetName(dhcp,L("DhcpDiscoveryTitle"));AutomationProperties.SetName(startup,L("StartupHeading"));
+        dhcp.Toggled+=async(_,_)=>{
+            if(updatingDhcp)return;
+            await Action(async()=>{
+                if(latest?.Hotspot?.State=="On")throw new InvalidOperationException("Error_DhcpStopFirst");
+                var desired=dhcp.IsOn;var reply=await ControlProtocol.Send(new("dhcp",desired?"on":"off"),15000);
+                if(reply is null)await ServiceSetup.ElevateAsync(desired?"--dhcp-on":"--dhcp-off");else if(!reply.Success)throw new InvalidOperationException(reply.Error);
+            });
+            updatingDhcp=true;dhcp.IsOn=ServiceSettings.Read().DhcpDiscovery;updatingDhcp=false;
+        };
         start.Content=L("StartHotspot");stop.Content=L("StopHotspot");
         root.Loaded+=(_,_)=>{
             var scale=root.XamlRoot.RasterizationScale;
@@ -66,14 +80,14 @@ public sealed class MainWindow:Window
         AutomationProperties.SetAutomationId(startup,"HighPriorityStartup");AutomationProperties.SetAutomationId(bootMode,"StartupAction");
         bootMode.Items.Add(L("StartupNone"));bootMode.Items.Add(L("StartupOffline"));bootMode.Items.Add(L("StartupProxy"));
         bootMode.SelectedIndex=ServiceSettings.Read().StartupMode switch{"offline"=>1,"proxy"=>2,_=>0};
-        startup.IsOn=ServiceSetup.Installed;
+        startup.IsOn=ServiceSetup.AutoStartEnabled;
         startup.Toggled+=async(_,_)=>{
             if(updatingStartup)return;await Action(async()=>{
                 if(local.Relay.Running)throw new InvalidOperationException(L("StartupConflict"));
                 var desired=startup.IsOn;await ServiceSetup.ElevateAsync(desired?"--install":"--uninstall");
-                updatingStartup=true;startup.IsOn=ServiceSetup.Installed;updatingStartup=false;
+                updatingStartup=true;startup.IsOn=ServiceSetup.AutoStartEnabled;updatingStartup=false;
                 Message(L("StartupUpdatedTitle"),L(desired?"StartupEnabledMessage":"StartupDisabledMessage"),InfoBarSeverity.Success);
-            });updatingStartup=true;startup.IsOn=ServiceSetup.Installed;updatingStartup=false;};
+            });updatingStartup=true;startup.IsOn=ServiceSetup.AutoStartEnabled;updatingStartup=false;};
         bootMode.SelectionChanged+=async(_,_)=>{if(initial||updatingStartup||!ServiceSetup.Installed)return;await Action(async()=>{var r=await ControlProtocol.Send(new("startup",bootMode.SelectedIndex switch{1=>"offline",2=>"proxy",_=>"none"}),5000);if(r is not {Success:true})throw new InvalidOperationException(r?.Error??L("ServiceUnresponsive"));});};
         foreach(var tag in Localization.SupportedLanguages)
             language.Items.Add(new ComboBoxItem{Content=Localization.NativeName(tag),Tag=tag});
@@ -134,7 +148,9 @@ public sealed class MainWindow:Window
         var url=$"http://{addr}:18080/wpad.dat";
         var pacAddress=new TextBox{Text=url,IsReadOnly=true,FlowDirection=FlowDirection.LeftToRight};
         content.Children.Add(Card(Stack(Text(L("PacHeading"),16),pacAddress,Secondary(L("PacUrlHelp")),Button(L("CopyPacAddress"),()=>Copy(url)))));
-        content.Children.Add(new InfoBar{IsOpen=true,IsClosable=false,Severity=InfoBarSeverity.Informational,Title=L("DhcpDiscoveryTitle"),Message=L("DhcpDiscoveryNote")});
+        var discoveryRow=new Grid{ColumnSpacing=24};discoveryRow.ColumnDefinitions.Add(new(){Width=new(1,GridUnitType.Star)});discoveryRow.ColumnDefinitions.Add(new(){Width=GridLength.Auto});
+        discoveryRow.Children.Add(Stack(Text(L("DhcpDiscoveryTitle"),16),Secondary(L("DhcpDiscoveryNote"))));Grid.SetColumn(dhcp,1);dhcp.VerticalAlignment=VerticalAlignment.Center;discoveryRow.Children.Add(dhcp);
+        content.Children.Add(Card(Stack(discoveryRow,dhcpStatus,Secondary(L("DhcpCompatibility")))));
         content.Children.Add(Card(Stack(Text(L("MobileDevicesHeading"),16),Secondary(L("MobileDevicesHelp")),Button(L("ExportMobileProfile"),ExportMobile))));
     }
     void BuildSettings(StackPanel content)
@@ -155,11 +171,12 @@ public sealed class MainWindow:Window
     void Message(string title,string value,InfoBarSeverity severity){notice.Title=title;notice.Message=value;notice.Severity=severity;notice.IsOpen=true;}
     async Task Action(Func<Task> action)
     {
-        if(busy)return;busy=true;start.IsEnabled=stop.IsEnabled=false;
+        if(busy)return;busy=true;UpdateControls();
         try{await action();await Refresh();}catch(Exception ex){Message(L("OperationFailed"),Localization.Error(ex.Message),InfoBarSeverity.Error);}finally{busy=false;UpdateControls();}
     }
     async Task Command(ControlRequest request)
     {
+        if(ServiceSetup.Installed && await ControlProtocol.Send(new("status"),500) is null)await ServiceSetup.ElevateAsync("--ensure-service");
         var reply=await ControlProtocol.Send(request,45000);
         if(reply is not null){if(!reply.Success)throw new InvalidOperationException(reply.Error);return;}
         if(ServiceSetup.Installed)throw new InvalidOperationException(L("ServiceNotReady"));
@@ -175,8 +192,10 @@ public sealed class MainWindow:Window
             if(initial&&h is not null){ssid.Text=h.Ssid;password.Password=h.Password;initial=false;}
             diagnostic.Text=string.Join("\n",new[]{Localization.Format("InternetStatusLine",h?.Connectivity??L("Unknown")),Localization.Format("CurrentSourceLine",h?.Source??"—"),reply is null?L("RunModeApp"):L("RunModeService")}.Concat(latest.Logs.Select(Localization.Error)).Concat(latest.Error is null?[]:new[]{Localization.Error(latest.Error)}));
             bootMode.IsEnabled=ServiceSetup.Installed;
+            var discovery=latest.Dhcp;updatingDhcp=true;dhcp.IsOn=discovery.Enabled;updatingDhcp=false;
+            dhcpStatus.Text=discovery.Error is not null?Localization.Error(discovery.Error):discovery.Running?Localization.Format("DhcpRunning",discovery.Advertisements):L(discovery.Enabled?"DhcpWaiting":"DhcpOff");
             UpdateControls();
         } finally {refreshing=false;}
     }
-    void UpdateControls(){var on=latest?.Hotspot?.State=="On";start.IsEnabled=!busy&&!on;stop.IsEnabled=!busy&&on;ssid.IsEnabled=password.IsEnabled=!on;}
+    void UpdateControls(){var on=latest?.Hotspot?.State=="On";start.IsEnabled=!busy&&!on;stop.IsEnabled=!busy&&on;ssid.IsEnabled=password.IsEnabled=!on;dhcp.IsEnabled=!busy&&!on;startup.IsEnabled=!busy;}
 }

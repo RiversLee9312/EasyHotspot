@@ -8,9 +8,11 @@ namespace EasyHotspot.Core;
 public static class ServiceSetup
 {
     public const string ServiceName="EasyHotspotService";
+    public const string DriverName="EasyHotspotDhcpDriver";
     public static string InstallDirectory=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles),"EasyHotspot");
     public static string DataDirectory=>Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData),"EasyHotspot");
     public static bool Installed {get{using var key=Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\"+ServiceName);return key is not null;}}
+    public static bool AutoStartEnabled {get{using var key=Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\"+ServiceName);return key?.GetValue("Start") is int start && start==2;}}
     public static bool IsAdmin=>new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator);
     public static string OwnerSid {get{using var key=Registry.LocalMachine.OpenSubKey(@"SOFTWARE\EasyHotspot");return key?.GetValue("OwnerSid")?.ToString() ?? WindowsIdentity.GetCurrent().User!.Value;}}
     public static int Run(string exe,params string[] args)
@@ -25,9 +27,9 @@ public static class ServiceSetup
         if(!File.Exists(helper))throw new FileNotFoundException("Error_HelperMissing",helper);
         var args=$"{action} --source \"{AppContext.BaseDirectory.TrimEnd(Path.DirectorySeparatorChar)}\" --owner {WindowsIdentity.GetCurrent().User!.Value}";
         using var p=Process.Start(new ProcessStartInfo(helper,args){UseShellExecute=true,Verb="runas",WindowStyle=ProcessWindowStyle.Hidden}) ?? throw new IOException("Error_ElevationStart");
-        await p.WaitForExitAsync();if(p.ExitCode!=0)throw new InvalidOperationException("Error_AdminIncomplete");
+        await p.WaitForExitAsync();if(p.ExitCode!=0){var path=Path.Combine(DataDirectory,"setup-result.txt");var result=File.Exists(path)?await File.ReadAllTextAsync(path):null;throw new InvalidOperationException(result?.StartsWith("Error_",StringComparison.Ordinal)==true?result:"Error_AdminIncomplete");}
     }
-    public static void Install(string source,string owner)
+    public static void Install(string source,string owner,bool automatic=true)
     {
         if(!IsAdmin)throw new UnauthorizedAccessException();
         var fresh=!Installed;
@@ -39,17 +41,48 @@ public static class ServiceSetup
             }
         using(var key=Registry.LocalMachine.CreateSubKey(@"SOFTWARE\EasyHotspot"))key.SetValue("OwnerSid",owner);
         Directory.CreateDirectory(DataDirectory);
-        if(fresh)ServiceSettings.Save("none");
-        Firewall(Path.Combine(dest,"EasyHotspot.exe"));Firewall(Path.Combine(dest,"EasyHotspot.Service.exe"),"Service");
+        if(fresh && !File.Exists(Path.Combine(DataDirectory,"settings.json")))ServiceSettings.Save("none");
+        if(fresh){Firewall(Path.Combine(dest,"EasyHotspot.exe"));Firewall(Path.Combine(dest,"EasyHotspot.Service.exe"),"Service");}
         var binary=$"\"{Path.Combine(dest,"EasyHotspot.Service.exe")}\" --service";
         var command=Installed?"config":"create";
-        if(Run("sc.exe",command,ServiceName,"binPath=",binary,"start=","auto","obj=","LocalSystem","DisplayName=","EasyHotspot")!=0)throw new IOException("Error_RegisterService");
+        if(Run("sc.exe",command,ServiceName,"binPath=",binary,"start=",automatic?"auto":"demand","obj=","LocalSystem","DisplayName=","EasyHotspot")!=0)throw new IOException("Error_RegisterService");
         Run("sc.exe","description",ServiceName,"EasyHotspot background service");
         Run("sc.exe","failure",ServiceName,"reset=","86400","actions=","restart/10000/restart/30000/none/0");
         var started=Run("sc.exe","start",ServiceName);
         if(started!=0&&started!=1056)throw new IOException("Error_StartService");
         using var service=new ServiceController(ServiceName);
         service.WaitForStatus(ServiceControllerStatus.Running,TimeSpan.FromSeconds(30));
+    }
+    public static void DisableStartup()
+    {
+        if(!IsAdmin)throw new UnauthorizedAccessException();
+        if(ServiceSettings.Read().DhcpDiscovery){if(Run("sc.exe","config",ServiceName,"start=","demand")!=0)throw new IOException("Error_RegisterService");}
+        else Uninstall();
+    }
+    public static async Task ConfigureDhcp(string source,string owner,bool enabled)
+    {
+        if(!IsAdmin)throw new UnauthorizedAccessException();
+        if(new HotspotController().Read().State=="On")throw new InvalidOperationException("Error_DhcpStopFirst");
+        if(enabled && !Installed)DhcpDiscovery.Probe();
+        if(enabled || Installed){if(await ControlProtocol.Send(new("status"),500) is null)Install(source,owner,AutoStartEnabled);var reply=await ControlProtocol.Send(new("dhcp",enabled?"on":"off"),15000);if(reply is not {Success:true})throw new IOException(reply?.Error??"Error_StartService");}
+        else ServiceSettings.SaveDhcp(false);
+    }
+    public static void StartDhcpDriver()
+    {
+        if(!IsAdmin)throw new UnauthorizedAccessException();
+        var driver=Path.Combine(AppContext.BaseDirectory,"Native","WinDivert64.sys");
+        if(!File.Exists(driver))throw new IOException("Error_DhcpComponent");
+        using(var key=Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\"+DriverName)) {
+            if(key is null){if(Run("sc.exe","create",DriverName,"type=","kernel","start=","demand","binPath=",driver,"DisplayName=","EasyHotspot DHCP")!=0)throw new IOException("Error_DhcpComponent");}
+            else if(!string.Equals(key.GetValue("ImagePath")?.ToString()?.Replace(@"\??\","").Trim('"'),driver,StringComparison.OrdinalIgnoreCase))throw new IOException("Error_DhcpDriverOwner");
+        }
+        var code=Run("sc.exe","start",DriverName);if(code is not (0 or 1056))throw new IOException("Error_DhcpComponent");
+    }
+    public static void StopDhcpDriver()
+    {
+        if(!IsAdmin)return;
+        using var key=Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\"+DriverName);if(key is null)return;
+        var code=Run("sc.exe","stop",DriverName);if(code is not (0 or 1062 or 1060))throw new IOException("Error_DhcpDriverStop");
     }
     public static void Uninstall()
     {
@@ -69,11 +102,12 @@ public static class ServiceSetup
     public static void Cleanup()
     {
         Uninstall();
+        StopDhcpDriver();var driverRemoved=Run("sc.exe","delete",DriverName);if(driverRemoved is not (0 or 1060))throw new IOException("Error_DhcpDriverStop");
         var script="$ErrorActionPreference='Stop';Get-NetFirewallRule -Name 'EasyHotspot-*' -ErrorAction SilentlyContinue|Remove-NetFirewallRule -ErrorAction Stop";
         var encoded=Convert.ToBase64String(System.Text.Encoding.Unicode.GetBytes(script));
         if(Run(Path.Combine(Environment.SystemDirectory,@"WindowsPowerShell\v1.0\powershell.exe"),"-NoProfile","-EncodedCommand",encoded)!=0)throw new IOException("Error_Firewall");
         Registry.LocalMachine.DeleteSubKeyTree(@"SOFTWARE\EasyHotspot",false);
-        foreach(var name in new[]{"settings.json","setup-error.txt"})File.Delete(Path.Combine(DataDirectory,name));
+        foreach(var name in new[]{"settings.json","settings.json.tmp","setup-error.txt","setup-result.txt"})File.Delete(Path.Combine(DataDirectory,name));
         if(Directory.Exists(DataDirectory)&&!Directory.EnumerateFileSystemEntries(DataDirectory).Any())Directory.Delete(DataDirectory);
     }
     public static void Firewall(string program,string suffix="App")

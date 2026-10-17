@@ -127,7 +127,7 @@
     <value>Découverte automatique DHCP</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>L’option DHCP 252 n’est pas configurée. Certains appareils ou certaines applications peuvent ignorer une adresse PAC manuelle.</value>
+    <value>Annonce l’adresse du proxy aux appareils connectés au point d’accès. Modifiez ce réglage lorsque le point d’accès est désactivé. S’applique uniquement au mode proxy.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Téléphones et tablettes</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>Impossible de configurer le pare-feu.</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Nécessite un client compatible avec WPAD via DHCP. Sur Android, iPhone et iPad, l’URL PAC doit parfois encore être configurée manuellement. Les applications sans prise en charge du proxy ne l’utiliseront pas.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Adresse du proxy annoncée · {0} réponses envoyées</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Activé · en attente d’un point d’accès en mode proxy</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Désactivé</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>Le composant DHCP est indisponible. S’il est bloqué, autorisez Native\WinDivert.dll et Native\WinDivert64.sys dans Sécurité Windows, puis réessayez.</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>Aucun adaptateur actif du point d’accès n’a été trouvé.</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Désactivez le point d’accès avant de modifier la découverte automatique DHCP.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>Le chemin du pilote DHCP ne correspond pas à cette installation. Réinstallez EasyHotspot.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>Impossible d’arrêter le pilote DHCP. Redémarrez Windows, puis réessayez.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>Échec du traitement du paquet DHCP : {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>La découverte automatique DHCP s’est arrêtée : {0}</value>
   </data>
 </root>

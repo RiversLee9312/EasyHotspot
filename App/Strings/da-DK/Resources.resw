@@ -127,7 +127,7 @@
     <value>Automatisk DHCP-registrering</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>DHCP-indstilling 252 er ikke konfigureret. Nogle enheder eller apps ignorerer muligvis en manuelt angivet PAC-adresse.</value>
+    <value>Oplys hotspot-enheder om proxyadressen. Skift dette, mens hotspotten er slået fra. Gælder kun i proxitilstand.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Telefoner og tablets</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>Firewallen kunne ikke konfigureres.</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Aktiveret · venter på et proxy-hotspot</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Kræver en klient, der understøtter DHCP WPAD. Android, iPhone og iPad kan stadig kræve, at PAC-URL-adressen konfigureres manuelt. Apps uden proxyunderstøttelse bruger ikke denne adresse.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>Behandling af DHCP-pakke mislykkedes: {0}</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Fra</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>Automatisk DHCP-registrering stoppet: {0}</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Slå hotspotten fra, før du ændrer automatisk DHCP-registrering.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>DHCP-driverens sti stemmer ikke overens med denne installation. Geninstaller EasyHotspot.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>DHCP-driveren kunne ikke stoppes. Genstart Windows, og prøv igen.</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>DHCP-komponenten er ikke tilgængelig. Hvis den er blokeret, skal du tillade Native\WinDivert.dll og Native\WinDivert64.sys i Windows Sikkerhed og derefter prøve igen.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Proxyadressen annonceres · antal sendte svar: {0}</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>Der blev ikke fundet nogen aktiv hotspotadapter.</value>
   </data>
 </root>

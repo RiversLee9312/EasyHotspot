@@ -124,10 +124,10 @@
     <value>Копировать адрес PAC</value>
   </data>
   <data name="DhcpDiscoveryTitle" xml:space="preserve">
-    <value>Автообнаружение DHCP</value>
+    <value>Автоматическое обнаружение DHCP</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>Параметр DHCP 252 не настроен. Некоторые устройства или приложения могут игнорировать адрес PAC, заданный вручную.</value>
+    <value>Сообщает адрес прокси устройствам точки доступа. Изменяйте эту настройку, когда точка доступа выключена. Действует только в режиме прокси.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Телефоны и планшеты</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>Не удалось настроить брандмауэр.</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Требуется клиент с поддержкой DHCP WPAD. На Android, iPhone и iPad URL PAC, возможно, по-прежнему придется настраивать вручную. Приложения без поддержки прокси не будут использовать этот адрес.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Передача адреса прокси · отправлено ответов: {0}</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Включено · ожидание точки доступа в режиме прокси</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Выкл.</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>Компонент DHCP недоступен. Если он заблокирован, разрешите Native\WinDivert.dll и Native\WinDivert64.sys в приложении «Безопасность Windows», затем повторите попытку.</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>Активный сетевой адаптер точки доступа не найден.</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Выключите точку доступа перед изменением автообнаружения DHCP.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>Путь к драйверу DHCP не соответствует этой установке. Переустановите EasyHotspot.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>Не удалось остановить драйвер DHCP. Перезапустите Windows и повторите попытку.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>Не удалось обработать DHCP-пакет: {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>Автообнаружение DHCP остановлено: {0}</value>
   </data>
 </root>

@@ -124,10 +124,10 @@
     <value>העתק כתובת PAC</value>
   </data>
   <data name="DhcpDiscoveryTitle" xml:space="preserve">
-    <value>גילוי אוטומטי של DHCP</value>
+    <value>גילוי DHCP אוטומטי</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>אפשרות DHCP 252 לא הוגדרה. מכשירים או אפליקציות מסוימים עשויים להתעלם מכתובת PAC שהוזנה ידנית.</value>
+    <value>פרסם את כתובת ה־proxy למכשירי נקודת הגישה. יש לכבות את נקודת הגישה לפני שינוי ההגדרה. חל רק במצב proxy.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>טלפונים וטאבלטים</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>לא ניתן להגדיר את חומת האש.</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>נדרש לקוח שתומך ב־DHCP WPAD. ייתכן שבמכשירי Android, iPhone ו־iPad עדיין צריך להגדיר כתובת PAC ידנית. אפליקציות ללא תמיכה ב־proxy לא ישתמשו בה.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>מפרסם את כתובת ה־proxy · נשלחו {0} תשובות</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>מופעל · ממתין לנקודת גישה במצב proxy</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>כבוי</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>רכיב DHCP אינו זמין. אם הוא נחסם, יש לאפשר את Native\WinDivert.dll ואת Native\WinDivert64.sys באבטחת Windows ואז לנסות שוב.</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>לא נמצא מתאם פעיל של נקודת גישה.</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>יש לכבות את נקודת הגישה לפני שינוי הגילוי האוטומטי של DHCP.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>נתיב מנהל ההתקן של DHCP אינו תואם להתקנה זו. התקן מחדש את EasyHotspot.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>לא ניתן לעצור את מנהל ההתקן של DHCP. הפעל מחדש את Windows ונסה שוב.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>עיבוד חבילת DHCP נכשל: {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>הגילוי האוטומטי של DHCP הופסק: {0}</value>
   </data>
 </root>

@@ -127,7 +127,7 @@
     <value>Automatické zjišťování DHCP</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>Možnost DHCP 252 není nakonfigurována. Některá zařízení nebo aplikace mohou ručně zadanou adresu PAC ignorovat.</value>
+    <value>Oznamujte zařízením hotspotu adresu proxy. Toto nastavení změňte, když je hotspot vypnutý. Platí pouze v režimu proxy.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Telefony a tablety</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>Firewall se nepodařilo nakonfigurovat.</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Zapnuto · čeká se na proxy hotspot</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Vyžaduje klienta s podporou DHCP WPAD. V zařízeních Android, iPhone a iPad může být stále nutné ručně nastavit adresu URL PAC. Aplikace bez podpory proxy tuto adresu nepoužijí.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>Zpracování paketu DHCP selhalo: {0}</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Vypnuto</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>Automatické zjišťování DHCP se zastavilo: {0}</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Před změnou automatického zjišťování DHCP hotspot vypněte.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>Cesta k ovladači DHCP neodpovídá této instalaci. Znovu nainstalujte EasyHotspot.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>Ovladač DHCP se nepodařilo zastavit. Restartujte Windows a zkuste to znovu.</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>Komponenta DHCP není dostupná. Pokud je blokovaná, povolte v Zabezpečení Windows soubory Native\WinDivert.dll a Native\WinDivert64.sys a zkuste to znovu.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Adresa proxy se oznamuje · počet odeslaných odpovědí: {0}</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>Nebyl nalezen žádný aktivní adaptér hotspotu.</value>
   </data>
 </root>

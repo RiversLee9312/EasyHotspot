@@ -127,7 +127,7 @@
     <value>DHCP 自动发现</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>尚未配置 DHCP 选项 252。部分设备或应用可能忽略手动填写的 PAC 地址。</value>
+    <value>向热点设备发布代理地址。关闭热点后可更改，仅在代理模式下生效。</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>手机和平板</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>无法配置防火墙。</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>客户端须支持 DHCP WPAD。Android、iPhone 和 iPad 可能仍需手动设置 PAC；不支持代理的应用不会使用它。</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>正在发布代理地址 · 已应答 {0} 次</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>已启用，等待启动代理热点</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>已关闭</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>DHCP 组件不可用。如被拦截，请在 Windows 安全中心放行 Native\WinDivert.dll 和 Native\WinDivert64.sys，然后重试。</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>找不到正在运行的热点网卡。</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>请先关闭热点，再更改 DHCP 自动发现。</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>DHCP 驱动服务路径与当前安装不一致，请重新安装 EasyHotspot。</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>无法停止 DHCP 驱动，请重启后重试。</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>DHCP 报文处理失败：{0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>DHCP 自动发现已停止：{0}</value>
   </data>
 </root>

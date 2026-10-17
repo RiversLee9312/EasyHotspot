@@ -127,7 +127,7 @@
     <value>الاكتشاف التلقائي لـ DHCP</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>لم يتم تكوين خيار DHCP رقم 252. قد تتجاهل بعض الأجهزة أو التطبيقات عنوان PAC المُدخل يدوياً.</value>
+    <value>أعلن عنوان الوكيل لأجهزة نقطة الاتصال. أوقف نقطة الاتصال قبل التغيير. ينطبق في وضع الوكيل فقط.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>الهواتف والأجهزة اللوحية</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>تعذر تكوين جدار الحماية.</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>يتطلب عميلًا يدعم DHCP WPAD. قد تحتاج أجهزة Android وiPhone وiPad إلى إعداد عنوان PAC يدويًا. لن تستخدمه التطبيقات التي لا تدعم الوكيل.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>جارٍ الإعلان عن عنوان الوكيل · تم إرسال {0} ردًا</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>مفعّل · بانتظار نقطة اتصال الوكيل</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>إيقاف</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>مكوّن DHCP غير متاح. إذا تم حظره، فاسمح بالملفين Native\WinDivert.dll وNative\WinDivert64.sys في أمن Windows، ثم حاول مرة أخرى.</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>لم يتم العثور على محول نشط لنقطة الاتصال.</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>أوقف نقطة الاتصال قبل تغيير الاكتشاف التلقائي لـ DHCP.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>مسار برنامج تشغيل DHCP لا يطابق هذا التثبيت. أعد تثبيت EasyHotspot.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>تعذر إيقاف برنامج تشغيل DHCP. أعد تشغيل Windows ثم حاول مرة أخرى.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>فشلت معالجة حزمة DHCP: {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>توقف الاكتشاف التلقائي لـ DHCP: {0}</value>
   </data>
 </root>

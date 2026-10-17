@@ -1,0 +1,16 @@
+WinDivert 2.2.2 (unmodified x64 DLL and signed driver)
+Copyright ReQrypt and contributors.
+Upstream: https://github.com/basil00/WinDivert/releases/tag/v2.2.2
+Binary distribution: WinDivert-2.2.2-A.zip (x64 directory).
+License choice for this distribution: GNU LGPL version 3.
+The complete upstream license text is in LICENSE. Corresponding upstream source
+is included in WinDivert-2.2.2-source.tar.gz (tag v2.2.2).
+
+EasyHotspot dynamically loads Native/WinDivert.dll. Users may replace the library
+and driver with compatible versions. Reverse engineering for debugging changes
+to this LGPL library is permitted. WinDivert has not been modified.
+
+SHA256 WinDivert.dll:
+C1E060EE19444A259B2162F8AF0F3FE8C4428A1C6F694DCE20DE194AC8D7D9A2
+SHA256 WinDivert64.sys:
+8DA085332782708D8767BCACE5327A6EC7283C17CFB85E40B03CD2323A90DDC2

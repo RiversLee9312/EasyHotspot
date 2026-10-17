@@ -127,7 +127,7 @@
     <value>Tự động phát hiện DHCP</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>Chưa cấu hình tùy chọn DHCP 252. Một số thiết bị hoặc ứng dụng có thể bỏ qua địa chỉ PAC nhập thủ công.</value>
+    <value>Quảng bá địa chỉ proxy tới các thiết bị kết nối với điểm phát sóng. Hãy tắt điểm phát sóng trước khi thay đổi. Chỉ áp dụng ở chế độ proxy.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Điện thoại và máy tính bảng</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>Không thể cấu hình tường lửa.</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Cần thiết bị khách hỗ trợ DHCP WPAD. Android, iPhone và iPad có thể vẫn cần cấu hình thủ công URL PAC. Các ứng dụng không hỗ trợ proxy sẽ không dùng địa chỉ này.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Đang quảng bá địa chỉ proxy · đã gửi {0} phản hồi</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Đã bật · đang chờ điểm phát sóng proxy</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Tắt</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>Không có thành phần DHCP. Nếu thành phần này bị chặn, hãy cho phép Native\WinDivert.dll và Native\WinDivert64.sys trong Bảo mật Windows rồi thử lại.</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>Không tìm thấy bộ điều hợp điểm phát sóng đang hoạt động.</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Hãy tắt điểm phát sóng trước khi thay đổi tính năng tự động phát hiện DHCP.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>Đường dẫn trình điều khiển DHCP không khớp với bản cài đặt này. Hãy cài đặt lại EasyHotspot.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>Không thể dừng trình điều khiển DHCP. Hãy khởi động lại Windows rồi thử lại.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>Xử lý gói DHCP thất bại: {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>Tính năng tự động phát hiện DHCP đã dừng: {0}</value>
   </data>
 </root>

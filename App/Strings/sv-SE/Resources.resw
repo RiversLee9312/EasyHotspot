@@ -127,7 +127,7 @@
     <value>Automatisk DHCP-identifiering</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>DHCP-alternativ 252 är inte konfigurerat. Vissa enheter eller appar kan ignorera en manuellt angiven PAC-adress.</value>
+    <value>Meddela enheter på din hotspot om proxyadressen. Ändra detta när hotspoten är avstängd. Gäller endast i proxyläge.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Telefoner och surfplattor</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>Det gick inte att konfigurera brandväggen.</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Aktiverat · väntar på en proxy-hotspot</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Kräver en klient med stöd för DHCP WPAD. Android, iPhone och iPad kan fortfarande behöva en manuellt konfigurerad PAC-URL. Appar utan proxy-stöd använder inte den här adressen.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>Det gick inte att bearbeta DHCP-paketet: {0}</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Av</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>Automatisk DHCP-identifiering stoppades: {0}</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Stäng av hotspoten innan du ändrar automatisk DHCP-identifiering.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>DHCP-drivrutinens sökväg matchar inte den här installationen. Installera om EasyHotspot.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>Det gick inte att stoppa DHCP-drivrutinen. Starta om Windows och försök igen.</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>DHCP-komponenten är inte tillgänglig. Om den blockeras kan du tillåta Native\WinDivert.dll och Native\WinDivert64.sys i Windows-säkerhet och sedan försöka igen.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Proxyadressen meddelas · antal skickade svar: {0}</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>Ingen aktiv hotspot-adapter hittades.</value>
   </data>
 </root>

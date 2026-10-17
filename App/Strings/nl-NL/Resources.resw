@@ -127,7 +127,7 @@
     <value>Automatische DHCP-detectie</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>DHCP-optie 252 is niet ingesteld. Sommige apparaten of apps negeren mogelijk een handmatig opgegeven PAC-adres.</value>
+    <value>Meld het proxyadres aan hotspotapparaten. Wijzig dit wanneer de hotspot is uitgeschakeld. Geldt alleen in de proxymodus.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Telefoons en tablets</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>De firewall kan niet worden geconfigureerd.</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Vereist een client die DHCP-WPAD ondersteunt. Op Android, iPhone en iPad moet de PAC-URL mogelijk nog handmatig worden ingesteld. Apps zonder proxyondersteuning gebruiken deze niet.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Proxyadres wordt bekendgemaakt · {0} antwoorden verzonden</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Ingeschakeld · wachten op een proxyhotspot</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Uit</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>Het DHCP-onderdeel is niet beschikbaar. Als het wordt geblokkeerd, sta Native\WinDivert.dll en Native\WinDivert64.sys toe in Windows-beveiliging en probeer het opnieuw.</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>Geen actieve hotspotadapter gevonden.</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Schakel de hotspot uit voordat u automatische DHCP-detectie wijzigt.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>Het pad naar het DHCP-stuurprogramma komt niet overeen met deze installatie. Installeer EasyHotspot opnieuw.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>Het DHCP-stuurprogramma kan niet worden gestopt. Start Windows opnieuw en probeer het opnieuw.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>DHCP-pakketverwerking mislukt: {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>Automatische DHCP-detectie is gestopt: {0}</value>
   </data>
 </root>

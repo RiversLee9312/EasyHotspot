@@ -127,7 +127,7 @@
     <value>ค้นหา DHCP อัตโนมัติ</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>ยังไม่ได้กำหนดค่าตัวเลือก DHCP 252 อุปกรณ์หรือแอปบางรายการอาจไม่ใช้ที่อยู่ PAC ที่ป้อนด้วยตนเอง</value>
+    <value>ประกาศที่อยู่พร็อกซีให้กับอุปกรณ์ฮอตสปอต ปิดฮอตสปอตก่อนเปลี่ยนการตั้งค่านี้ ใช้ได้เฉพาะในโหมดพร็อกซี</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>โทรศัพท์และแท็บเล็ต</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>กำหนดค่าไฟร์วอลล์ไม่ได้</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>ต้องใช้ไคลเอ็นต์ที่รองรับ DHCP WPAD อุปกรณ์ Android, iPhone และ iPad อาจต้องตั้งค่า URL PAC ด้วยตนเอง แอปที่ไม่รองรับพร็อกซีจะใช้การตั้งค่านี้ไม่ได้</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>กำลังประกาศที่อยู่พร็อกซี · ส่งการตอบกลับแล้ว {0} รายการ</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>เปิดใช้แล้ว · กำลังรอฮอตสปอตพร็อกซี</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>ไม่พบคอมโพเนนต์ DHCP หากถูกบล็อก ให้อนุญาต Native\WinDivert.dll และ Native\WinDivert64.sys ในความปลอดภัยของ Windows แล้วลองอีกครั้ง</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>ไม่พบอะแดปเตอร์ฮอตสปอตที่ใช้งานอยู่</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>ปิดฮอตสปอตก่อนเปลี่ยนการค้นหา DHCP อัตโนมัติ</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>เส้นทางไดรเวอร์ DHCP ไม่ตรงกับการติดตั้งนี้ ติดตั้ง EasyHotspot อีกครั้ง</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>ไม่สามารถหยุดไดรเวอร์ DHCP ได้ เริ่ม Windows ใหม่แล้วลองอีกครั้ง</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>ประมวลผลแพ็กเก็ต DHCP ไม่สำเร็จ: {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>การค้นหา DHCP อัตโนมัติหยุดทำงาน: {0}</value>
   </data>
 </root>

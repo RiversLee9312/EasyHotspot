@@ -127,7 +127,7 @@
     <value>DHCP:n automaattinen etsintä</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>DHCP-asetusta 252 ei ole määritetty. Jotkin laitteet tai sovellukset voivat sivuuttaa manuaalisen PAC-osoitteen.</value>
+    <value>Ilmoita välityspalvelimen osoite tukiaseman laitteille. Muuta asetusta, kun tukiasema on poissa käytöstä. Koskee vain välityspalvelintilaa.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Puhelimet ja tabletit</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>Palomuuria ei voitu määrittää.</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Käytössä · odotetaan välityspalvelintukiasemaa</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Edellyttää DHCP WPADia tukevaa asiakaslaitetta. Android-, iPhone- ja iPad-laitteissa PAC-URL-osoite on ehkä silti määritettävä manuaalisesti. Sovellukset, jotka eivät tue välityspalvelinta, eivät käytä tätä osoitetta.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>DHCP-paketin käsittely epäonnistui: {0}</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Ei käytössä</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>DHCP:n automaattinen etsintä pysähtyi: {0}</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Poista tukiasema käytöstä ennen DHCP:n automaattisen etsinnän muuttamista.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>DHCP-ohjaimen polku ei vastaa tätä asennusta. Asenna EasyHotspot uudelleen.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>DHCP-ohjainta ei voitu pysäyttää. Käynnistä Windows uudelleen ja yritä uudelleen.</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>DHCP-komponentti ei ole käytettävissä. Jos se on estetty, salli Native\WinDivert.dll- ja Native\WinDivert64.sys-tiedostot Windowsin suojauksessa ja yritä sitten uudelleen.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Välityspalvelimen osoitetta ilmoitetaan · lähetettyjä vastauksia: {0}</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>Aktiivista tukiaseman verkkosovitinta ei löytynyt.</value>
   </data>
 </root>

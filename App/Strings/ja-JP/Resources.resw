@@ -127,7 +127,7 @@
     <value>DHCP 自動検出</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>DHCP オプション 252 は設定されていません。一部のデバイスやアプリでは、手動で指定した PAC アドレスが無視される場合があります。</value>
+    <value>ホットスポットに接続したデバイスにプロキシアドレスを通知します。変更するにはホットスポットをオフにしてください。プロキシモードでのみ適用されます。</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>スマートフォンとタブレット</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>ファイアウォールを設定できませんでした。</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>DHCP WPAD に対応するクライアントが必要です。Android、iPhone、iPad では、PAC URL を手動で設定する必要がある場合があります。プロキシに対応していないアプリでは利用されません。</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>プロキシアドレスを通知中 · 返信 {0} 件</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>有効 · プロキシホットスポットの待機中</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>オフ</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>DHCP コンポーネントを利用できません。ブロックされている場合は、Windows セキュリティで Native\WinDivert.dll と Native\WinDivert64.sys を許可してから、もう一度お試しください。</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>アクティブなホットスポットアダプターが見つかりませんでした。</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>DHCP 自動検出を変更する前に、ホットスポットをオフにしてください。</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>DHCP ドライバーのパスがこのインストールと一致しません。EasyHotspot を再インストールしてください。</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>DHCP ドライバーを停止できませんでした。Windows を再起動してから、もう一度お試しください。</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>DHCP パケットの処理に失敗しました: {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>DHCP 自動検出が停止しました: {0}</value>
   </data>
 </root>

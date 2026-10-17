@@ -127,7 +127,7 @@
     <value>Detección automática mediante DHCP</value>
   </data>
   <data name="DhcpDiscoveryNote" xml:space="preserve">
-    <value>La opción 252 de DHCP no está configurada. Es posible que algunos dispositivos o aplicaciones ignoren una dirección PAC manual.</value>
+    <value>Anuncia la dirección del proxy a los dispositivos del punto de acceso. Cambia esta opción con el punto de acceso apagado. Solo se aplica al modo proxy.</value>
   </data>
   <data name="MobileDevicesHeading" xml:space="preserve">
     <value>Teléfonos y tabletas</value>
@@ -301,5 +301,38 @@
   </data>
   <data name="Error_Firewall" xml:space="preserve">
     <value>No se pudo configurar el firewall.</value>
+  </data>
+  <data name="DhcpCompatibility" xml:space="preserve">
+    <value>Requiere un cliente compatible con WPAD mediante DHCP. En Android, iPhone y iPad, puede que aún sea necesario configurar manualmente la URL PAC. Las aplicaciones sin compatibilidad con proxy no la usarán.</value>
+  </data>
+  <data name="DhcpRunning" xml:space="preserve">
+    <value>Anunciando la dirección del proxy · {0} respuestas enviadas</value>
+  </data>
+  <data name="DhcpWaiting" xml:space="preserve">
+    <value>Activado · esperando a que se inicie un punto de acceso en modo proxy</value>
+  </data>
+  <data name="DhcpOff" xml:space="preserve">
+    <value>Desactivado</value>
+  </data>
+  <data name="Error_DhcpComponent" xml:space="preserve">
+    <value>El componente DHCP no está disponible. Si está bloqueado, permita Native\WinDivert.dll y Native\WinDivert64.sys en Seguridad de Windows y vuelva a intentarlo.</value>
+  </data>
+  <data name="Error_DhcpAdapter" xml:space="preserve">
+    <value>No se encontró ningún adaptador activo del punto de acceso.</value>
+  </data>
+  <data name="Error_DhcpStopFirst" xml:space="preserve">
+    <value>Apague el punto de acceso antes de cambiar la detección automática DHCP.</value>
+  </data>
+  <data name="Error_DhcpDriverOwner" xml:space="preserve">
+    <value>La ruta del controlador DHCP no coincide con esta instalación. Vuelva a instalar EasyHotspot.</value>
+  </data>
+  <data name="Error_DhcpDriverStop" xml:space="preserve">
+    <value>No se pudo detener el controlador DHCP. Reinicie Windows y vuelva a intentarlo.</value>
+  </data>
+  <data name="Error_DhcpPacket" xml:space="preserve">
+    <value>Error al procesar el paquete DHCP: {0}</value>
+  </data>
+  <data name="Error_DhcpRuntime" xml:space="preserve">
+    <value>Se detuvo la detección automática DHCP: {0}</value>
   </data>
 </root>
