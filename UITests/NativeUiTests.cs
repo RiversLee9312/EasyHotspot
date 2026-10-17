@@ -62,6 +62,11 @@ public sealed class NativeUiTests
     {
         var root=(FrameworkElement)Window.Content;root.UpdateLayout();Assert.IsTrue(root.ActualWidth>=800,$"Window content is only {root.ActualWidth} logical pixels wide.");
     }
+    [UITestMethod] public void WindowChromeStaysLeftToRightWhenContentIsMirrored()
+    {
+        Assert.AreEqual(FlowDirection.LeftToRight,((FrameworkElement)Window.Content).FlowDirection);
+        Assert.AreEqual(Localization.IsRightToLeft(Localization.CurrentLanguage)?FlowDirection.RightToLeft:FlowDirection.LeftToRight,Window.Navigation.FlowDirection);
+    }
     void Show(string page){Window.ShowPage(page);((FrameworkElement)Window.Content).UpdateLayout();}
     static Microsoft.Windows.ApplicationModel.Resources.ResourceContext CreateContext(ResourceManager manager,string language){var context=manager.CreateResourceContext();context.QualifierValues["Language"]=language;return context;}
     static IEnumerable<DependencyObject> Elements(DependencyObject root)

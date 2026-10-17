@@ -34,7 +34,8 @@ public sealed class MainWindow:Window
     public MainWindow()
     {
         Title=L("AppName");ExtendsContentIntoTitleBar=true;SystemBackdrop=new MicaBackdrop();AppWindow.Resize(new(1120,820));
-        root.FlowDirection=Localization.IsRightToLeft(Localization.CurrentLanguage)?FlowDirection.RightToLeft:FlowDirection.LeftToRight;
+        root.FlowDirection=FlowDirection.LeftToRight;
+        nav.FlowDirection=Localization.IsRightToLeft(Localization.CurrentLanguage)?FlowDirection.RightToLeft:FlowDirection.LeftToRight;
         var icon=Path.Combine(AppContext.BaseDirectory,"Assets","app.ico");if(File.Exists(icon))AppWindow.SetIcon(icon);
         root.RowDefinitions.Add(new(){Height=new GridLength(48)});root.RowDefinitions.Add(new(){Height=new GridLength(1,GridUnitType.Star)});
         var title=new StackPanel{Orientation=Orientation.Horizontal,Spacing=12,Margin=new(16,0,140,0),VerticalAlignment=VerticalAlignment.Center};
@@ -87,7 +88,7 @@ public sealed class MainWindow:Window
         nav.SelectedItem=nav.MenuItems[0];timer.Tick+=async(_,_)=>await Refresh();timer.Start();_ = Refresh();
         Closed+=(_,_)=>{timer.Stop();_ = local.DisposeAsync();};
         AppWindow.Closing+=async(_,e)=>{
-            if(local.Relay.Running){e.Cancel=true;var d=new ContentDialog{XamlRoot=root.XamlRoot,Title=L("ConfirmStopTitle"),Content=L("ConfirmStopContent"),PrimaryButtonText=L("ConfirmStopButton"),CloseButtonText=L("Cancel"),DefaultButton=ContentDialogButton.Close};if(await d.ShowAsync()==ContentDialogResult.Primary){await local.Relay.StopAsync();Close();}}
+            if(local.Relay.Running){e.Cancel=true;var d=new ContentDialog{XamlRoot=root.XamlRoot,FlowDirection=nav.FlowDirection,Title=L("ConfirmStopTitle"),Content=L("ConfirmStopContent"),PrimaryButtonText=L("ConfirmStopButton"),CloseButtonText=L("Cancel"),DefaultButton=ContentDialogButton.Close};if(await d.ShowAsync()==ContentDialogResult.Primary){await local.Relay.StopAsync();Close();}}
         };
     }
     string SelectedMode()=>mode.SelectedIndex switch{1=>"proxy",2=>"sharing",_=>"offline"};
@@ -117,7 +118,7 @@ public sealed class MainWindow:Window
         var panels=new[]{Card(Stack(Secondary(L("StatusLabel")),status)),Card(Stack(Secondary(L("ClientsLabel")),clients)),Card(Stack(Secondary(L("AddressLabel")),ip))};
         for(int n=0;n<3;n++){Grid.SetColumn(panels[n],n);stats.Children.Add(panels[n]);}content.Children.Add(stats);
         Detach(mode);Detach(start);Detach(stop);
-        content.Children.Add(Card(Stack(Text(L("ModeLabel"),16),mode,Secondary(L("OfflineModeHelp")),Row(start,stop,Button(L("RefreshStatus"),Refresh)))));
+        content.Children.Add(Card(Stack(mode,Row(start,stop,Button(L("RefreshStatus"),Refresh)))));
         Detach(ssid);Detach(password);
         var fields=new Grid{ColumnSpacing=16};fields.ColumnDefinitions.Add(new(){Width=new(1,GridUnitType.Star)});fields.ColumnDefinitions.Add(new(){Width=new(1,GridUnitType.Star)});fields.Children.Add(ssid);Grid.SetColumn(password,1);fields.Children.Add(password);
         content.Children.Add(Card(Stack(fields,Button(L("SaveHotspotInfo"),()=>Command(new("configure",Ssid:ssid.Text,Password:password.Password))))));
