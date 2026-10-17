@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>EasyHotspot</value>
+  </data>
+  <data name="NavHotspot" xml:space="preserve">
+    <value>Etkin nokta</value>
+  </data>
+  <data name="NavProxy" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="PageHotspot" xml:space="preserve">
+    <value>Etkin nokta</value>
+  </data>
+  <data name="PageProxy" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="PageSettings" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>Durum</value>
+  </data>
+  <data name="ClientsLabel" xml:space="preserve">
+    <value>Bağlı cihazlar</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>Etkin nokta adresi</value>
+  </data>
+  <data name="ModeLabel" xml:space="preserve">
+    <value>Bağlantı modu</value>
+  </data>
+  <data name="ModeOffline" xml:space="preserve">
+    <value>Çevrimdışı etkin nokta — internet gerekmez</value>
+  </data>
+  <data name="ModeProxy" xml:space="preserve">
+    <value>Proxy etkin noktası — bu bilgisayar üzerinden paylaşım</value>
+  </data>
+  <data name="ModeSharing" xml:space="preserve">
+    <value>Standart paylaşım — geçerli ağı kullan</value>
+  </data>
+  <data name="OfflineModeHelp" xml:space="preserve">
+    <value>İnternet olmasa da yakındaki cihazları bağlayın.</value>
+  </data>
+  <data name="HotspotName" xml:space="preserve">
+    <value>Etkin nokta adı</value>
+  </data>
+  <data name="HotspotPassword" xml:space="preserve">
+    <value>Etkin nokta parolası</value>
+  </data>
+  <data name="ToggleOff" xml:space="preserve">
+    <value>Kapalı</value>
+  </data>
+  <data name="ToggleOn" xml:space="preserve">
+    <value>Açık</value>
+  </data>
+  <data name="StartHotspot" xml:space="preserve">
+    <value>Etkin noktayı başlat</value>
+  </data>
+  <data name="StopHotspot" xml:space="preserve">
+    <value>Etkin noktayı durdur</value>
+  </data>
+  <data name="RefreshStatus" xml:space="preserve">
+    <value>Durumu yenile</value>
+  </data>
+  <data name="SaveHotspotInfo" xml:space="preserve">
+    <value>Adı ve parolayı kaydet</value>
+  </data>
+  <data name="DevicesHeading" xml:space="preserve">
+    <value>Bağlı cihazlar</value>
+  </data>
+  <data name="DiagnosticsHeading" xml:space="preserve">
+    <value>Tanılama</value>
+  </data>
+  <data name="StatusOn" xml:space="preserve">
+    <value>Açık</value>
+  </data>
+  <data name="StatusOff" xml:space="preserve">
+    <value>Kapalı</value>
+  </data>
+  <data name="NoDevicesConnected" xml:space="preserve">
+    <value>Bağlı cihaz yok</value>
+  </data>
+  <data name="ProxyModeNoticeTitle" xml:space="preserve">
+    <value>Proxy etkin noktası</value>
+  </data>
+  <data name="ProxyModeNotice" xml:space="preserve">
+    <value>Bilgisayar, HTTP ve SOCKS5 trafiğini aktarabilir. Uyumluluğu bağlı bir cihazda kontrol edin.</value>
+  </data>
+  <data name="ProxyComputerHeading" xml:space="preserve">
+    <value>Bilgisayar proxy'si</value>
+  </data>
+  <data name="ProxyEndpointsHelp" xml:space="preserve">
+    <value>HTTP CONNECT ve SOCKS5 · Etkin nokta adresinde dinler</value>
+  </data>
+  <data name="CopyProxyAddress" xml:space="preserve">
+    <value>Proxy adresini kopyala</value>
+  </data>
+  <data name="ConfigureFirewall" xml:space="preserve">
+    <value>Güvenlik duvarını yapılandır</value>
+  </data>
+  <data name="PacHeading" xml:space="preserve">
+    <value>PAC otomatik proxy</value>
+  </data>
+  <data name="PacUrlHelp" xml:space="preserve">
+    <value>Bu adresi PAC ve sistem proxy ayarlarını destekleyen cihazlarda kullanın.</value>
+  </data>
+  <data name="CopyPacAddress" xml:space="preserve">
+    <value>PAC adresini kopyala</value>
+  </data>
+  <data name="DhcpDiscoveryTitle" xml:space="preserve">
+    <value>DHCP otomatik keşfi</value>
+  </data>
+  <data name="DhcpDiscoveryNote" xml:space="preserve">
+    <value>DHCP 252 seçeneği yapılandırılmadı. Bazı cihazlar veya uygulamalar elle girilen PAC adresini yok sayabilir.</value>
+  </data>
+  <data name="MobileDevicesHeading" xml:space="preserve">
+    <value>Telefonlar ve tabletler</value>
+  </data>
+  <data name="MobileDevicesHelp" xml:space="preserve">
+    <value>TCP ve UDP trafiğini yönlendirmek için sing-box profilini Android, iPhone veya iPad'e aktarın.</value>
+  </data>
+  <data name="ExportMobileProfile" xml:space="preserve">
+    <value>Mobil profili dışa aktar</value>
+  </data>
+  <data name="JsonProfile" xml:space="preserve">
+    <value>JSON profili</value>
+  </data>
+  <data name="StartupHeading" xml:space="preserve">
+    <value>Yüksek öncelikli başlangıç</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>Açılışta yüksek öncelikli bir Windows hizmeti başlatır. Güvenlik yazılımı bunu engelleyebilir.</value>
+  </data>
+  <data name="StartupActionHeading" xml:space="preserve">
+    <value>Hizmet başladığında</value>
+  </data>
+  <data name="StartupActionHelp" xml:space="preserve">
+    <value>Hizmet varsayılan olarak arka planda çalışır ve etkin nokta başlatmaz.</value>
+  </data>
+  <data name="StartupNone" xml:space="preserve">
+    <value>Yalnızca arka plan hizmetini yükle</value>
+  </data>
+  <data name="StartupOffline" xml:space="preserve">
+    <value>Çevrimdışı etkin noktayı başlat</value>
+  </data>
+  <data name="StartupProxy" xml:space="preserve">
+    <value>Proxy etkin noktasını başlat</value>
+  </data>
+  <data name="LanguageHeading" xml:space="preserve">
+    <value>Uygulama dili</value>
+  </data>
+  <data name="LanguageHelp" xml:space="preserve">
+    <value>Seçilen dili uygulamak için EasyHotspot'u yeniden başlatın.</value>
+  </data>
+  <data name="LanguageSavedTitle" xml:space="preserve">
+    <value>Dil kaydedildi</value>
+  </data>
+  <data name="LanguageSavedMessage" xml:space="preserve">
+    <value>Seçilen dili uygulamak için EasyHotspot'u yeniden başlatın.</value>
+  </data>
+  <data name="StartupConflict" xml:space="preserve">
+    <value>Hizmetin başlangıç ayarını değiştirmeden önce yerel proxy'yi durdurun.</value>
+  </data>
+  <data name="StartupUpdatedTitle" xml:space="preserve">
+    <value>Başlangıç ayarı güncellendi</value>
+  </data>
+  <data name="StartupEnabledMessage" xml:space="preserve">
+    <value>Windows hizmeti otomatik başlayacak şekilde kaydedildi. Varsayılan olarak yalnızca arka planı yükler, etkin nokta başlatmaz.</value>
+  </data>
+  <data name="StartupDisabledMessage" xml:space="preserve">
+    <value>Yüksek öncelikli başlangıç hizmeti kaldırıldı.</value>
+  </data>
+  <data name="ConfirmStopTitle" xml:space="preserve">
+    <value>Yerel proxy durdurulup kapatılsın mı?</value>
+  </data>
+  <data name="ConfirmStopContent" xml:space="preserve">
+    <value>Proxy bu uygulamada çalışıyor. Pencere kapatıldığında arka plan hizmeti etkin noktayı yönetebilir.</value>
+  </data>
+  <data name="ConfirmStopButton" xml:space="preserve">
+    <value>Durdur ve kapat</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="ExportedTitle" xml:space="preserve">
+    <value>Profil dışa aktarıldı</value>
+  </data>
+  <data name="ExportedMessage" xml:space="preserve">
+    <value>Telefon veya tabletinizdeki sing-box uygulamasına aktarın.</value>
+  </data>
+  <data name="CopiedTitle" xml:space="preserve">
+    <value>Kopyalandı</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>Pano'ya kopyalandı.</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>İşlem başarısız</value>
+  </data>
+  <data name="ServiceUnresponsive" xml:space="preserve">
+    <value>Arka plan hizmeti yanıt vermiyor.</value>
+  </data>
+  <data name="ServiceNotReady" xml:space="preserve">
+    <value>Arka plan hizmeti hazır değil. Biraz bekleyip yeniden deneyin veya Ayarlar'dan hizmeti yeniden etkinleştirin.</value>
+  </data>
+  <data name="ServiceInstalledStatus" xml:space="preserve">
+    <value>Kayıtlı · otomatik başlangıç · LocalSystem hizmeti</value>
+  </data>
+  <data name="ServiceNotInstalledStatus" xml:space="preserve">
+    <value>Devre dışı. İlk kez etkinleştirmek için yönetici onayı gerekir ve hizmet Program Files altına yüklenir.</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Bilinmiyor</value>
+  </data>
+  <data name="InternetStatusLine" xml:space="preserve">
+    <value>İnternet durumu: {0}</value>
+  </data>
+  <data name="CurrentSourceLine" xml:space="preserve">
+    <value>Geçerli kaynak: {0}</value>
+  </data>
+  <data name="RunModeApp" xml:space="preserve">
+    <value>Çalışma modu: uygulama</value>
+  </data>
+  <data name="RunModeService" xml:space="preserve">
+    <value>Çalışma modu: Windows hizmeti</value>
+  </data>
+  <data name="Error_AccessHotspot" xml:space="preserve">
+    <value>Windows etkin nokta yapılandırmasına erişilemedi.</value>
+  </data>
+  <data name="Error_AlreadyOn" xml:space="preserve">
+    <value>Etkin nokta zaten çalışıyor.</value>
+  </data>
+  <data name="Error_LocalAdapter" xml:space="preserve">
+    <value>Yerel ağ bağdaştırıcısı kullanılamıyor.</value>
+  </data>
+  <data name="Error_StartHotspot" xml:space="preserve">
+    <value>Etkin nokta başlatılamadı (Windows durum kodu {0}). {1}</value>
+    <comment>{0} is a Windows status code; {1} is optional additional detail.</comment>
+  </data>
+  <data name="Error_StopHotspot" xml:space="preserve">
+    <value>Etkin nokta durdurulamadı (Windows durum kodu {0}).</value>
+    <comment>{0} is a Windows status code.</comment>
+  </data>
+  <data name="Error_InvalidSsid" xml:space="preserve">
+    <value>Etkin nokta adı geçersiz.</value>
+  </data>
+  <data name="Error_InvalidPassword" xml:space="preserve">
+    <value>Etkin nokta parolası geçersiz.</value>
+  </data>
+  <data name="Error_StopBeforeConfigure" xml:space="preserve">
+    <value>Adı veya parolayı değiştirmeden önce etkin noktayı durdurun.</value>
+  </data>
+  <data name="Error_InvalidMode" xml:space="preserve">
+    <value>Seçilen etkin nokta modu geçersiz.</value>
+  </data>
+  <data name="Error_InvalidStartup" xml:space="preserve">
+    <value>Başlangıç eylemi geçersiz.</value>
+  </data>
+  <data name="Error_InvalidRequest" xml:space="preserve">
+    <value>Hizmet isteği geçersiz.</value>
+  </data>
+  <data name="Error_UnknownCommand" xml:space="preserve">
+    <value>Hizmet komutu bilinmiyor.</value>
+  </data>
+  <data name="Error_HelperMissing" xml:space="preserve">
+    <value>Hizmet yardımcı programı bulunamadı.</value>
+  </data>
+  <data name="Error_ElevationStart" xml:space="preserve">
+    <value>Yönetici izin istemi başlatılamadı.</value>
+  </data>
+  <data name="Error_AdminIncomplete" xml:space="preserve">
+    <value>Yönetici kurulumu tamamlanmadı.</value>
+  </data>
+  <data name="Error_RegisterService" xml:space="preserve">
+    <value>Windows hizmeti kaydedilemedi.</value>
+  </data>
+  <data name="Error_StartService" xml:space="preserve">
+    <value>Windows hizmeti başlatılamadı.</value>
+  </data>
+  <data name="Error_StopService" xml:space="preserve">
+    <value>Windows hizmeti durdurulamadı.</value>
+  </data>
+  <data name="Error_RemoveService" xml:space="preserve">
+    <value>Windows hizmeti kaldırılamadı.</value>
+  </data>
+  <data name="Error_Firewall" xml:space="preserve">
+    <value>Güvenlik duvarı yapılandırılamadı.</value>
+  </data>
+</root>

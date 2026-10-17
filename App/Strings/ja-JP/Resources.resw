@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>EasyHotspot</value>
+  </data>
+  <data name="NavHotspot" xml:space="preserve">
+    <value>ホットスポット</value>
+  </data>
+  <data name="NavProxy" xml:space="preserve">
+    <value>プロキシ</value>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="PageHotspot" xml:space="preserve">
+    <value>ホットスポット</value>
+  </data>
+  <data name="PageProxy" xml:space="preserve">
+    <value>プロキシ</value>
+  </data>
+  <data name="PageSettings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="ClientsLabel" xml:space="preserve">
+    <value>接続中のデバイス</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>ホットスポットのアドレス</value>
+  </data>
+  <data name="ModeLabel" xml:space="preserve">
+    <value>接続モード</value>
+  </data>
+  <data name="ModeOffline" xml:space="preserve">
+    <value>オフラインのホットスポット — インターネット接続不要</value>
+  </data>
+  <data name="ModeProxy" xml:space="preserve">
+    <value>プロキシホットスポット — この PC 経由で共有</value>
+  </data>
+  <data name="ModeSharing" xml:space="preserve">
+    <value>標準の共有 — 現在のネットワークを使用</value>
+  </data>
+  <data name="OfflineModeHelp" xml:space="preserve">
+    <value>インターネットに接続できない場合でも、近くのデバイスを接続できます。</value>
+  </data>
+  <data name="HotspotName" xml:space="preserve">
+    <value>ホットスポット名</value>
+  </data>
+  <data name="HotspotPassword" xml:space="preserve">
+    <value>ホットスポットのパスワード</value>
+  </data>
+  <data name="ToggleOff" xml:space="preserve">
+    <value>オフ</value>
+  </data>
+  <data name="ToggleOn" xml:space="preserve">
+    <value>オン</value>
+  </data>
+  <data name="StartHotspot" xml:space="preserve">
+    <value>ホットスポットを開始</value>
+  </data>
+  <data name="StopHotspot" xml:space="preserve">
+    <value>ホットスポットを停止</value>
+  </data>
+  <data name="RefreshStatus" xml:space="preserve">
+    <value>状態を更新</value>
+  </data>
+  <data name="SaveHotspotInfo" xml:space="preserve">
+    <value>名前とパスワードを保存</value>
+  </data>
+  <data name="DevicesHeading" xml:space="preserve">
+    <value>接続中のデバイス</value>
+  </data>
+  <data name="DiagnosticsHeading" xml:space="preserve">
+    <value>診断情報</value>
+  </data>
+  <data name="StatusOn" xml:space="preserve">
+    <value>オン</value>
+  </data>
+  <data name="StatusOff" xml:space="preserve">
+    <value>オフ</value>
+  </data>
+  <data name="NoDevicesConnected" xml:space="preserve">
+    <value>接続中のデバイスはありません</value>
+  </data>
+  <data name="ProxyModeNoticeTitle" xml:space="preserve">
+    <value>プロキシホットスポット</value>
+  </data>
+  <data name="ProxyModeNotice" xml:space="preserve">
+    <value>PC は HTTP と SOCKS5 の通信を中継できます。接続したデバイスで互換性を確認してください。</value>
+  </data>
+  <data name="ProxyComputerHeading" xml:space="preserve">
+    <value>PC のプロキシ</value>
+  </data>
+  <data name="ProxyEndpointsHelp" xml:space="preserve">
+    <value>HTTP CONNECT と SOCKS5 · ホットスポットのアドレスで待ち受け</value>
+  </data>
+  <data name="CopyProxyAddress" xml:space="preserve">
+    <value>プロキシアドレスをコピー</value>
+  </data>
+  <data name="ConfigureFirewall" xml:space="preserve">
+    <value>ファイアウォールを設定</value>
+  </data>
+  <data name="PacHeading" xml:space="preserve">
+    <value>PAC 自動プロキシ</value>
+  </data>
+  <data name="PacUrlHelp" xml:space="preserve">
+    <value>PAC とシステムのプロキシ設定に対応するデバイスで、このアドレスを使用してください。</value>
+  </data>
+  <data name="CopyPacAddress" xml:space="preserve">
+    <value>PAC アドレスをコピー</value>
+  </data>
+  <data name="DhcpDiscoveryTitle" xml:space="preserve">
+    <value>DHCP 自動検出</value>
+  </data>
+  <data name="DhcpDiscoveryNote" xml:space="preserve">
+    <value>DHCP オプション 252 は設定されていません。一部のデバイスやアプリでは、手動で指定した PAC アドレスが無視される場合があります。</value>
+  </data>
+  <data name="MobileDevicesHeading" xml:space="preserve">
+    <value>スマートフォンとタブレット</value>
+  </data>
+  <data name="MobileDevicesHelp" xml:space="preserve">
+    <value>TCP と UDP の通信を転送するには、Android、iPhone、または iPad で sing-box のプロファイルをインポートしてください。</value>
+  </data>
+  <data name="ExportMobileProfile" xml:space="preserve">
+    <value>モバイルプロファイルをエクスポート</value>
+  </data>
+  <data name="JsonProfile" xml:space="preserve">
+    <value>JSON プロファイル</value>
+  </data>
+  <data name="StartupHeading" xml:space="preserve">
+    <value>優先度の高い起動</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>起動時に優先度の高い Windows サービスを開始します。セキュリティソフトによってブロックされる場合があります。</value>
+  </data>
+  <data name="StartupActionHeading" xml:space="preserve">
+    <value>サービス起動時の動作</value>
+  </data>
+  <data name="StartupActionHelp" xml:space="preserve">
+    <value>既定では、サービスはバックグラウンドで実行され、ホットスポットは開始しません。</value>
+  </data>
+  <data name="StartupNone" xml:space="preserve">
+    <value>バックグラウンドサービスのみを読み込む</value>
+  </data>
+  <data name="StartupOffline" xml:space="preserve">
+    <value>オフラインのホットスポットを開始</value>
+  </data>
+  <data name="StartupProxy" xml:space="preserve">
+    <value>プロキシホットスポットを開始</value>
+  </data>
+  <data name="LanguageHeading" xml:space="preserve">
+    <value>アプリの言語</value>
+  </data>
+  <data name="LanguageHelp" xml:space="preserve">
+    <value>選択した言語を適用するには EasyHotspot を再起動してください。</value>
+  </data>
+  <data name="LanguageSavedTitle" xml:space="preserve">
+    <value>言語を保存しました</value>
+  </data>
+  <data name="LanguageSavedMessage" xml:space="preserve">
+    <value>選択した言語を適用するには EasyHotspot を再起動してください。</value>
+  </data>
+  <data name="StartupConflict" xml:space="preserve">
+    <value>サービスの起動設定を変更する前に、ローカルプロキシを停止してください。</value>
+  </data>
+  <data name="StartupUpdatedTitle" xml:space="preserve">
+    <value>起動設定を更新しました</value>
+  </data>
+  <data name="StartupEnabledMessage" xml:space="preserve">
+    <value>Windows サービスが自動起動するよう登録されました。既定ではバックグラウンドのみを読み込み、ホットスポットは開始しません。</value>
+  </data>
+  <data name="StartupDisabledMessage" xml:space="preserve">
+    <value>優先度の高い起動サービスを削除しました。</value>
+  </data>
+  <data name="ConfirmStopTitle" xml:space="preserve">
+    <value>ローカルプロキシを停止して終了しますか？</value>
+  </data>
+  <data name="ConfirmStopContent" xml:space="preserve">
+    <value>プロキシはこのアプリ内で実行中です。ウィンドウを閉じた後は、バックグラウンドサービスでホットスポットを管理できます。</value>
+  </data>
+  <data name="ConfirmStopButton" xml:space="preserve">
+    <value>停止して終了</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="ExportedTitle" xml:space="preserve">
+    <value>プロファイルをエクスポートしました</value>
+  </data>
+  <data name="ExportedMessage" xml:space="preserve">
+    <value>スマートフォンまたはタブレットの sing-box アプリにインポートしてください。</value>
+  </data>
+  <data name="CopiedTitle" xml:space="preserve">
+    <value>コピーしました</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>クリップボードにコピーしました。</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>操作に失敗しました</value>
+  </data>
+  <data name="ServiceUnresponsive" xml:space="preserve">
+    <value>バックグラウンドサービスが応答していません。</value>
+  </data>
+  <data name="ServiceNotReady" xml:space="preserve">
+    <value>バックグラウンドサービスの準備ができていません。しばらくしてから再試行するか、設定でサービスを再度有効にしてください。</value>
+  </data>
+  <data name="ServiceInstalledStatus" xml:space="preserve">
+    <value>登録済み · 自動起動 · LocalSystem サービス</value>
+  </data>
+  <data name="ServiceNotInstalledStatus" xml:space="preserve">
+    <value>無効です。初回の有効化には管理者の承認が必要で、Program Files にインストールされます。</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>不明</value>
+  </data>
+  <data name="InternetStatusLine" xml:space="preserve">
+    <value>インターネットの状態: {0}</value>
+  </data>
+  <data name="CurrentSourceLine" xml:space="preserve">
+    <value>現在のソース: {0}</value>
+  </data>
+  <data name="RunModeApp" xml:space="preserve">
+    <value>実行モード: アプリ</value>
+  </data>
+  <data name="RunModeService" xml:space="preserve">
+    <value>実行モード: Windows サービス</value>
+  </data>
+  <data name="Error_AccessHotspot" xml:space="preserve">
+    <value>Windows のホットスポット設定にアクセスできませんでした。</value>
+  </data>
+  <data name="Error_AlreadyOn" xml:space="preserve">
+    <value>ホットスポットはすでに実行中です。</value>
+  </data>
+  <data name="Error_LocalAdapter" xml:space="preserve">
+    <value>ローカルネットワークアダプターを利用できません。</value>
+  </data>
+  <data name="Error_StartHotspot" xml:space="preserve">
+    <value>ホットスポットを開始できませんでした（Windows の状態コード {0}）。{1}</value>
+    <comment>{0} is a Windows status code; {1} is optional additional detail.</comment>
+  </data>
+  <data name="Error_StopHotspot" xml:space="preserve">
+    <value>ホットスポットを停止できませんでした（Windows の状態コード {0}）。</value>
+    <comment>{0} is a Windows status code.</comment>
+  </data>
+  <data name="Error_InvalidSsid" xml:space="preserve">
+    <value>ホットスポット名が無効です。</value>
+  </data>
+  <data name="Error_InvalidPassword" xml:space="preserve">
+    <value>ホットスポットのパスワードが無効です。</value>
+  </data>
+  <data name="Error_StopBeforeConfigure" xml:space="preserve">
+    <value>名前またはパスワードを変更する前に、ホットスポットを停止してください。</value>
+  </data>
+  <data name="Error_InvalidMode" xml:space="preserve">
+    <value>選択したホットスポットモードが無効です。</value>
+  </data>
+  <data name="Error_InvalidStartup" xml:space="preserve">
+    <value>起動時の動作が無効です。</value>
+  </data>
+  <data name="Error_InvalidRequest" xml:space="preserve">
+    <value>サービスへの要求が無効です。</value>
+  </data>
+  <data name="Error_UnknownCommand" xml:space="preserve">
+    <value>サービスコマンドが不明です。</value>
+  </data>
+  <data name="Error_HelperMissing" xml:space="preserve">
+    <value>サービスヘルパーが見つかりません。</value>
+  </data>
+  <data name="Error_ElevationStart" xml:space="preserve">
+    <value>管理者権限の確認画面を開始できませんでした。</value>
+  </data>
+  <data name="Error_AdminIncomplete" xml:space="preserve">
+    <value>管理者によるセットアップが完了しませんでした。</value>
+  </data>
+  <data name="Error_RegisterService" xml:space="preserve">
+    <value>Windows サービスを登録できませんでした。</value>
+  </data>
+  <data name="Error_StartService" xml:space="preserve">
+    <value>Windows サービスを開始できませんでした。</value>
+  </data>
+  <data name="Error_StopService" xml:space="preserve">
+    <value>Windows サービスを停止できませんでした。</value>
+  </data>
+  <data name="Error_RemoveService" xml:space="preserve">
+    <value>Windows サービスを削除できませんでした。</value>
+  </data>
+  <data name="Error_Firewall" xml:space="preserve">
+    <value>ファイアウォールを設定できませんでした。</value>
+  </data>
+</root>

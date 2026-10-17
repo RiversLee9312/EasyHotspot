@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+publish/
+service-publish/
+dist/
+.tools/
+TestResults/
+Installer.wxs
+*.wixpdb
+artifacts/

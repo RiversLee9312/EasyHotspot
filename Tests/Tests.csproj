@@ -1,0 +1,1 @@
+<Project Sdk="MSTest.Sdk"><PropertyGroup><OutputType>Exe</OutputType><TestingExtensionsProfile>Default</TestingExtensionsProfile></PropertyGroup><ItemGroup><ProjectReference Include="../Core/Core.csproj"/></ItemGroup></Project>

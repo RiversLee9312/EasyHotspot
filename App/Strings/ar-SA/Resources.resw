@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>EasyHotspot</value>
+  </data>
+  <data name="NavHotspot" xml:space="preserve">
+    <value>نقطة اتصال</value>
+  </data>
+  <data name="NavProxy" xml:space="preserve">
+    <value>وكيل</value>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>الإعدادات</value>
+  </data>
+  <data name="PageHotspot" xml:space="preserve">
+    <value>نقطة اتصال</value>
+  </data>
+  <data name="PageProxy" xml:space="preserve">
+    <value>وكيل</value>
+  </data>
+  <data name="PageSettings" xml:space="preserve">
+    <value>الإعدادات</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="ClientsLabel" xml:space="preserve">
+    <value>الأجهزة المتصلة</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>عنوان نقطة الاتصال</value>
+  </data>
+  <data name="ModeLabel" xml:space="preserve">
+    <value>وضع الاتصال</value>
+  </data>
+  <data name="ModeOffline" xml:space="preserve">
+    <value>نقطة اتصال محلية — لا يلزم الإنترنت</value>
+  </data>
+  <data name="ModeProxy" xml:space="preserve">
+    <value>نقطة اتصال عبر وكيل — المشاركة من خلال هذا الكمبيوتر</value>
+  </data>
+  <data name="ModeSharing" xml:space="preserve">
+    <value>مشاركة عادية — استخدام الشبكة الحالية</value>
+  </data>
+  <data name="OfflineModeHelp" xml:space="preserve">
+    <value>يمكنك توصيل الأجهزة القريبة حتى عند عدم توفر الإنترنت.</value>
+  </data>
+  <data name="HotspotName" xml:space="preserve">
+    <value>اسم نقطة الاتصال</value>
+  </data>
+  <data name="HotspotPassword" xml:space="preserve">
+    <value>كلمة مرور نقطة الاتصال</value>
+  </data>
+  <data name="ToggleOff" xml:space="preserve">
+    <value>إيقاف</value>
+  </data>
+  <data name="ToggleOn" xml:space="preserve">
+    <value>تشغيل</value>
+  </data>
+  <data name="StartHotspot" xml:space="preserve">
+    <value>بدء نقطة الاتصال</value>
+  </data>
+  <data name="StopHotspot" xml:space="preserve">
+    <value>إيقاف نقطة الاتصال</value>
+  </data>
+  <data name="RefreshStatus" xml:space="preserve">
+    <value>تحديث الحالة</value>
+  </data>
+  <data name="SaveHotspotInfo" xml:space="preserve">
+    <value>حفظ الاسم وكلمة المرور</value>
+  </data>
+  <data name="DevicesHeading" xml:space="preserve">
+    <value>الأجهزة المتصلة</value>
+  </data>
+  <data name="DiagnosticsHeading" xml:space="preserve">
+    <value>التشخيص</value>
+  </data>
+  <data name="StatusOn" xml:space="preserve">
+    <value>قيد التشغيل</value>
+  </data>
+  <data name="StatusOff" xml:space="preserve">
+    <value>متوقف</value>
+  </data>
+  <data name="NoDevicesConnected" xml:space="preserve">
+    <value>لا توجد أجهزة متصلة</value>
+  </data>
+  <data name="ProxyModeNoticeTitle" xml:space="preserve">
+    <value>نقطة اتصال عبر وكيل</value>
+  </data>
+  <data name="ProxyModeNotice" xml:space="preserve">
+    <value>يمكن للكمبيوتر تمرير حركة مرور HTTP وSOCKS5. تحقّق من التوافق على جهاز متصل.</value>
+  </data>
+  <data name="ProxyComputerHeading" xml:space="preserve">
+    <value>وكيل الكمبيوتر</value>
+  </data>
+  <data name="ProxyEndpointsHelp" xml:space="preserve">
+    <value>HTTP CONNECT وSOCKS5 · يستمع على عنوان نقطة الاتصال</value>
+  </data>
+  <data name="CopyProxyAddress" xml:space="preserve">
+    <value>نسخ عنوان الوكيل</value>
+  </data>
+  <data name="ConfigureFirewall" xml:space="preserve">
+    <value>تكوين جدار الحماية</value>
+  </data>
+  <data name="PacHeading" xml:space="preserve">
+    <value>الوكيل التلقائي PAC</value>
+  </data>
+  <data name="PacUrlHelp" xml:space="preserve">
+    <value>استخدم هذا العنوان على الأجهزة التي تدعم PAC وإعدادات وكيل النظام.</value>
+  </data>
+  <data name="CopyPacAddress" xml:space="preserve">
+    <value>نسخ عنوان PAC</value>
+  </data>
+  <data name="DhcpDiscoveryTitle" xml:space="preserve">
+    <value>الاكتشاف التلقائي لـ DHCP</value>
+  </data>
+  <data name="DhcpDiscoveryNote" xml:space="preserve">
+    <value>لم يتم تكوين خيار DHCP رقم 252. قد تتجاهل بعض الأجهزة أو التطبيقات عنوان PAC المُدخل يدوياً.</value>
+  </data>
+  <data name="MobileDevicesHeading" xml:space="preserve">
+    <value>الهواتف والأجهزة اللوحية</value>
+  </data>
+  <data name="MobileDevicesHelp" xml:space="preserve">
+    <value>لتمرير حركة مرور TCP وUDP، استورد ملف تعريف sing-box على Android أو iPhone أو iPad.</value>
+  </data>
+  <data name="ExportMobileProfile" xml:space="preserve">
+    <value>تصدير ملف تعريف الهاتف</value>
+  </data>
+  <data name="JsonProfile" xml:space="preserve">
+    <value>ملف تعريف JSON</value>
+  </data>
+  <data name="StartupHeading" xml:space="preserve">
+    <value>بدء التشغيل بأولوية عالية</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>يبدأ خدمة Windows ذات أولوية عالية عند تشغيل النظام. قد تمنعها برامج الأمان.</value>
+  </data>
+  <data name="StartupActionHeading" xml:space="preserve">
+    <value>عند بدء الخدمة</value>
+  </data>
+  <data name="StartupActionHelp" xml:space="preserve">
+    <value>تعمل الخدمة في الخلفية افتراضياً دون بدء نقطة اتصال.</value>
+  </data>
+  <data name="StartupNone" xml:space="preserve">
+    <value>تحميل خدمة الخلفية فقط</value>
+  </data>
+  <data name="StartupOffline" xml:space="preserve">
+    <value>بدء نقطة اتصال دون إنترنت</value>
+  </data>
+  <data name="StartupProxy" xml:space="preserve">
+    <value>بدء نقطة اتصال عبر وكيل</value>
+  </data>
+  <data name="LanguageHeading" xml:space="preserve">
+    <value>لغة التطبيق</value>
+  </data>
+  <data name="LanguageHelp" xml:space="preserve">
+    <value>أعِد تشغيل EasyHotspot لتطبيق اللغة المحددة.</value>
+  </data>
+  <data name="LanguageSavedTitle" xml:space="preserve">
+    <value>تم حفظ اللغة</value>
+  </data>
+  <data name="LanguageSavedMessage" xml:space="preserve">
+    <value>أعِد تشغيل EasyHotspot لتطبيق اللغة المحددة.</value>
+  </data>
+  <data name="StartupConflict" xml:space="preserve">
+    <value>أوقف الوكيل المحلي قبل تغيير إعداد بدء تشغيل الخدمة.</value>
+  </data>
+  <data name="StartupUpdatedTitle" xml:space="preserve">
+    <value>تم تحديث إعداد بدء التشغيل</value>
+  </data>
+  <data name="StartupEnabledMessage" xml:space="preserve">
+    <value>تم تسجيل خدمة Windows لبدء التشغيل تلقائياً. افتراضياً، تُحمّل في الخلفية دون بدء نقطة اتصال.</value>
+  </data>
+  <data name="StartupDisabledMessage" xml:space="preserve">
+    <value>تمت إزالة خدمة بدء التشغيل ذات الأولوية العالية.</value>
+  </data>
+  <data name="ConfirmStopTitle" xml:space="preserve">
+    <value>هل تريد إيقاف الوكيل المحلي والإغلاق؟</value>
+  </data>
+  <data name="ConfirmStopContent" xml:space="preserve">
+    <value>يعمل الوكيل داخل هذا التطبيق. يمكن لخدمة الخلفية إدارة نقطة الاتصال بعد إغلاق النافذة.</value>
+  </data>
+  <data name="ConfirmStopButton" xml:space="preserve">
+    <value>إيقاف وإغلاق</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="ExportedTitle" xml:space="preserve">
+    <value>تم تصدير ملف التعريف</value>
+  </data>
+  <data name="ExportedMessage" xml:space="preserve">
+    <value>استورده في تطبيق sing-box على هاتفك أو جهازك اللوحي.</value>
+  </data>
+  <data name="CopiedTitle" xml:space="preserve">
+    <value>تم النسخ</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>تم النسخ إلى الحافظة.</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>فشلت العملية</value>
+  </data>
+  <data name="ServiceUnresponsive" xml:space="preserve">
+    <value>خدمة الخلفية لا تستجيب.</value>
+  </data>
+  <data name="ServiceNotReady" xml:space="preserve">
+    <value>خدمة الخلفية غير جاهزة. انتظر قليلاً ثم أعد المحاولة، أو أعد تمكينها من الإعدادات.</value>
+  </data>
+  <data name="ServiceInstalledStatus" xml:space="preserve">
+    <value>مسجلة · بدء تلقائي · خدمة LocalSystem</value>
+  </data>
+  <data name="ServiceNotInstalledStatus" xml:space="preserve">
+    <value>معطلة. يتطلب تمكينها لأول مرة موافقة المسؤول، وسيتم تثبيتها ضمن Program Files.</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>غير معروف</value>
+  </data>
+  <data name="InternetStatusLine" xml:space="preserve">
+    <value>حالة الإنترنت: {0}</value>
+  </data>
+  <data name="CurrentSourceLine" xml:space="preserve">
+    <value>المصدر الحالي: {0}</value>
+  </data>
+  <data name="RunModeApp" xml:space="preserve">
+    <value>وضع التشغيل: التطبيق</value>
+  </data>
+  <data name="RunModeService" xml:space="preserve">
+    <value>وضع التشغيل: خدمة Windows</value>
+  </data>
+  <data name="Error_AccessHotspot" xml:space="preserve">
+    <value>تعذر الوصول إلى تكوين نقطة اتصال Windows.</value>
+  </data>
+  <data name="Error_AlreadyOn" xml:space="preserve">
+    <value>نقطة الاتصال قيد التشغيل بالفعل.</value>
+  </data>
+  <data name="Error_LocalAdapter" xml:space="preserve">
+    <value>محول الشبكة المحلي غير متوفر.</value>
+  </data>
+  <data name="Error_StartHotspot" xml:space="preserve">
+    <value>تعذر بدء نقطة الاتصال (رمز حالة Windows {0}). {1}</value>
+    <comment>{0} is a Windows status code; {1} is optional additional detail.</comment>
+  </data>
+  <data name="Error_StopHotspot" xml:space="preserve">
+    <value>تعذر إيقاف نقطة الاتصال (رمز حالة Windows {0}).</value>
+    <comment>{0} is a Windows status code.</comment>
+  </data>
+  <data name="Error_InvalidSsid" xml:space="preserve">
+    <value>اسم نقطة الاتصال غير صالح.</value>
+  </data>
+  <data name="Error_InvalidPassword" xml:space="preserve">
+    <value>كلمة مرور نقطة الاتصال غير صالحة.</value>
+  </data>
+  <data name="Error_StopBeforeConfigure" xml:space="preserve">
+    <value>أوقف نقطة الاتصال قبل تغيير اسمها أو كلمة مرورها.</value>
+  </data>
+  <data name="Error_InvalidMode" xml:space="preserve">
+    <value>وضع نقطة الاتصال المحدد غير صالح.</value>
+  </data>
+  <data name="Error_InvalidStartup" xml:space="preserve">
+    <value>إجراء بدء التشغيل غير صالح.</value>
+  </data>
+  <data name="Error_InvalidRequest" xml:space="preserve">
+    <value>طلب الخدمة غير صالح.</value>
+  </data>
+  <data name="Error_UnknownCommand" xml:space="preserve">
+    <value>أمر الخدمة غير معروف.</value>
+  </data>
+  <data name="Error_HelperMissing" xml:space="preserve">
+    <value>ملف مساعد الخدمة مفقود.</value>
+  </data>
+  <data name="Error_ElevationStart" xml:space="preserve">
+    <value>تعذر بدء طلب صلاحيات المسؤول.</value>
+  </data>
+  <data name="Error_AdminIncomplete" xml:space="preserve">
+    <value>لم يكتمل إعداد المسؤول.</value>
+  </data>
+  <data name="Error_RegisterService" xml:space="preserve">
+    <value>تعذر تسجيل خدمة Windows.</value>
+  </data>
+  <data name="Error_StartService" xml:space="preserve">
+    <value>تعذر بدء خدمة Windows.</value>
+  </data>
+  <data name="Error_StopService" xml:space="preserve">
+    <value>تعذر إيقاف خدمة Windows.</value>
+  </data>
+  <data name="Error_RemoveService" xml:space="preserve">
+    <value>تعذر إزالة خدمة Windows.</value>
+  </data>
+  <data name="Error_Firewall" xml:space="preserve">
+    <value>تعذر تكوين جدار الحماية.</value>
+  </data>
+</root>

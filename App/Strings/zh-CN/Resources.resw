@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>EasyHotspot</value>
+  </data>
+  <data name="NavHotspot" xml:space="preserve">
+    <value>热点</value>
+  </data>
+  <data name="NavProxy" xml:space="preserve">
+    <value>代理</value>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="PageHotspot" xml:space="preserve">
+    <value>热点</value>
+  </data>
+  <data name="PageProxy" xml:space="preserve">
+    <value>代理</value>
+  </data>
+  <data name="PageSettings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="ClientsLabel" xml:space="preserve">
+    <value>已连接设备</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>热点地址</value>
+  </data>
+  <data name="ModeLabel" xml:space="preserve">
+    <value>连接方式</value>
+  </data>
+  <data name="ModeOffline" xml:space="preserve">
+    <value>离线热点 — 无需 Internet</value>
+  </data>
+  <data name="ModeProxy" xml:space="preserve">
+    <value>代理热点 — 通过电脑转发</value>
+  </data>
+  <data name="ModeSharing" xml:space="preserve">
+    <value>普通共享 — 使用当前网络</value>
+  </data>
+  <data name="OfflineModeHelp" xml:space="preserve">
+    <value>即使无法连接 Internet，也可以连接附近的设备。</value>
+  </data>
+  <data name="HotspotName" xml:space="preserve">
+    <value>热点名称</value>
+  </data>
+  <data name="HotspotPassword" xml:space="preserve">
+    <value>热点密码</value>
+  </data>
+  <data name="ToggleOff" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="ToggleOn" xml:space="preserve">
+    <value>已启用</value>
+  </data>
+  <data name="StartHotspot" xml:space="preserve">
+    <value>开启热点</value>
+  </data>
+  <data name="StopHotspot" xml:space="preserve">
+    <value>关闭热点</value>
+  </data>
+  <data name="RefreshStatus" xml:space="preserve">
+    <value>刷新状态</value>
+  </data>
+  <data name="SaveHotspotInfo" xml:space="preserve">
+    <value>保存名称和密码</value>
+  </data>
+  <data name="DevicesHeading" xml:space="preserve">
+    <value>连接设备</value>
+  </data>
+  <data name="DiagnosticsHeading" xml:space="preserve">
+    <value>诊断信息</value>
+  </data>
+  <data name="StatusOn" xml:space="preserve">
+    <value>已开启</value>
+  </data>
+  <data name="StatusOff" xml:space="preserve">
+    <value>已关闭</value>
+  </data>
+  <data name="NoDevicesConnected" xml:space="preserve">
+    <value>暂无设备连接</value>
+  </data>
+  <data name="ProxyModeNoticeTitle" xml:space="preserve">
+    <value>代理热点</value>
+  </data>
+  <data name="ProxyModeNotice" xml:space="preserve">
+    <value>电脑可以转发 HTTP 和 SOCKS5 流量。请在已连接的设备上确认兼容性。</value>
+  </data>
+  <data name="ProxyComputerHeading" xml:space="preserve">
+    <value>电脑代理</value>
+  </data>
+  <data name="ProxyEndpointsHelp" xml:space="preserve">
+    <value>HTTP CONNECT 和 SOCKS5 · 仅监听热点地址</value>
+  </data>
+  <data name="CopyProxyAddress" xml:space="preserve">
+    <value>复制代理地址</value>
+  </data>
+  <data name="ConfigureFirewall" xml:space="preserve">
+    <value>配置防火墙</value>
+  </data>
+  <data name="PacHeading" xml:space="preserve">
+    <value>PAC 自动代理</value>
+  </data>
+  <data name="PacUrlHelp" xml:space="preserve">
+    <value>在支持 PAC 和系统代理设置的设备上使用此地址。</value>
+  </data>
+  <data name="CopyPacAddress" xml:space="preserve">
+    <value>复制 PAC 地址</value>
+  </data>
+  <data name="DhcpDiscoveryTitle" xml:space="preserve">
+    <value>DHCP 自动发现</value>
+  </data>
+  <data name="DhcpDiscoveryNote" xml:space="preserve">
+    <value>尚未配置 DHCP 选项 252。部分设备或应用可能忽略手动填写的 PAC 地址。</value>
+  </data>
+  <data name="MobileDevicesHeading" xml:space="preserve">
+    <value>手机和平板</value>
+  </data>
+  <data name="MobileDevicesHelp" xml:space="preserve">
+    <value>如需转发 TCP 和 UDP 流量，请在 Android、iPhone 或 iPad 上导入 sing-box 配置。</value>
+  </data>
+  <data name="ExportMobileProfile" xml:space="preserve">
+    <value>导出移动设备配置</value>
+  </data>
+  <data name="JsonProfile" xml:space="preserve">
+    <value>JSON 配置</value>
+  </data>
+  <data name="StartupHeading" xml:space="preserve">
+    <value>高优先级开机启动</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>通过 Windows 服务实现高优先级开机自启，可能被安全软件拦截。</value>
+  </data>
+  <data name="StartupActionHeading" xml:space="preserve">
+    <value>服务启动后执行</value>
+  </data>
+  <data name="StartupActionHelp" xml:space="preserve">
+    <value>默认只在后台运行服务，不会启动热点。</value>
+  </data>
+  <data name="StartupNone" xml:space="preserve">
+    <value>仅加载后台服务</value>
+  </data>
+  <data name="StartupOffline" xml:space="preserve">
+    <value>自动开启离线热点</value>
+  </data>
+  <data name="StartupProxy" xml:space="preserve">
+    <value>自动开启代理热点</value>
+  </data>
+  <data name="LanguageHeading" xml:space="preserve">
+    <value>应用语言</value>
+  </data>
+  <data name="LanguageHelp" xml:space="preserve">
+    <value>重启 EasyHotspot 以应用所选语言。</value>
+  </data>
+  <data name="LanguageSavedTitle" xml:space="preserve">
+    <value>语言已保存</value>
+  </data>
+  <data name="LanguageSavedMessage" xml:space="preserve">
+    <value>重启 EasyHotspot 以应用所选语言。</value>
+  </data>
+  <data name="StartupConflict" xml:space="preserve">
+    <value>请先停止本地代理，再更改服务启动设置。</value>
+  </data>
+  <data name="StartupUpdatedTitle" xml:space="preserve">
+    <value>启动设置已更新</value>
+  </data>
+  <data name="StartupEnabledMessage" xml:space="preserve">
+    <value>已注册 Windows 服务以实现自动启动。默认只加载后台，不会启动热点。</value>
+  </data>
+  <data name="StartupDisabledMessage" xml:space="preserve">
+    <value>已移除高优先级启动服务。</value>
+  </data>
+  <data name="ConfirmStopTitle" xml:space="preserve">
+    <value>停止本地代理并关闭？</value>
+  </data>
+  <data name="ConfirmStopContent" xml:space="preserve">
+    <value>代理正在应用内运行。关闭窗口后，可由后台服务管理热点。</value>
+  </data>
+  <data name="ConfirmStopButton" xml:space="preserve">
+    <value>停止并关闭</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="ExportedTitle" xml:space="preserve">
+    <value>配置已导出</value>
+  </data>
+  <data name="ExportedMessage" xml:space="preserve">
+    <value>请在手机或平板的 sing-box 应用中导入。</value>
+  </data>
+  <data name="CopiedTitle" xml:space="preserve">
+    <value>已复制</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>内容已复制到剪贴板。</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>操作未完成</value>
+  </data>
+  <data name="ServiceUnresponsive" xml:space="preserve">
+    <value>后台服务没有响应。</value>
+  </data>
+  <data name="ServiceNotReady" xml:space="preserve">
+    <value>后台服务尚未就绪。请稍后重试，或在“设置”中重新启用服务。</value>
+  </data>
+  <data name="ServiceInstalledStatus" xml:space="preserve">
+    <value>已注册 · 自动启动 · LocalSystem 后台服务</value>
+  </data>
+  <data name="ServiceNotInstalledStatus" xml:space="preserve">
+    <value>未启用。首次启用需要管理员确认，并会安装到 Program Files。</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="InternetStatusLine" xml:space="preserve">
+    <value>Internet 状态：{0}</value>
+  </data>
+  <data name="CurrentSourceLine" xml:space="preserve">
+    <value>当前入口：{0}</value>
+  </data>
+  <data name="RunModeApp" xml:space="preserve">
+    <value>运行方式：应用内</value>
+  </data>
+  <data name="RunModeService" xml:space="preserve">
+    <value>运行方式：Windows 后台服务</value>
+  </data>
+  <data name="Error_AccessHotspot" xml:space="preserve">
+    <value>无法访问 Windows 热点配置。</value>
+  </data>
+  <data name="Error_AlreadyOn" xml:space="preserve">
+    <value>热点已在运行。</value>
+  </data>
+  <data name="Error_LocalAdapter" xml:space="preserve">
+    <value>本地网络适配器不可用。</value>
+  </data>
+  <data name="Error_StartHotspot" xml:space="preserve">
+    <value>无法启动热点（Windows 状态码 {0}）。{1}</value>
+    <comment>{0} 是 Windows 状态码；{1} 是可选的补充说明。</comment>
+  </data>
+  <data name="Error_StopHotspot" xml:space="preserve">
+    <value>无法停止热点（Windows 状态码 {0}）。</value>
+    <comment>{0} 是 Windows 状态码。</comment>
+  </data>
+  <data name="Error_InvalidSsid" xml:space="preserve">
+    <value>热点名称无效。</value>
+  </data>
+  <data name="Error_InvalidPassword" xml:space="preserve">
+    <value>热点密码无效。</value>
+  </data>
+  <data name="Error_StopBeforeConfigure" xml:space="preserve">
+    <value>请先停止热点，再更改名称或密码。</value>
+  </data>
+  <data name="Error_InvalidMode" xml:space="preserve">
+    <value>所选热点模式无效。</value>
+  </data>
+  <data name="Error_InvalidStartup" xml:space="preserve">
+    <value>启动操作无效。</value>
+  </data>
+  <data name="Error_InvalidRequest" xml:space="preserve">
+    <value>服务请求无效。</value>
+  </data>
+  <data name="Error_UnknownCommand" xml:space="preserve">
+    <value>未知的服务命令。</value>
+  </data>
+  <data name="Error_HelperMissing" xml:space="preserve">
+    <value>服务辅助程序缺失。</value>
+  </data>
+  <data name="Error_ElevationStart" xml:space="preserve">
+    <value>无法启动管理员权限提示。</value>
+  </data>
+  <data name="Error_AdminIncomplete" xml:space="preserve">
+    <value>管理员配置未完成。</value>
+  </data>
+  <data name="Error_RegisterService" xml:space="preserve">
+    <value>无法注册 Windows 服务。</value>
+  </data>
+  <data name="Error_StartService" xml:space="preserve">
+    <value>无法启动 Windows 服务。</value>
+  </data>
+  <data name="Error_StopService" xml:space="preserve">
+    <value>无法停止 Windows 服务。</value>
+  </data>
+  <data name="Error_RemoveService" xml:space="preserve">
+    <value>无法移除 Windows 服务。</value>
+  </data>
+  <data name="Error_Firewall" xml:space="preserve">
+    <value>无法配置防火墙。</value>
+  </data>
+</root>

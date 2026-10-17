@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>EasyHotspot</value>
+  </data>
+  <data name="NavHotspot" xml:space="preserve">
+    <value>Hotspot</value>
+  </data>
+  <data name="NavProxy" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>Pengaturan</value>
+  </data>
+  <data name="PageHotspot" xml:space="preserve">
+    <value>Hotspot</value>
+  </data>
+  <data name="PageProxy" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="PageSettings" xml:space="preserve">
+    <value>Pengaturan</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ClientsLabel" xml:space="preserve">
+    <value>Perangkat terhubung</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>Alamat hotspot</value>
+  </data>
+  <data name="ModeLabel" xml:space="preserve">
+    <value>Mode koneksi</value>
+  </data>
+  <data name="ModeOffline" xml:space="preserve">
+    <value>Hotspot offline — tidak perlu internet</value>
+  </data>
+  <data name="ModeProxy" xml:space="preserve">
+    <value>Hotspot proxy — berbagi melalui PC ini</value>
+  </data>
+  <data name="ModeSharing" xml:space="preserve">
+    <value>Berbagi standar — gunakan jaringan saat ini</value>
+  </data>
+  <data name="OfflineModeHelp" xml:space="preserve">
+    <value>Hubungkan perangkat di sekitar meskipun internet tidak tersedia.</value>
+  </data>
+  <data name="HotspotName" xml:space="preserve">
+    <value>Nama hotspot</value>
+  </data>
+  <data name="HotspotPassword" xml:space="preserve">
+    <value>Kata sandi hotspot</value>
+  </data>
+  <data name="ToggleOff" xml:space="preserve">
+    <value>Mati</value>
+  </data>
+  <data name="ToggleOn" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="StartHotspot" xml:space="preserve">
+    <value>Mulai hotspot</value>
+  </data>
+  <data name="StopHotspot" xml:space="preserve">
+    <value>Hentikan hotspot</value>
+  </data>
+  <data name="RefreshStatus" xml:space="preserve">
+    <value>Segarkan status</value>
+  </data>
+  <data name="SaveHotspotInfo" xml:space="preserve">
+    <value>Simpan nama dan kata sandi</value>
+  </data>
+  <data name="DevicesHeading" xml:space="preserve">
+    <value>Perangkat terhubung</value>
+  </data>
+  <data name="DiagnosticsHeading" xml:space="preserve">
+    <value>Diagnostik</value>
+  </data>
+  <data name="StatusOn" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="StatusOff" xml:space="preserve">
+    <value>Mati</value>
+  </data>
+  <data name="NoDevicesConnected" xml:space="preserve">
+    <value>Tidak ada perangkat yang terhubung</value>
+  </data>
+  <data name="ProxyModeNoticeTitle" xml:space="preserve">
+    <value>Hotspot proxy</value>
+  </data>
+  <data name="ProxyModeNotice" xml:space="preserve">
+    <value>PC dapat meneruskan lalu lintas HTTP dan SOCKS5. Periksa kompatibilitas pada perangkat yang terhubung.</value>
+  </data>
+  <data name="ProxyComputerHeading" xml:space="preserve">
+    <value>Proxy PC</value>
+  </data>
+  <data name="ProxyEndpointsHelp" xml:space="preserve">
+    <value>HTTP CONNECT dan SOCKS5 · Mendengarkan di alamat hotspot</value>
+  </data>
+  <data name="CopyProxyAddress" xml:space="preserve">
+    <value>Salin alamat proxy</value>
+  </data>
+  <data name="ConfigureFirewall" xml:space="preserve">
+    <value>Konfigurasikan firewall</value>
+  </data>
+  <data name="PacHeading" xml:space="preserve">
+    <value>Proxy otomatis PAC</value>
+  </data>
+  <data name="PacUrlHelp" xml:space="preserve">
+    <value>Gunakan alamat ini pada perangkat yang mendukung PAC dan pengaturan proxy sistem.</value>
+  </data>
+  <data name="CopyPacAddress" xml:space="preserve">
+    <value>Salin alamat PAC</value>
+  </data>
+  <data name="DhcpDiscoveryTitle" xml:space="preserve">
+    <value>Penemuan otomatis DHCP</value>
+  </data>
+  <data name="DhcpDiscoveryNote" xml:space="preserve">
+    <value>Opsi DHCP 252 belum dikonfigurasi. Beberapa perangkat atau aplikasi mungkin mengabaikan alamat PAC yang dimasukkan secara manual.</value>
+  </data>
+  <data name="MobileDevicesHeading" xml:space="preserve">
+    <value>Ponsel dan tablet</value>
+  </data>
+  <data name="MobileDevicesHelp" xml:space="preserve">
+    <value>Untuk merutekan lalu lintas TCP dan UDP, impor profil sing-box di Android, iPhone, atau iPad.</value>
+  </data>
+  <data name="ExportMobileProfile" xml:space="preserve">
+    <value>Ekspor profil seluler</value>
+  </data>
+  <data name="JsonProfile" xml:space="preserve">
+    <value>Profil JSON</value>
+  </data>
+  <data name="StartupHeading" xml:space="preserve">
+    <value>Startup prioritas tinggi</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>Memulai layanan Windows berprioritas tinggi saat boot. Perangkat lunak keamanan mungkin memblokirnya.</value>
+  </data>
+  <data name="StartupActionHeading" xml:space="preserve">
+    <value>Saat layanan dimulai</value>
+  </data>
+  <data name="StartupActionHelp" xml:space="preserve">
+    <value>Secara default, layanan berjalan di latar belakang tanpa memulai hotspot.</value>
+  </data>
+  <data name="StartupNone" xml:space="preserve">
+    <value>Muat layanan latar belakang saja</value>
+  </data>
+  <data name="StartupOffline" xml:space="preserve">
+    <value>Mulai hotspot offline</value>
+  </data>
+  <data name="StartupProxy" xml:space="preserve">
+    <value>Mulai hotspot proxy</value>
+  </data>
+  <data name="LanguageHeading" xml:space="preserve">
+    <value>Bahasa aplikasi</value>
+  </data>
+  <data name="LanguageHelp" xml:space="preserve">
+    <value>Mulai ulang EasyHotspot untuk menerapkan bahasa yang dipilih.</value>
+  </data>
+  <data name="LanguageSavedTitle" xml:space="preserve">
+    <value>Bahasa disimpan</value>
+  </data>
+  <data name="LanguageSavedMessage" xml:space="preserve">
+    <value>Mulai ulang EasyHotspot untuk menerapkan bahasa yang dipilih.</value>
+  </data>
+  <data name="StartupConflict" xml:space="preserve">
+    <value>Hentikan proxy lokal sebelum mengubah pengaturan startup layanan.</value>
+  </data>
+  <data name="StartupUpdatedTitle" xml:space="preserve">
+    <value>Pengaturan startup diperbarui</value>
+  </data>
+  <data name="StartupEnabledMessage" xml:space="preserve">
+    <value>Layanan Windows telah didaftarkan untuk mulai otomatis. Secara default, layanan hanya dimuat di latar belakang tanpa memulai hotspot.</value>
+  </data>
+  <data name="StartupDisabledMessage" xml:space="preserve">
+    <value>Layanan startup prioritas tinggi telah dihapus.</value>
+  </data>
+  <data name="ConfirmStopTitle" xml:space="preserve">
+    <value>Hentikan proxy lokal dan tutup?</value>
+  </data>
+  <data name="ConfirmStopContent" xml:space="preserve">
+    <value>Proxy berjalan di aplikasi ini. Layanan latar belakang dapat mengelola hotspot setelah jendela ditutup.</value>
+  </data>
+  <data name="ConfirmStopButton" xml:space="preserve">
+    <value>Hentikan dan tutup</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="ExportedTitle" xml:space="preserve">
+    <value>Profil diekspor</value>
+  </data>
+  <data name="ExportedMessage" xml:space="preserve">
+    <value>Impor di aplikasi sing-box pada ponsel atau tablet Anda.</value>
+  </data>
+  <data name="CopiedTitle" xml:space="preserve">
+    <value>Disalin</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>Disalin ke clipboard.</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>Operasi gagal</value>
+  </data>
+  <data name="ServiceUnresponsive" xml:space="preserve">
+    <value>Layanan latar belakang tidak merespons.</value>
+  </data>
+  <data name="ServiceNotReady" xml:space="preserve">
+    <value>Layanan latar belakang belum siap. Tunggu sebentar lalu coba lagi, atau aktifkan kembali layanan di Pengaturan.</value>
+  </data>
+  <data name="ServiceInstalledStatus" xml:space="preserve">
+    <value>Terdaftar · mulai otomatis · layanan LocalSystem</value>
+  </data>
+  <data name="ServiceNotInstalledStatus" xml:space="preserve">
+    <value>Dinonaktifkan. Pengaktifan pertama memerlukan persetujuan administrator dan akan memasang layanan di Program Files.</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Tidak diketahui</value>
+  </data>
+  <data name="InternetStatusLine" xml:space="preserve">
+    <value>Status internet: {0}</value>
+  </data>
+  <data name="CurrentSourceLine" xml:space="preserve">
+    <value>Sumber saat ini: {0}</value>
+  </data>
+  <data name="RunModeApp" xml:space="preserve">
+    <value>Mode berjalan: aplikasi</value>
+  </data>
+  <data name="RunModeService" xml:space="preserve">
+    <value>Mode berjalan: layanan Windows</value>
+  </data>
+  <data name="Error_AccessHotspot" xml:space="preserve">
+    <value>Tidak dapat mengakses konfigurasi hotspot Windows.</value>
+  </data>
+  <data name="Error_AlreadyOn" xml:space="preserve">
+    <value>Hotspot sudah berjalan.</value>
+  </data>
+  <data name="Error_LocalAdapter" xml:space="preserve">
+    <value>Adaptor jaringan lokal tidak tersedia.</value>
+  </data>
+  <data name="Error_StartHotspot" xml:space="preserve">
+    <value>Tidak dapat memulai hotspot (kode status Windows {0}). {1}</value>
+    <comment>{0} is a Windows status code; {1} is optional additional detail.</comment>
+  </data>
+  <data name="Error_StopHotspot" xml:space="preserve">
+    <value>Tidak dapat menghentikan hotspot (kode status Windows {0}).</value>
+    <comment>{0} is a Windows status code.</comment>
+  </data>
+  <data name="Error_InvalidSsid" xml:space="preserve">
+    <value>Nama hotspot tidak valid.</value>
+  </data>
+  <data name="Error_InvalidPassword" xml:space="preserve">
+    <value>Kata sandi hotspot tidak valid.</value>
+  </data>
+  <data name="Error_StopBeforeConfigure" xml:space="preserve">
+    <value>Hentikan hotspot sebelum mengubah nama atau kata sandinya.</value>
+  </data>
+  <data name="Error_InvalidMode" xml:space="preserve">
+    <value>Mode hotspot yang dipilih tidak valid.</value>
+  </data>
+  <data name="Error_InvalidStartup" xml:space="preserve">
+    <value>Tindakan startup tidak valid.</value>
+  </data>
+  <data name="Error_InvalidRequest" xml:space="preserve">
+    <value>Permintaan layanan tidak valid.</value>
+  </data>
+  <data name="Error_UnknownCommand" xml:space="preserve">
+    <value>Perintah layanan tidak diketahui.</value>
+  </data>
+  <data name="Error_HelperMissing" xml:space="preserve">
+    <value>Pembantu layanan tidak tersedia.</value>
+  </data>
+  <data name="Error_ElevationStart" xml:space="preserve">
+    <value>Tidak dapat memulai permintaan izin administrator.</value>
+  </data>
+  <data name="Error_AdminIncomplete" xml:space="preserve">
+    <value>Penyiapan administrator tidak selesai.</value>
+  </data>
+  <data name="Error_RegisterService" xml:space="preserve">
+    <value>Tidak dapat mendaftarkan layanan Windows.</value>
+  </data>
+  <data name="Error_StartService" xml:space="preserve">
+    <value>Tidak dapat memulai layanan Windows.</value>
+  </data>
+  <data name="Error_StopService" xml:space="preserve">
+    <value>Tidak dapat menghentikan layanan Windows.</value>
+  </data>
+  <data name="Error_RemoveService" xml:space="preserve">
+    <value>Tidak dapat menghapus layanan Windows.</value>
+  </data>
+  <data name="Error_Firewall" xml:space="preserve">
+    <value>Tidak dapat mengonfigurasi firewall.</value>
+  </data>
+</root>

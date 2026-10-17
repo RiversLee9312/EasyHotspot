@@ -1,0 +1,42 @@
+{
+  "log": { "level": "warn" },
+  "dns": {
+    "servers": [
+      {
+        "type": "https",
+        "tag": "dns-through-pc",
+        "server": "223.5.5.5",
+        "path": "/dns-query",
+        "detour": "pc-relay"
+      }
+    ],
+    "final": "dns-through-pc",
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "device-tun",
+      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
+      "mtu": 1400,
+      "auto_route": true,
+      "strict_route": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "socks",
+      "tag": "pc-relay",
+      "server": "192.168.137.1",
+      "server_port": 18877,
+      "version": "5"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "rules": [
+      { "port": 53, "action": "hijack-dns" }
+    ],
+    "final": "pc-relay"
+  }
+}

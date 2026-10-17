@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>EasyHotspot</value>
+  </data>
+  <data name="NavHotspot" xml:space="preserve">
+    <value>Tukiasema</value>
+  </data>
+  <data name="NavProxy" xml:space="preserve">
+    <value>Välityspalvelin</value>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>Asetukset</value>
+  </data>
+  <data name="PageHotspot" xml:space="preserve">
+    <value>Tukiasema</value>
+  </data>
+  <data name="PageProxy" xml:space="preserve">
+    <value>Välityspalvelin</value>
+  </data>
+  <data name="PageSettings" xml:space="preserve">
+    <value>Asetukset</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>Tila</value>
+  </data>
+  <data name="ClientsLabel" xml:space="preserve">
+    <value>Yhdistetyt laitteet</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>Tukiaseman osoite</value>
+  </data>
+  <data name="ModeLabel" xml:space="preserve">
+    <value>Yhteystila</value>
+  </data>
+  <data name="ModeOffline" xml:space="preserve">
+    <value>Yhteydetön tukiasema — internetiä ei tarvita</value>
+  </data>
+  <data name="ModeProxy" xml:space="preserve">
+    <value>Välityspalvelintukiasema — jaa tämän tietokoneen kautta</value>
+  </data>
+  <data name="ModeSharing" xml:space="preserve">
+    <value>Tavallinen jakaminen — käytä nykyistä verkkoa</value>
+  </data>
+  <data name="OfflineModeHelp" xml:space="preserve">
+    <value>Yhdistä lähellä olevia laitteita, vaikka internetyhteyttä ei olisi.</value>
+  </data>
+  <data name="HotspotName" xml:space="preserve">
+    <value>Tukiaseman nimi</value>
+  </data>
+  <data name="HotspotPassword" xml:space="preserve">
+    <value>Tukiaseman salasana</value>
+  </data>
+  <data name="ToggleOff" xml:space="preserve">
+    <value>Pois</value>
+  </data>
+  <data name="ToggleOn" xml:space="preserve">
+    <value>Päällä</value>
+  </data>
+  <data name="StartHotspot" xml:space="preserve">
+    <value>Käynnistä tukiasema</value>
+  </data>
+  <data name="StopHotspot" xml:space="preserve">
+    <value>Pysäytä tukiasema</value>
+  </data>
+  <data name="RefreshStatus" xml:space="preserve">
+    <value>Päivitä tila</value>
+  </data>
+  <data name="SaveHotspotInfo" xml:space="preserve">
+    <value>Tallenna nimi ja salasana</value>
+  </data>
+  <data name="DevicesHeading" xml:space="preserve">
+    <value>Yhdistetyt laitteet</value>
+  </data>
+  <data name="DiagnosticsHeading" xml:space="preserve">
+    <value>Vianmääritys</value>
+  </data>
+  <data name="StatusOn" xml:space="preserve">
+    <value>Päällä</value>
+  </data>
+  <data name="StatusOff" xml:space="preserve">
+    <value>Pois</value>
+  </data>
+  <data name="NoDevicesConnected" xml:space="preserve">
+    <value>Ei yhdistettyjä laitteita</value>
+  </data>
+  <data name="ProxyModeNoticeTitle" xml:space="preserve">
+    <value>Välityspalvelintukiasema</value>
+  </data>
+  <data name="ProxyModeNotice" xml:space="preserve">
+    <value>Tietokone voi välittää HTTP- ja SOCKS5-liikennettä. Tarkista yhteensopivuus yhdistetyllä laitteella.</value>
+  </data>
+  <data name="ProxyComputerHeading" xml:space="preserve">
+    <value>Tietokoneen välityspalvelin</value>
+  </data>
+  <data name="ProxyEndpointsHelp" xml:space="preserve">
+    <value>HTTP CONNECT ja SOCKS5 · Kuuntelee tukiaseman osoitteessa</value>
+  </data>
+  <data name="CopyProxyAddress" xml:space="preserve">
+    <value>Kopioi välityspalvelimen osoite</value>
+  </data>
+  <data name="ConfigureFirewall" xml:space="preserve">
+    <value>Määritä palomuuri</value>
+  </data>
+  <data name="PacHeading" xml:space="preserve">
+    <value>PAC-automaattivälityspalvelin</value>
+  </data>
+  <data name="PacUrlHelp" xml:space="preserve">
+    <value>Käytä tätä osoitetta laitteissa, jotka tukevat PAC-määrityksiä ja järjestelmän välityspalvelinasetuksia.</value>
+  </data>
+  <data name="CopyPacAddress" xml:space="preserve">
+    <value>Kopioi PAC-osoite</value>
+  </data>
+  <data name="DhcpDiscoveryTitle" xml:space="preserve">
+    <value>DHCP:n automaattinen etsintä</value>
+  </data>
+  <data name="DhcpDiscoveryNote" xml:space="preserve">
+    <value>DHCP-asetusta 252 ei ole määritetty. Jotkin laitteet tai sovellukset voivat sivuuttaa manuaalisen PAC-osoitteen.</value>
+  </data>
+  <data name="MobileDevicesHeading" xml:space="preserve">
+    <value>Puhelimet ja tabletit</value>
+  </data>
+  <data name="MobileDevicesHelp" xml:space="preserve">
+    <value>Reititä TCP- ja UDP-liikenne tuomalla sing-box-profiili Androidiin, iPhoneen tai iPadiin.</value>
+  </data>
+  <data name="ExportMobileProfile" xml:space="preserve">
+    <value>Vie mobiiliprofiili</value>
+  </data>
+  <data name="JsonProfile" xml:space="preserve">
+    <value>JSON-profiili</value>
+  </data>
+  <data name="StartupHeading" xml:space="preserve">
+    <value>Korkean prioriteetin käynnistys</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>Käynnistää korkean prioriteetin Windows-palvelun järjestelmän käynnistyessä. Tietoturvaohjelmisto voi estää sen.</value>
+  </data>
+  <data name="StartupActionHeading" xml:space="preserve">
+    <value>Palvelun käynnistyessä</value>
+  </data>
+  <data name="StartupActionHelp" xml:space="preserve">
+    <value>Oletusarvoisesti palvelu toimii taustalla käynnistämättä tukiasemaa.</value>
+  </data>
+  <data name="StartupNone" xml:space="preserve">
+    <value>Lataa vain taustapalvelu</value>
+  </data>
+  <data name="StartupOffline" xml:space="preserve">
+    <value>Käynnistä yhteydetön tukiasema</value>
+  </data>
+  <data name="StartupProxy" xml:space="preserve">
+    <value>Käynnistä välityspalvelintukiasema</value>
+  </data>
+  <data name="LanguageHeading" xml:space="preserve">
+    <value>Sovelluksen kieli</value>
+  </data>
+  <data name="LanguageHelp" xml:space="preserve">
+    <value>Käynnistä EasyHotspot uudelleen, jotta valittu kieli otetaan käyttöön.</value>
+  </data>
+  <data name="LanguageSavedTitle" xml:space="preserve">
+    <value>Kieli tallennettu</value>
+  </data>
+  <data name="LanguageSavedMessage" xml:space="preserve">
+    <value>Käynnistä EasyHotspot uudelleen, jotta valittu kieli otetaan käyttöön.</value>
+  </data>
+  <data name="StartupConflict" xml:space="preserve">
+    <value>Pysäytä paikallinen välityspalvelin ennen palvelun käynnistysasetuksen muuttamista.</value>
+  </data>
+  <data name="StartupUpdatedTitle" xml:space="preserve">
+    <value>Käynnistysasetus päivitetty</value>
+  </data>
+  <data name="StartupEnabledMessage" xml:space="preserve">
+    <value>Windows-palvelu on rekisteröity käynnistymään automaattisesti. Oletusarvoisesti se lataa vain taustapalvelun eikä käynnistä tukiasemaa.</value>
+  </data>
+  <data name="StartupDisabledMessage" xml:space="preserve">
+    <value>Korkean prioriteetin käynnistyspalvelu poistettiin.</value>
+  </data>
+  <data name="ConfirmStopTitle" xml:space="preserve">
+    <value>Pysäytetäänkö paikallinen välityspalvelin ja suljetaanko sovellus?</value>
+  </data>
+  <data name="ConfirmStopContent" xml:space="preserve">
+    <value>Välityspalvelin toimii tässä sovelluksessa. Taustapalvelu voi hallita tukiasemaa ikkunan sulkemisen jälkeen.</value>
+  </data>
+  <data name="ConfirmStopButton" xml:space="preserve">
+    <value>Pysäytä ja sulje</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Peruuta</value>
+  </data>
+  <data name="ExportedTitle" xml:space="preserve">
+    <value>Profiili vietiin</value>
+  </data>
+  <data name="ExportedMessage" xml:space="preserve">
+    <value>Tuo se puhelimen tai tabletin sing-box-sovellukseen.</value>
+  </data>
+  <data name="CopiedTitle" xml:space="preserve">
+    <value>Kopioitu</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>Kopioitu leikepöydälle.</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>Toiminto epäonnistui</value>
+  </data>
+  <data name="ServiceUnresponsive" xml:space="preserve">
+    <value>Taustapalvelu ei vastaa.</value>
+  </data>
+  <data name="ServiceNotReady" xml:space="preserve">
+    <value>Taustapalvelu ei ole valmis. Odota hetki ja yritä uudelleen tai ota palvelu uudelleen käyttöön Asetuksissa.</value>
+  </data>
+  <data name="ServiceInstalledStatus" xml:space="preserve">
+    <value>Rekisteröity · automaattinen käynnistys · LocalSystem-palvelu</value>
+  </data>
+  <data name="ServiceNotInstalledStatus" xml:space="preserve">
+    <value>Ei käytössä. Käyttöönotto ensimmäistä kertaa edellyttää järjestelmänvalvojan hyväksyntää ja asentaa palvelun Program Files -kansioon.</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Tuntematon</value>
+  </data>
+  <data name="InternetStatusLine" xml:space="preserve">
+    <value>Internetin tila: {0}</value>
+  </data>
+  <data name="CurrentSourceLine" xml:space="preserve">
+    <value>Nykyinen lähde: {0}</value>
+  </data>
+  <data name="RunModeApp" xml:space="preserve">
+    <value>Suoritustila: sovellus</value>
+  </data>
+  <data name="RunModeService" xml:space="preserve">
+    <value>Suoritustila: Windows-palvelu</value>
+  </data>
+  <data name="Error_AccessHotspot" xml:space="preserve">
+    <value>Windowsin tukiasemamääritystä ei voitu käyttää.</value>
+  </data>
+  <data name="Error_AlreadyOn" xml:space="preserve">
+    <value>Tukiasema on jo käynnissä.</value>
+  </data>
+  <data name="Error_LocalAdapter" xml:space="preserve">
+    <value>Paikallinen verkkosovitin ei ole käytettävissä.</value>
+  </data>
+  <data name="Error_StartHotspot" xml:space="preserve">
+    <value>Tukiaseman käynnistys epäonnistui (Windowsin tilakoodi {0}). {1}</value>
+    <comment>{0} is a Windows status code; {1} is optional additional detail.</comment>
+  </data>
+  <data name="Error_StopHotspot" xml:space="preserve">
+    <value>Tukiaseman pysäytys epäonnistui (Windowsin tilakoodi {0}).</value>
+    <comment>{0} is a Windows status code.</comment>
+  </data>
+  <data name="Error_InvalidSsid" xml:space="preserve">
+    <value>Tukiaseman nimi ei kelpaa.</value>
+  </data>
+  <data name="Error_InvalidPassword" xml:space="preserve">
+    <value>Tukiaseman salasana ei kelpaa.</value>
+  </data>
+  <data name="Error_StopBeforeConfigure" xml:space="preserve">
+    <value>Pysäytä tukiasema ennen nimen tai salasanan muuttamista.</value>
+  </data>
+  <data name="Error_InvalidMode" xml:space="preserve">
+    <value>Valittu tukiasematila ei kelpaa.</value>
+  </data>
+  <data name="Error_InvalidStartup" xml:space="preserve">
+    <value>Käynnistystoiminto ei kelpaa.</value>
+  </data>
+  <data name="Error_InvalidRequest" xml:space="preserve">
+    <value>Palvelupyyntö ei kelpaa.</value>
+  </data>
+  <data name="Error_UnknownCommand" xml:space="preserve">
+    <value>Palvelukomentoa ei tunnisteta.</value>
+  </data>
+  <data name="Error_HelperMissing" xml:space="preserve">
+    <value>Palvelun apuohjelma puuttuu.</value>
+  </data>
+  <data name="Error_ElevationStart" xml:space="preserve">
+    <value>Järjestelmänvalvojan kehotetta ei voitu käynnistää.</value>
+  </data>
+  <data name="Error_AdminIncomplete" xml:space="preserve">
+    <value>Järjestelmänvalvojan määritys jäi kesken.</value>
+  </data>
+  <data name="Error_RegisterService" xml:space="preserve">
+    <value>Windows-palvelua ei voitu rekisteröidä.</value>
+  </data>
+  <data name="Error_StartService" xml:space="preserve">
+    <value>Windows-palvelua ei voitu käynnistää.</value>
+  </data>
+  <data name="Error_StopService" xml:space="preserve">
+    <value>Windows-palvelua ei voitu pysäyttää.</value>
+  </data>
+  <data name="Error_RemoveService" xml:space="preserve">
+    <value>Windows-palvelua ei voitu poistaa.</value>
+  </data>
+  <data name="Error_Firewall" xml:space="preserve">
+    <value>Palomuuria ei voitu määrittää.</value>
+  </data>
+</root>

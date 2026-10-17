@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>EasyHotspot</value>
+  </data>
+  <data name="NavHotspot" xml:space="preserve">
+    <value>Точка доступа</value>
+  </data>
+  <data name="NavProxy" xml:space="preserve">
+    <value>Прокси</value>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>Параметры</value>
+  </data>
+  <data name="PageHotspot" xml:space="preserve">
+    <value>Точка доступа</value>
+  </data>
+  <data name="PageProxy" xml:space="preserve">
+    <value>Прокси</value>
+  </data>
+  <data name="PageSettings" xml:space="preserve">
+    <value>Параметры</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>Состояние</value>
+  </data>
+  <data name="ClientsLabel" xml:space="preserve">
+    <value>Подключенные устройства</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>Адрес точки доступа</value>
+  </data>
+  <data name="ModeLabel" xml:space="preserve">
+    <value>Режим подключения</value>
+  </data>
+  <data name="ModeOffline" xml:space="preserve">
+    <value>Точка доступа без Интернета — подключение к Интернету не требуется</value>
+  </data>
+  <data name="ModeProxy" xml:space="preserve">
+    <value>Точка доступа с прокси — общий доступ через этот ПК</value>
+  </data>
+  <data name="ModeSharing" xml:space="preserve">
+    <value>Обычный общий доступ — использовать текущую сеть</value>
+  </data>
+  <data name="OfflineModeHelp" xml:space="preserve">
+    <value>Подключайте устройства поблизости, даже если Интернет недоступен.</value>
+  </data>
+  <data name="HotspotName" xml:space="preserve">
+    <value>Имя точки доступа</value>
+  </data>
+  <data name="HotspotPassword" xml:space="preserve">
+    <value>Пароль точки доступа</value>
+  </data>
+  <data name="ToggleOff" xml:space="preserve">
+    <value>Выключено</value>
+  </data>
+  <data name="ToggleOn" xml:space="preserve">
+    <value>Включено</value>
+  </data>
+  <data name="StartHotspot" xml:space="preserve">
+    <value>Запустить точку доступа</value>
+  </data>
+  <data name="StopHotspot" xml:space="preserve">
+    <value>Остановить точку доступа</value>
+  </data>
+  <data name="RefreshStatus" xml:space="preserve">
+    <value>Обновить состояние</value>
+  </data>
+  <data name="SaveHotspotInfo" xml:space="preserve">
+    <value>Сохранить имя и пароль</value>
+  </data>
+  <data name="DevicesHeading" xml:space="preserve">
+    <value>Подключенные устройства</value>
+  </data>
+  <data name="DiagnosticsHeading" xml:space="preserve">
+    <value>Диагностика</value>
+  </data>
+  <data name="StatusOn" xml:space="preserve">
+    <value>Включено</value>
+  </data>
+  <data name="StatusOff" xml:space="preserve">
+    <value>Выключено</value>
+  </data>
+  <data name="NoDevicesConnected" xml:space="preserve">
+    <value>Нет подключенных устройств</value>
+  </data>
+  <data name="ProxyModeNoticeTitle" xml:space="preserve">
+    <value>Точка доступа с прокси</value>
+  </data>
+  <data name="ProxyModeNotice" xml:space="preserve">
+    <value>ПК может пересылать трафик HTTP и SOCKS5. Проверьте совместимость на подключенном устройстве.</value>
+  </data>
+  <data name="ProxyComputerHeading" xml:space="preserve">
+    <value>Прокси на ПК</value>
+  </data>
+  <data name="ProxyEndpointsHelp" xml:space="preserve">
+    <value>HTTP CONNECT и SOCKS5 · Прослушивает адрес точки доступа</value>
+  </data>
+  <data name="CopyProxyAddress" xml:space="preserve">
+    <value>Копировать адрес прокси</value>
+  </data>
+  <data name="ConfigureFirewall" xml:space="preserve">
+    <value>Настроить брандмауэр</value>
+  </data>
+  <data name="PacHeading" xml:space="preserve">
+    <value>Автоматический прокси PAC</value>
+  </data>
+  <data name="PacUrlHelp" xml:space="preserve">
+    <value>Используйте этот адрес на устройствах, поддерживающих PAC и системные настройки прокси.</value>
+  </data>
+  <data name="CopyPacAddress" xml:space="preserve">
+    <value>Копировать адрес PAC</value>
+  </data>
+  <data name="DhcpDiscoveryTitle" xml:space="preserve">
+    <value>Автообнаружение DHCP</value>
+  </data>
+  <data name="DhcpDiscoveryNote" xml:space="preserve">
+    <value>Параметр DHCP 252 не настроен. Некоторые устройства или приложения могут игнорировать адрес PAC, заданный вручную.</value>
+  </data>
+  <data name="MobileDevicesHeading" xml:space="preserve">
+    <value>Телефоны и планшеты</value>
+  </data>
+  <data name="MobileDevicesHelp" xml:space="preserve">
+    <value>Для маршрутизации трафика TCP и UDP импортируйте профиль sing-box на Android, iPhone или iPad.</value>
+  </data>
+  <data name="ExportMobileProfile" xml:space="preserve">
+    <value>Экспортировать профиль для мобильного устройства</value>
+  </data>
+  <data name="JsonProfile" xml:space="preserve">
+    <value>Профиль JSON</value>
+  </data>
+  <data name="StartupHeading" xml:space="preserve">
+    <value>Запуск с высоким приоритетом</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>Запускает службу Windows с высоким приоритетом при старте системы. Защитное ПО может заблокировать ее.</value>
+  </data>
+  <data name="StartupActionHeading" xml:space="preserve">
+    <value>Действие при запуске службы</value>
+  </data>
+  <data name="StartupActionHelp" xml:space="preserve">
+    <value>По умолчанию служба работает в фоновом режиме, не запуская точку доступа.</value>
+  </data>
+  <data name="StartupNone" xml:space="preserve">
+    <value>Запускать только фоновую службу</value>
+  </data>
+  <data name="StartupOffline" xml:space="preserve">
+    <value>Запустить точку доступа без Интернета</value>
+  </data>
+  <data name="StartupProxy" xml:space="preserve">
+    <value>Запустить точку доступа с прокси</value>
+  </data>
+  <data name="LanguageHeading" xml:space="preserve">
+    <value>Язык приложения</value>
+  </data>
+  <data name="LanguageHelp" xml:space="preserve">
+    <value>Перезапустите EasyHotspot, чтобы применить выбранный язык.</value>
+  </data>
+  <data name="LanguageSavedTitle" xml:space="preserve">
+    <value>Язык сохранен</value>
+  </data>
+  <data name="LanguageSavedMessage" xml:space="preserve">
+    <value>Перезапустите EasyHotspot, чтобы применить выбранный язык.</value>
+  </data>
+  <data name="StartupConflict" xml:space="preserve">
+    <value>Остановите локальный прокси перед изменением параметра запуска службы.</value>
+  </data>
+  <data name="StartupUpdatedTitle" xml:space="preserve">
+    <value>Параметр запуска обновлен</value>
+  </data>
+  <data name="StartupEnabledMessage" xml:space="preserve">
+    <value>Служба Windows настроена на автоматический запуск. По умолчанию она загружается в фоновом режиме, не запуская точку доступа.</value>
+  </data>
+  <data name="StartupDisabledMessage" xml:space="preserve">
+    <value>Служба запуска с высоким приоритетом удалена.</value>
+  </data>
+  <data name="ConfirmStopTitle" xml:space="preserve">
+    <value>Остановить локальный прокси и закрыть приложение?</value>
+  </data>
+  <data name="ConfirmStopContent" xml:space="preserve">
+    <value>Прокси работает в приложении. Фоновая служба может управлять точкой доступа после закрытия окна.</value>
+  </data>
+  <data name="ConfirmStopButton" xml:space="preserve">
+    <value>Остановить и закрыть</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="ExportedTitle" xml:space="preserve">
+    <value>Профиль экспортирован</value>
+  </data>
+  <data name="ExportedMessage" xml:space="preserve">
+    <value>Импортируйте его в приложение sing-box на телефоне или планшете.</value>
+  </data>
+  <data name="CopiedTitle" xml:space="preserve">
+    <value>Скопировано</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>Скопировано в буфер обмена.</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>Не удалось выполнить операцию</value>
+  </data>
+  <data name="ServiceUnresponsive" xml:space="preserve">
+    <value>Фоновая служба не отвечает.</value>
+  </data>
+  <data name="ServiceNotReady" xml:space="preserve">
+    <value>Фоновая служба еще не готова. Подождите немного и повторите попытку либо включите ее снова в разделе Параметры.</value>
+  </data>
+  <data name="ServiceInstalledStatus" xml:space="preserve">
+    <value>Зарегистрирована · автоматический запуск · служба LocalSystem</value>
+  </data>
+  <data name="ServiceNotInstalledStatus" xml:space="preserve">
+    <value>Отключено. Для первого включения потребуется подтверждение администратора; служба будет установлена в Program Files.</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="InternetStatusLine" xml:space="preserve">
+    <value>Состояние Интернета: {0}</value>
+  </data>
+  <data name="CurrentSourceLine" xml:space="preserve">
+    <value>Текущий источник: {0}</value>
+  </data>
+  <data name="RunModeApp" xml:space="preserve">
+    <value>Режим работы: приложение</value>
+  </data>
+  <data name="RunModeService" xml:space="preserve">
+    <value>Режим работы: служба Windows</value>
+  </data>
+  <data name="Error_AccessHotspot" xml:space="preserve">
+    <value>Не удалось получить доступ к настройкам точки доступа Windows.</value>
+  </data>
+  <data name="Error_AlreadyOn" xml:space="preserve">
+    <value>Точка доступа уже запущена.</value>
+  </data>
+  <data name="Error_LocalAdapter" xml:space="preserve">
+    <value>Локальный сетевой адаптер недоступен.</value>
+  </data>
+  <data name="Error_StartHotspot" xml:space="preserve">
+    <value>Не удалось запустить точку доступа (код состояния Windows {0}). {1}</value>
+    <comment>{0} is a Windows status code; {1} is optional additional detail.</comment>
+  </data>
+  <data name="Error_StopHotspot" xml:space="preserve">
+    <value>Не удалось остановить точку доступа (код состояния Windows {0}).</value>
+    <comment>{0} is a Windows status code.</comment>
+  </data>
+  <data name="Error_InvalidSsid" xml:space="preserve">
+    <value>Недопустимое имя точки доступа.</value>
+  </data>
+  <data name="Error_InvalidPassword" xml:space="preserve">
+    <value>Недопустимый пароль точки доступа.</value>
+  </data>
+  <data name="Error_StopBeforeConfigure" xml:space="preserve">
+    <value>Остановите точку доступа перед изменением ее имени или пароля.</value>
+  </data>
+  <data name="Error_InvalidMode" xml:space="preserve">
+    <value>Выбран недопустимый режим точки доступа.</value>
+  </data>
+  <data name="Error_InvalidStartup" xml:space="preserve">
+    <value>Выбрано недопустимое действие при запуске.</value>
+  </data>
+  <data name="Error_InvalidRequest" xml:space="preserve">
+    <value>Недопустимый запрос к службе.</value>
+  </data>
+  <data name="Error_UnknownCommand" xml:space="preserve">
+    <value>Неизвестная команда службы.</value>
+  </data>
+  <data name="Error_HelperMissing" xml:space="preserve">
+    <value>Вспомогательный компонент службы отсутствует.</value>
+  </data>
+  <data name="Error_ElevationStart" xml:space="preserve">
+    <value>Не удалось открыть запрос на повышение прав администратора.</value>
+  </data>
+  <data name="Error_AdminIncomplete" xml:space="preserve">
+    <value>Настройка администратора не завершена.</value>
+  </data>
+  <data name="Error_RegisterService" xml:space="preserve">
+    <value>Не удалось зарегистрировать службу Windows.</value>
+  </data>
+  <data name="Error_StartService" xml:space="preserve">
+    <value>Не удалось запустить службу Windows.</value>
+  </data>
+  <data name="Error_StopService" xml:space="preserve">
+    <value>Не удалось остановить службу Windows.</value>
+  </data>
+  <data name="Error_RemoveService" xml:space="preserve">
+    <value>Не удалось удалить службу Windows.</value>
+  </data>
+  <data name="Error_Firewall" xml:space="preserve">
+    <value>Не удалось настроить брандмауэр.</value>
+  </data>
+</root>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>EasyHotspot</value>
+  </data>
+  <data name="NavHotspot" xml:space="preserve">
+    <value>Điểm phát sóng</value>
+  </data>
+  <data name="NavProxy" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="PageHotspot" xml:space="preserve">
+    <value>Điểm phát sóng</value>
+  </data>
+  <data name="PageProxy" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="PageSettings" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="ClientsLabel" xml:space="preserve">
+    <value>Thiết bị đã kết nối</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>Địa chỉ điểm phát sóng</value>
+  </data>
+  <data name="ModeLabel" xml:space="preserve">
+    <value>Chế độ kết nối</value>
+  </data>
+  <data name="ModeOffline" xml:space="preserve">
+    <value>Điểm phát sóng ngoại tuyến — không cần Internet</value>
+  </data>
+  <data name="ModeProxy" xml:space="preserve">
+    <value>Điểm phát sóng proxy — chia sẻ qua PC này</value>
+  </data>
+  <data name="ModeSharing" xml:space="preserve">
+    <value>Chia sẻ thông thường — dùng mạng hiện tại</value>
+  </data>
+  <data name="OfflineModeHelp" xml:space="preserve">
+    <value>Kết nối các thiết bị ở gần ngay cả khi không có Internet.</value>
+  </data>
+  <data name="HotspotName" xml:space="preserve">
+    <value>Tên điểm phát sóng</value>
+  </data>
+  <data name="HotspotPassword" xml:space="preserve">
+    <value>Mật khẩu điểm phát sóng</value>
+  </data>
+  <data name="ToggleOff" xml:space="preserve">
+    <value>Tắt</value>
+  </data>
+  <data name="ToggleOn" xml:space="preserve">
+    <value>Bật</value>
+  </data>
+  <data name="StartHotspot" xml:space="preserve">
+    <value>Bật điểm phát sóng</value>
+  </data>
+  <data name="StopHotspot" xml:space="preserve">
+    <value>Tắt điểm phát sóng</value>
+  </data>
+  <data name="RefreshStatus" xml:space="preserve">
+    <value>Làm mới trạng thái</value>
+  </data>
+  <data name="SaveHotspotInfo" xml:space="preserve">
+    <value>Lưu tên và mật khẩu</value>
+  </data>
+  <data name="DevicesHeading" xml:space="preserve">
+    <value>Thiết bị đã kết nối</value>
+  </data>
+  <data name="DiagnosticsHeading" xml:space="preserve">
+    <value>Chẩn đoán</value>
+  </data>
+  <data name="StatusOn" xml:space="preserve">
+    <value>Bật</value>
+  </data>
+  <data name="StatusOff" xml:space="preserve">
+    <value>Tắt</value>
+  </data>
+  <data name="NoDevicesConnected" xml:space="preserve">
+    <value>Chưa có thiết bị nào kết nối</value>
+  </data>
+  <data name="ProxyModeNoticeTitle" xml:space="preserve">
+    <value>Điểm phát sóng proxy</value>
+  </data>
+  <data name="ProxyModeNotice" xml:space="preserve">
+    <value>PC có thể chuyển tiếp lưu lượng HTTP và SOCKS5. Hãy kiểm tra khả năng tương thích trên thiết bị đã kết nối.</value>
+  </data>
+  <data name="ProxyComputerHeading" xml:space="preserve">
+    <value>Proxy trên PC</value>
+  </data>
+  <data name="ProxyEndpointsHelp" xml:space="preserve">
+    <value>HTTP CONNECT và SOCKS5 · Lắng nghe tại địa chỉ điểm phát sóng</value>
+  </data>
+  <data name="CopyProxyAddress" xml:space="preserve">
+    <value>Sao chép địa chỉ proxy</value>
+  </data>
+  <data name="ConfigureFirewall" xml:space="preserve">
+    <value>Cấu hình tường lửa</value>
+  </data>
+  <data name="PacHeading" xml:space="preserve">
+    <value>Proxy tự động PAC</value>
+  </data>
+  <data name="PacUrlHelp" xml:space="preserve">
+    <value>Dùng địa chỉ này trên các thiết bị hỗ trợ PAC và cài đặt proxy hệ thống.</value>
+  </data>
+  <data name="CopyPacAddress" xml:space="preserve">
+    <value>Sao chép địa chỉ PAC</value>
+  </data>
+  <data name="DhcpDiscoveryTitle" xml:space="preserve">
+    <value>Tự động phát hiện DHCP</value>
+  </data>
+  <data name="DhcpDiscoveryNote" xml:space="preserve">
+    <value>Chưa cấu hình tùy chọn DHCP 252. Một số thiết bị hoặc ứng dụng có thể bỏ qua địa chỉ PAC nhập thủ công.</value>
+  </data>
+  <data name="MobileDevicesHeading" xml:space="preserve">
+    <value>Điện thoại và máy tính bảng</value>
+  </data>
+  <data name="MobileDevicesHelp" xml:space="preserve">
+    <value>Để định tuyến lưu lượng TCP và UDP, hãy nhập cấu hình sing-box trên Android, iPhone hoặc iPad.</value>
+  </data>
+  <data name="ExportMobileProfile" xml:space="preserve">
+    <value>Xuất cấu hình di động</value>
+  </data>
+  <data name="JsonProfile" xml:space="preserve">
+    <value>Cấu hình JSON</value>
+  </data>
+  <data name="StartupHeading" xml:space="preserve">
+    <value>Khởi động ưu tiên cao</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>Khởi chạy dịch vụ Windows có độ ưu tiên cao khi khởi động máy. Phần mềm bảo mật có thể chặn dịch vụ này.</value>
+  </data>
+  <data name="StartupActionHeading" xml:space="preserve">
+    <value>Khi dịch vụ khởi chạy</value>
+  </data>
+  <data name="StartupActionHelp" xml:space="preserve">
+    <value>Theo mặc định, dịch vụ chạy nền mà không bật điểm phát sóng.</value>
+  </data>
+  <data name="StartupNone" xml:space="preserve">
+    <value>Chỉ tải dịch vụ nền</value>
+  </data>
+  <data name="StartupOffline" xml:space="preserve">
+    <value>Bật điểm phát sóng ngoại tuyến</value>
+  </data>
+  <data name="StartupProxy" xml:space="preserve">
+    <value>Bật điểm phát sóng proxy</value>
+  </data>
+  <data name="LanguageHeading" xml:space="preserve">
+    <value>Ngôn ngữ ứng dụng</value>
+  </data>
+  <data name="LanguageHelp" xml:space="preserve">
+    <value>Khởi động lại EasyHotspot để áp dụng ngôn ngữ đã chọn.</value>
+  </data>
+  <data name="LanguageSavedTitle" xml:space="preserve">
+    <value>Đã lưu ngôn ngữ</value>
+  </data>
+  <data name="LanguageSavedMessage" xml:space="preserve">
+    <value>Khởi động lại EasyHotspot để áp dụng ngôn ngữ đã chọn.</value>
+  </data>
+  <data name="StartupConflict" xml:space="preserve">
+    <value>Hãy dừng proxy cục bộ trước khi thay đổi cài đặt khởi động dịch vụ.</value>
+  </data>
+  <data name="StartupUpdatedTitle" xml:space="preserve">
+    <value>Đã cập nhật cài đặt khởi động</value>
+  </data>
+  <data name="StartupEnabledMessage" xml:space="preserve">
+    <value>Dịch vụ Windows đã được đăng ký để tự khởi chạy. Theo mặc định, dịch vụ chỉ tải nền và không bật điểm phát sóng.</value>
+  </data>
+  <data name="StartupDisabledMessage" xml:space="preserve">
+    <value>Đã gỡ dịch vụ khởi động ưu tiên cao.</value>
+  </data>
+  <data name="ConfirmStopTitle" xml:space="preserve">
+    <value>Dừng proxy cục bộ và đóng ứng dụng?</value>
+  </data>
+  <data name="ConfirmStopContent" xml:space="preserve">
+    <value>Proxy đang chạy trong ứng dụng này. Dịch vụ nền có thể quản lý điểm phát sóng sau khi đóng cửa sổ.</value>
+  </data>
+  <data name="ConfirmStopButton" xml:space="preserve">
+    <value>Dừng và đóng</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="ExportedTitle" xml:space="preserve">
+    <value>Đã xuất cấu hình</value>
+  </data>
+  <data name="ExportedMessage" xml:space="preserve">
+    <value>Nhập cấu hình vào ứng dụng sing-box trên điện thoại hoặc máy tính bảng.</value>
+  </data>
+  <data name="CopiedTitle" xml:space="preserve">
+    <value>Đã sao chép</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>Đã sao chép vào bảng nhớ tạm.</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>Thao tác thất bại</value>
+  </data>
+  <data name="ServiceUnresponsive" xml:space="preserve">
+    <value>Dịch vụ nền không phản hồi.</value>
+  </data>
+  <data name="ServiceNotReady" xml:space="preserve">
+    <value>Dịch vụ nền chưa sẵn sàng. Hãy đợi một lát rồi thử lại hoặc bật lại dịch vụ trong Cài đặt.</value>
+  </data>
+  <data name="ServiceInstalledStatus" xml:space="preserve">
+    <value>Đã đăng ký · tự khởi động · dịch vụ LocalSystem</value>
+  </data>
+  <data name="ServiceNotInstalledStatus" xml:space="preserve">
+    <value>Đã tắt. Lần đầu bật cần quản trị viên chấp thuận và sẽ cài dịch vụ vào Program Files.</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Không xác định</value>
+  </data>
+  <data name="InternetStatusLine" xml:space="preserve">
+    <value>Trạng thái Internet: {0}</value>
+  </data>
+  <data name="CurrentSourceLine" xml:space="preserve">
+    <value>Nguồn hiện tại: {0}</value>
+  </data>
+  <data name="RunModeApp" xml:space="preserve">
+    <value>Chế độ chạy: ứng dụng</value>
+  </data>
+  <data name="RunModeService" xml:space="preserve">
+    <value>Chế độ chạy: dịch vụ Windows</value>
+  </data>
+  <data name="Error_AccessHotspot" xml:space="preserve">
+    <value>Không thể truy cập cấu hình điểm phát sóng của Windows.</value>
+  </data>
+  <data name="Error_AlreadyOn" xml:space="preserve">
+    <value>Điểm phát sóng đang chạy.</value>
+  </data>
+  <data name="Error_LocalAdapter" xml:space="preserve">
+    <value>Không có bộ điều hợp mạng cục bộ.</value>
+  </data>
+  <data name="Error_StartHotspot" xml:space="preserve">
+    <value>Không thể bật điểm phát sóng (mã trạng thái Windows {0}). {1}</value>
+    <comment>{0} is a Windows status code; {1} is optional additional detail.</comment>
+  </data>
+  <data name="Error_StopHotspot" xml:space="preserve">
+    <value>Không thể tắt điểm phát sóng (mã trạng thái Windows {0}).</value>
+    <comment>{0} is a Windows status code.</comment>
+  </data>
+  <data name="Error_InvalidSsid" xml:space="preserve">
+    <value>Tên điểm phát sóng không hợp lệ.</value>
+  </data>
+  <data name="Error_InvalidPassword" xml:space="preserve">
+    <value>Mật khẩu điểm phát sóng không hợp lệ.</value>
+  </data>
+  <data name="Error_StopBeforeConfigure" xml:space="preserve">
+    <value>Hãy tắt điểm phát sóng trước khi đổi tên hoặc mật khẩu.</value>
+  </data>
+  <data name="Error_InvalidMode" xml:space="preserve">
+    <value>Chế độ điểm phát sóng đã chọn không hợp lệ.</value>
+  </data>
+  <data name="Error_InvalidStartup" xml:space="preserve">
+    <value>Tác vụ khởi động không hợp lệ.</value>
+  </data>
+  <data name="Error_InvalidRequest" xml:space="preserve">
+    <value>Yêu cầu dịch vụ không hợp lệ.</value>
+  </data>
+  <data name="Error_UnknownCommand" xml:space="preserve">
+    <value>Lệnh dịch vụ không xác định.</value>
+  </data>
+  <data name="Error_HelperMissing" xml:space="preserve">
+    <value>Thiếu trình trợ giúp dịch vụ.</value>
+  </data>
+  <data name="Error_ElevationStart" xml:space="preserve">
+    <value>Không thể mở lời nhắc quyền quản trị viên.</value>
+  </data>
+  <data name="Error_AdminIncomplete" xml:space="preserve">
+    <value>Quá trình thiết lập của quản trị viên chưa hoàn tất.</value>
+  </data>
+  <data name="Error_RegisterService" xml:space="preserve">
+    <value>Không thể đăng ký dịch vụ Windows.</value>
+  </data>
+  <data name="Error_StartService" xml:space="preserve">
+    <value>Không thể khởi chạy dịch vụ Windows.</value>
+  </data>
+  <data name="Error_StopService" xml:space="preserve">
+    <value>Không thể dừng dịch vụ Windows.</value>
+  </data>
+  <data name="Error_RemoveService" xml:space="preserve">
+    <value>Không thể gỡ dịch vụ Windows.</value>
+  </data>
+  <data name="Error_Firewall" xml:space="preserve">
+    <value>Không thể cấu hình tường lửa.</value>
+  </data>
+</root>

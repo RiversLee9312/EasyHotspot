@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>EasyHotspot</value>
+  </data>
+  <data name="NavHotspot" xml:space="preserve">
+    <value>נקודה חמה</value>
+  </data>
+  <data name="NavProxy" xml:space="preserve">
+    <value>פרוקסי</value>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>הגדרות</value>
+  </data>
+  <data name="PageHotspot" xml:space="preserve">
+    <value>נקודה חמה</value>
+  </data>
+  <data name="PageProxy" xml:space="preserve">
+    <value>פרוקסי</value>
+  </data>
+  <data name="PageSettings" xml:space="preserve">
+    <value>הגדרות</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>מצב</value>
+  </data>
+  <data name="ClientsLabel" xml:space="preserve">
+    <value>מכשירים מחוברים</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>כתובת הנקודה החמה</value>
+  </data>
+  <data name="ModeLabel" xml:space="preserve">
+    <value>מצב חיבור</value>
+  </data>
+  <data name="ModeOffline" xml:space="preserve">
+    <value>נקודה חמה ללא אינטרנט — אין צורך בחיבור לאינטרנט</value>
+  </data>
+  <data name="ModeProxy" xml:space="preserve">
+    <value>נקודה חמה עם פרוקסי — שיתוף דרך המחשב הזה</value>
+  </data>
+  <data name="ModeSharing" xml:space="preserve">
+    <value>שיתוף רגיל — שימוש ברשת הנוכחית</value>
+  </data>
+  <data name="OfflineModeHelp" xml:space="preserve">
+    <value>אפשר לחבר מכשירים בקרבת מקום גם כשאין חיבור לאינטרנט.</value>
+  </data>
+  <data name="HotspotName" xml:space="preserve">
+    <value>שם הנקודה החמה</value>
+  </data>
+  <data name="HotspotPassword" xml:space="preserve">
+    <value>סיסמת הנקודה החמה</value>
+  </data>
+  <data name="ToggleOff" xml:space="preserve">
+    <value>כבוי</value>
+  </data>
+  <data name="ToggleOn" xml:space="preserve">
+    <value>פועל</value>
+  </data>
+  <data name="StartHotspot" xml:space="preserve">
+    <value>הפעל נקודה חמה</value>
+  </data>
+  <data name="StopHotspot" xml:space="preserve">
+    <value>עצור נקודה חמה</value>
+  </data>
+  <data name="RefreshStatus" xml:space="preserve">
+    <value>רענן מצב</value>
+  </data>
+  <data name="SaveHotspotInfo" xml:space="preserve">
+    <value>שמור שם וסיסמה</value>
+  </data>
+  <data name="DevicesHeading" xml:space="preserve">
+    <value>מכשירים מחוברים</value>
+  </data>
+  <data name="DiagnosticsHeading" xml:space="preserve">
+    <value>אבחון</value>
+  </data>
+  <data name="StatusOn" xml:space="preserve">
+    <value>פועל</value>
+  </data>
+  <data name="StatusOff" xml:space="preserve">
+    <value>כבוי</value>
+  </data>
+  <data name="NoDevicesConnected" xml:space="preserve">
+    <value>אין מכשירים מחוברים</value>
+  </data>
+  <data name="ProxyModeNoticeTitle" xml:space="preserve">
+    <value>נקודה חמה עם פרוקסי</value>
+  </data>
+  <data name="ProxyModeNotice" xml:space="preserve">
+    <value>המחשב יכול להעביר תעבורת HTTP ו-SOCKS5. בדוק תאימות במכשיר מחובר.</value>
+  </data>
+  <data name="ProxyComputerHeading" xml:space="preserve">
+    <value>פרוקסי במחשב</value>
+  </data>
+  <data name="ProxyEndpointsHelp" xml:space="preserve">
+    <value>HTTP CONNECT ו-SOCKS5 · מאזין בכתובת הנקודה החמה</value>
+  </data>
+  <data name="CopyProxyAddress" xml:space="preserve">
+    <value>העתק כתובת פרוקסי</value>
+  </data>
+  <data name="ConfigureFirewall" xml:space="preserve">
+    <value>הגדר חומת אש</value>
+  </data>
+  <data name="PacHeading" xml:space="preserve">
+    <value>פרוקסי אוטומטי PAC</value>
+  </data>
+  <data name="PacUrlHelp" xml:space="preserve">
+    <value>השתמש בכתובת הזו במכשירים שתומכים ב-PAC ובהגדרות פרוקסי של המערכת.</value>
+  </data>
+  <data name="CopyPacAddress" xml:space="preserve">
+    <value>העתק כתובת PAC</value>
+  </data>
+  <data name="DhcpDiscoveryTitle" xml:space="preserve">
+    <value>גילוי אוטומטי של DHCP</value>
+  </data>
+  <data name="DhcpDiscoveryNote" xml:space="preserve">
+    <value>אפשרות DHCP 252 לא הוגדרה. מכשירים או אפליקציות מסוימים עשויים להתעלם מכתובת PAC שהוזנה ידנית.</value>
+  </data>
+  <data name="MobileDevicesHeading" xml:space="preserve">
+    <value>טלפונים וטאבלטים</value>
+  </data>
+  <data name="MobileDevicesHelp" xml:space="preserve">
+    <value>להעברת תעבורת TCP ו-UDP, ייבא את פרופיל sing-box ל-Android, ל-iPhone או ל-iPad.</value>
+  </data>
+  <data name="ExportMobileProfile" xml:space="preserve">
+    <value>ייצא פרופיל לנייד</value>
+  </data>
+  <data name="JsonProfile" xml:space="preserve">
+    <value>פרופיל JSON</value>
+  </data>
+  <data name="StartupHeading" xml:space="preserve">
+    <value>הפעלה בעדיפות גבוהה</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>מפעיל שירות Windows בעדיפות גבוהה בעת אתחול המחשב. תוכנת אבטחה עשויה לחסום אותו.</value>
+  </data>
+  <data name="StartupActionHeading" xml:space="preserve">
+    <value>כשהשירות מופעל</value>
+  </data>
+  <data name="StartupActionHelp" xml:space="preserve">
+    <value>כברירת מחדל, השירות פועל ברקע בלי להפעיל נקודה חמה.</value>
+  </data>
+  <data name="StartupNone" xml:space="preserve">
+    <value>טען את שירות הרקע בלבד</value>
+  </data>
+  <data name="StartupOffline" xml:space="preserve">
+    <value>הפעל נקודה חמה ללא אינטרנט</value>
+  </data>
+  <data name="StartupProxy" xml:space="preserve">
+    <value>הפעל נקודה חמה עם פרוקסי</value>
+  </data>
+  <data name="LanguageHeading" xml:space="preserve">
+    <value>שפת האפליקציה</value>
+  </data>
+  <data name="LanguageHelp" xml:space="preserve">
+    <value>הפעל מחדש את EasyHotspot כדי להחיל את השפה שנבחרה.</value>
+  </data>
+  <data name="LanguageSavedTitle" xml:space="preserve">
+    <value>השפה נשמרה</value>
+  </data>
+  <data name="LanguageSavedMessage" xml:space="preserve">
+    <value>הפעל מחדש את EasyHotspot כדי להחיל את השפה שנבחרה.</value>
+  </data>
+  <data name="StartupConflict" xml:space="preserve">
+    <value>עצור את הפרוקסי המקומי לפני שינוי הגדרת הפעלת השירות.</value>
+  </data>
+  <data name="StartupUpdatedTitle" xml:space="preserve">
+    <value>הגדרת ההפעלה עודכנה</value>
+  </data>
+  <data name="StartupEnabledMessage" xml:space="preserve">
+    <value>שירות Windows נרשם להפעלה אוטומטית. כברירת מחדל הוא נטען ברקע בלי להפעיל נקודה חמה.</value>
+  </data>
+  <data name="StartupDisabledMessage" xml:space="preserve">
+    <value>שירות ההפעלה בעדיפות גבוהה הוסר.</value>
+  </data>
+  <data name="ConfirmStopTitle" xml:space="preserve">
+    <value>לעצור את הפרוקסי המקומי ולסגור?</value>
+  </data>
+  <data name="ConfirmStopContent" xml:space="preserve">
+    <value>הפרוקסי פועל באפליקציה הזו. שירות הרקע יכול לנהל את הנקודה החמה לאחר סגירת החלון.</value>
+  </data>
+  <data name="ConfirmStopButton" xml:space="preserve">
+    <value>עצור וסגור</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>ביטול</value>
+  </data>
+  <data name="ExportedTitle" xml:space="preserve">
+    <value>הפרופיל יוצא</value>
+  </data>
+  <data name="ExportedMessage" xml:space="preserve">
+    <value>ייבא אותו לאפליקציית sing-box בטלפון או בטאבלט.</value>
+  </data>
+  <data name="CopiedTitle" xml:space="preserve">
+    <value>הועתק</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>הועתק ללוח.</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>הפעולה נכשלה</value>
+  </data>
+  <data name="ServiceUnresponsive" xml:space="preserve">
+    <value>שירות הרקע לא מגיב.</value>
+  </data>
+  <data name="ServiceNotReady" xml:space="preserve">
+    <value>שירות הרקע עדיין לא מוכן. המתן רגע ונסה שוב, או הפעל מחדש את השירות בהגדרות.</value>
+  </data>
+  <data name="ServiceInstalledStatus" xml:space="preserve">
+    <value>נרשם · הפעלה אוטומטית · שירות LocalSystem</value>
+  </data>
+  <data name="ServiceNotInstalledStatus" xml:space="preserve">
+    <value>מושבת. ההפעלה הראשונה דורשת אישור מנהל מערכת ומתקינה את השירות בתיקייה Program Files.</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>לא ידוע</value>
+  </data>
+  <data name="InternetStatusLine" xml:space="preserve">
+    <value>מצב האינטרנט: {0}</value>
+  </data>
+  <data name="CurrentSourceLine" xml:space="preserve">
+    <value>המקור הנוכחי: {0}</value>
+  </data>
+  <data name="RunModeApp" xml:space="preserve">
+    <value>מצב הרצה: אפליקציה</value>
+  </data>
+  <data name="RunModeService" xml:space="preserve">
+    <value>מצב הרצה: שירות Windows</value>
+  </data>
+  <data name="Error_AccessHotspot" xml:space="preserve">
+    <value>לא ניתן לגשת להגדרות הנקודה החמה של Windows.</value>
+  </data>
+  <data name="Error_AlreadyOn" xml:space="preserve">
+    <value>הנקודה החמה כבר פועלת.</value>
+  </data>
+  <data name="Error_LocalAdapter" xml:space="preserve">
+    <value>מתאם רשת מקומי אינו זמין.</value>
+  </data>
+  <data name="Error_StartHotspot" xml:space="preserve">
+    <value>לא ניתן להפעיל את הנקודה החמה (קוד מצב Windows {0}). {1}</value>
+    <comment>{0} is a Windows status code; {1} is optional additional detail.</comment>
+  </data>
+  <data name="Error_StopHotspot" xml:space="preserve">
+    <value>לא ניתן לעצור את הנקודה החמה (קוד מצב Windows {0}).</value>
+    <comment>{0} is a Windows status code.</comment>
+  </data>
+  <data name="Error_InvalidSsid" xml:space="preserve">
+    <value>שם הנקודה החמה אינו חוקי.</value>
+  </data>
+  <data name="Error_InvalidPassword" xml:space="preserve">
+    <value>סיסמת הנקודה החמה אינה חוקית.</value>
+  </data>
+  <data name="Error_StopBeforeConfigure" xml:space="preserve">
+    <value>עצור את הנקודה החמה לפני שינוי השם או הסיסמה שלה.</value>
+  </data>
+  <data name="Error_InvalidMode" xml:space="preserve">
+    <value>מצב הנקודה החמה שנבחר אינו חוקי.</value>
+  </data>
+  <data name="Error_InvalidStartup" xml:space="preserve">
+    <value>פעולת ההפעלה אינה חוקית.</value>
+  </data>
+  <data name="Error_InvalidRequest" xml:space="preserve">
+    <value>בקשת השירות אינה חוקית.</value>
+  </data>
+  <data name="Error_UnknownCommand" xml:space="preserve">
+    <value>פקודת השירות אינה מוכרת.</value>
+  </data>
+  <data name="Error_HelperMissing" xml:space="preserve">
+    <value>קובץ העזר של השירות חסר.</value>
+  </data>
+  <data name="Error_ElevationStart" xml:space="preserve">
+    <value>לא ניתן להפעיל את בקשת הרשאות המנהל.</value>
+  </data>
+  <data name="Error_AdminIncomplete" xml:space="preserve">
+    <value>הגדרת מנהל המערכת לא הושלמה.</value>
+  </data>
+  <data name="Error_RegisterService" xml:space="preserve">
+    <value>לא ניתן לרשום את שירות Windows.</value>
+  </data>
+  <data name="Error_StartService" xml:space="preserve">
+    <value>לא ניתן להפעיל את שירות Windows.</value>
+  </data>
+  <data name="Error_StopService" xml:space="preserve">
+    <value>לא ניתן לעצור את שירות Windows.</value>
+  </data>
+  <data name="Error_RemoveService" xml:space="preserve">
+    <value>לא ניתן להסיר את שירות Windows.</value>
+  </data>
+  <data name="Error_Firewall" xml:space="preserve">
+    <value>לא ניתן להגדיר את חומת האש.</value>
+  </data>
+</root>

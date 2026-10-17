@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>EasyHotspot</value>
+  </data>
+  <data name="NavHotspot" xml:space="preserve">
+    <value>ฮอตสปอต</value>
+  </data>
+  <data name="NavProxy" xml:space="preserve">
+    <value>พร็อกซี</value>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>การตั้งค่า</value>
+  </data>
+  <data name="PageHotspot" xml:space="preserve">
+    <value>ฮอตสปอต</value>
+  </data>
+  <data name="PageProxy" xml:space="preserve">
+    <value>พร็อกซี</value>
+  </data>
+  <data name="PageSettings" xml:space="preserve">
+    <value>การตั้งค่า</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>สถานะ</value>
+  </data>
+  <data name="ClientsLabel" xml:space="preserve">
+    <value>อุปกรณ์ที่เชื่อมต่อ</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>ที่อยู่ฮอตสปอต</value>
+  </data>
+  <data name="ModeLabel" xml:space="preserve">
+    <value>โหมดการเชื่อมต่อ</value>
+  </data>
+  <data name="ModeOffline" xml:space="preserve">
+    <value>ฮอตสปอตออฟไลน์ — ไม่ต้องใช้อินเทอร์เน็ต</value>
+  </data>
+  <data name="ModeProxy" xml:space="preserve">
+    <value>ฮอตสปอตพร็อกซี — แชร์ผ่านพีซีเครื่องนี้</value>
+  </data>
+  <data name="ModeSharing" xml:space="preserve">
+    <value>การแชร์แบบมาตรฐาน — ใช้เครือข่ายปัจจุบัน</value>
+  </data>
+  <data name="OfflineModeHelp" xml:space="preserve">
+    <value>เชื่อมต่ออุปกรณ์ใกล้เคียงได้แม้ไม่มีอินเทอร์เน็ต</value>
+  </data>
+  <data name="HotspotName" xml:space="preserve">
+    <value>ชื่อฮอตสปอต</value>
+  </data>
+  <data name="HotspotPassword" xml:space="preserve">
+    <value>รหัสผ่านฮอตสปอต</value>
+  </data>
+  <data name="ToggleOff" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="ToggleOn" xml:space="preserve">
+    <value>เปิด</value>
+  </data>
+  <data name="StartHotspot" xml:space="preserve">
+    <value>เริ่มฮอตสปอต</value>
+  </data>
+  <data name="StopHotspot" xml:space="preserve">
+    <value>หยุดฮอตสปอต</value>
+  </data>
+  <data name="RefreshStatus" xml:space="preserve">
+    <value>รีเฟรชสถานะ</value>
+  </data>
+  <data name="SaveHotspotInfo" xml:space="preserve">
+    <value>บันทึกชื่อและรหัสผ่าน</value>
+  </data>
+  <data name="DevicesHeading" xml:space="preserve">
+    <value>อุปกรณ์ที่เชื่อมต่อ</value>
+  </data>
+  <data name="DiagnosticsHeading" xml:space="preserve">
+    <value>การวินิจฉัย</value>
+  </data>
+  <data name="StatusOn" xml:space="preserve">
+    <value>เปิด</value>
+  </data>
+  <data name="StatusOff" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="NoDevicesConnected" xml:space="preserve">
+    <value>ไม่มีอุปกรณ์เชื่อมต่อ</value>
+  </data>
+  <data name="ProxyModeNoticeTitle" xml:space="preserve">
+    <value>ฮอตสปอตพร็อกซี</value>
+  </data>
+  <data name="ProxyModeNotice" xml:space="preserve">
+    <value>พีซีสามารถส่งต่อทราฟฟิก HTTP และ SOCKS5 ได้ โปรดตรวจสอบความเข้ากันได้บนอุปกรณ์ที่เชื่อมต่อ</value>
+  </data>
+  <data name="ProxyComputerHeading" xml:space="preserve">
+    <value>พร็อกซีบนพีซี</value>
+  </data>
+  <data name="ProxyEndpointsHelp" xml:space="preserve">
+    <value>HTTP CONNECT และ SOCKS5 · รอรับการเชื่อมต่อที่ที่อยู่ฮอตสปอต</value>
+  </data>
+  <data name="CopyProxyAddress" xml:space="preserve">
+    <value>คัดลอกที่อยู่พร็อกซี</value>
+  </data>
+  <data name="ConfigureFirewall" xml:space="preserve">
+    <value>กำหนดค่าไฟร์วอลล์</value>
+  </data>
+  <data name="PacHeading" xml:space="preserve">
+    <value>พร็อกซีอัตโนมัติ PAC</value>
+  </data>
+  <data name="PacUrlHelp" xml:space="preserve">
+    <value>ใช้ที่อยู่นี้บนอุปกรณ์ที่รองรับ PAC และการตั้งค่าพร็อกซีของระบบ</value>
+  </data>
+  <data name="CopyPacAddress" xml:space="preserve">
+    <value>คัดลอกที่อยู่ PAC</value>
+  </data>
+  <data name="DhcpDiscoveryTitle" xml:space="preserve">
+    <value>ค้นหา DHCP อัตโนมัติ</value>
+  </data>
+  <data name="DhcpDiscoveryNote" xml:space="preserve">
+    <value>ยังไม่ได้กำหนดค่าตัวเลือก DHCP 252 อุปกรณ์หรือแอปบางรายการอาจไม่ใช้ที่อยู่ PAC ที่ป้อนด้วยตนเอง</value>
+  </data>
+  <data name="MobileDevicesHeading" xml:space="preserve">
+    <value>โทรศัพท์และแท็บเล็ต</value>
+  </data>
+  <data name="MobileDevicesHelp" xml:space="preserve">
+    <value>หากต้องการกำหนดเส้นทางทราฟฟิก TCP และ UDP ให้นำเข้าโปรไฟล์ sing-box บน Android, iPhone หรือ iPad</value>
+  </data>
+  <data name="ExportMobileProfile" xml:space="preserve">
+    <value>ส่งออกโปรไฟล์มือถือ</value>
+  </data>
+  <data name="JsonProfile" xml:space="preserve">
+    <value>โปรไฟล์ JSON</value>
+  </data>
+  <data name="StartupHeading" xml:space="preserve">
+    <value>เริ่มทำงานด้วยลำดับความสำคัญสูง</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>เริ่มบริการ Windows ที่มีลำดับความสำคัญสูงเมื่อบูต ซอฟต์แวร์รักษาความปลอดภัยอาจบล็อกบริการนี้</value>
+  </data>
+  <data name="StartupActionHeading" xml:space="preserve">
+    <value>เมื่อเริ่มบริการ</value>
+  </data>
+  <data name="StartupActionHelp" xml:space="preserve">
+    <value>โดยค่าเริ่มต้น บริการจะทำงานเบื้องหลังโดยไม่เริ่มฮอตสปอต</value>
+  </data>
+  <data name="StartupNone" xml:space="preserve">
+    <value>โหลดเฉพาะบริการเบื้องหลัง</value>
+  </data>
+  <data name="StartupOffline" xml:space="preserve">
+    <value>เริ่มฮอตสปอตออฟไลน์</value>
+  </data>
+  <data name="StartupProxy" xml:space="preserve">
+    <value>เริ่มฮอตสปอตพร็อกซี</value>
+  </data>
+  <data name="LanguageHeading" xml:space="preserve">
+    <value>ภาษาของแอป</value>
+  </data>
+  <data name="LanguageHelp" xml:space="preserve">
+    <value>เริ่ม EasyHotspot ใหม่เพื่อใช้ภาษาที่เลือก</value>
+  </data>
+  <data name="LanguageSavedTitle" xml:space="preserve">
+    <value>บันทึกภาษาแล้ว</value>
+  </data>
+  <data name="LanguageSavedMessage" xml:space="preserve">
+    <value>เริ่ม EasyHotspot ใหม่เพื่อใช้ภาษาที่เลือก</value>
+  </data>
+  <data name="StartupConflict" xml:space="preserve">
+    <value>หยุดพร็อกซีในเครื่องก่อนเปลี่ยนการตั้งค่าการเริ่มบริการ</value>
+  </data>
+  <data name="StartupUpdatedTitle" xml:space="preserve">
+    <value>อัปเดตการตั้งค่าการเริ่มทำงานแล้ว</value>
+  </data>
+  <data name="StartupEnabledMessage" xml:space="preserve">
+    <value>ลงทะเบียนบริการ Windows ให้เริ่มทำงานอัตโนมัติแล้ว โดยค่าเริ่มต้นจะโหลดบริการเบื้องหลังโดยไม่เริ่มฮอตสปอต</value>
+  </data>
+  <data name="StartupDisabledMessage" xml:space="preserve">
+    <value>นำบริการเริ่มทำงานลำดับความสำคัญสูงออกแล้ว</value>
+  </data>
+  <data name="ConfirmStopTitle" xml:space="preserve">
+    <value>หยุดพร็อกซีในเครื่องแล้วปิดหรือไม่</value>
+  </data>
+  <data name="ConfirmStopContent" xml:space="preserve">
+    <value>พร็อกซีกำลังทำงานในแอปนี้ บริการเบื้องหลังสามารถจัดการฮอตสปอตได้เมื่อปิดหน้าต่าง</value>
+  </data>
+  <data name="ConfirmStopButton" xml:space="preserve">
+    <value>หยุดและปิด</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>ยกเลิก</value>
+  </data>
+  <data name="ExportedTitle" xml:space="preserve">
+    <value>ส่งออกโปรไฟล์แล้ว</value>
+  </data>
+  <data name="ExportedMessage" xml:space="preserve">
+    <value>นำเข้าโปรไฟล์ในแอป sing-box บนโทรศัพท์หรือแท็บเล็ต</value>
+  </data>
+  <data name="CopiedTitle" xml:space="preserve">
+    <value>คัดลอกแล้ว</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>คัดลอกไปยังคลิปบอร์ดแล้ว</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>การดำเนินการล้มเหลว</value>
+  </data>
+  <data name="ServiceUnresponsive" xml:space="preserve">
+    <value>บริการเบื้องหลังไม่ตอบสนอง</value>
+  </data>
+  <data name="ServiceNotReady" xml:space="preserve">
+    <value>บริการเบื้องหลังยังไม่พร้อม โปรดรอสักครู่แล้วลองอีกครั้ง หรือเปิดใช้บริการอีกครั้งในการตั้งค่า</value>
+  </data>
+  <data name="ServiceInstalledStatus" xml:space="preserve">
+    <value>ลงทะเบียนแล้ว · เริ่มอัตโนมัติ · บริการ LocalSystem</value>
+  </data>
+  <data name="ServiceNotInstalledStatus" xml:space="preserve">
+    <value>ปิดใช้งานอยู่ การเปิดใช้ครั้งแรกต้องได้รับอนุมัติจากผู้ดูแลระบบ และจะติดตั้งบริการไว้ใน Program Files</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>ไม่ทราบ</value>
+  </data>
+  <data name="InternetStatusLine" xml:space="preserve">
+    <value>สถานะอินเทอร์เน็ต: {0}</value>
+  </data>
+  <data name="CurrentSourceLine" xml:space="preserve">
+    <value>แหล่งที่มาปัจจุบัน: {0}</value>
+  </data>
+  <data name="RunModeApp" xml:space="preserve">
+    <value>โหมดการทำงาน: แอป</value>
+  </data>
+  <data name="RunModeService" xml:space="preserve">
+    <value>โหมดการทำงาน: บริการ Windows</value>
+  </data>
+  <data name="Error_AccessHotspot" xml:space="preserve">
+    <value>เข้าถึงการกำหนดค่าฮอตสปอตของ Windows ไม่ได้</value>
+  </data>
+  <data name="Error_AlreadyOn" xml:space="preserve">
+    <value>ฮอตสปอตกำลังทำงานอยู่</value>
+  </data>
+  <data name="Error_LocalAdapter" xml:space="preserve">
+    <value>ไม่มีอะแดปเตอร์เครือข่ายในเครื่อง</value>
+  </data>
+  <data name="Error_StartHotspot" xml:space="preserve">
+    <value>เริ่มฮอตสปอตไม่ได้ (รหัสสถานะ Windows {0}) {1}</value>
+    <comment>{0} is a Windows status code; {1} is optional additional detail.</comment>
+  </data>
+  <data name="Error_StopHotspot" xml:space="preserve">
+    <value>หยุดฮอตสปอตไม่ได้ (รหัสสถานะ Windows {0})</value>
+    <comment>{0} is a Windows status code.</comment>
+  </data>
+  <data name="Error_InvalidSsid" xml:space="preserve">
+    <value>ชื่อฮอตสปอตไม่ถูกต้อง</value>
+  </data>
+  <data name="Error_InvalidPassword" xml:space="preserve">
+    <value>รหัสผ่านฮอตสปอตไม่ถูกต้อง</value>
+  </data>
+  <data name="Error_StopBeforeConfigure" xml:space="preserve">
+    <value>หยุดฮอตสปอตก่อนเปลี่ยนชื่อหรือรหัสผ่าน</value>
+  </data>
+  <data name="Error_InvalidMode" xml:space="preserve">
+    <value>โหมดฮอตสปอตที่เลือกไม่ถูกต้อง</value>
+  </data>
+  <data name="Error_InvalidStartup" xml:space="preserve">
+    <value>การดำเนินการเริ่มต้นไม่ถูกต้อง</value>
+  </data>
+  <data name="Error_InvalidRequest" xml:space="preserve">
+    <value>คำขอบริการไม่ถูกต้อง</value>
+  </data>
+  <data name="Error_UnknownCommand" xml:space="preserve">
+    <value>ไม่รู้จักคำสั่งบริการ</value>
+  </data>
+  <data name="Error_HelperMissing" xml:space="preserve">
+    <value>ไม่มีโปรแกรมช่วยบริการ</value>
+  </data>
+  <data name="Error_ElevationStart" xml:space="preserve">
+    <value>เริ่มหน้าต่างขอสิทธิ์ผู้ดูแลระบบไม่ได้</value>
+  </data>
+  <data name="Error_AdminIncomplete" xml:space="preserve">
+    <value>การตั้งค่าสำหรับผู้ดูแลระบบไม่เสร็จสมบูรณ์</value>
+  </data>
+  <data name="Error_RegisterService" xml:space="preserve">
+    <value>ลงทะเบียนบริการ Windows ไม่ได้</value>
+  </data>
+  <data name="Error_StartService" xml:space="preserve">
+    <value>เริ่มบริการ Windows ไม่ได้</value>
+  </data>
+  <data name="Error_StopService" xml:space="preserve">
+    <value>หยุดบริการ Windows ไม่ได้</value>
+  </data>
+  <data name="Error_RemoveService" xml:space="preserve">
+    <value>นำบริการ Windows ออกไม่ได้</value>
+  </data>
+  <data name="Error_Firewall" xml:space="preserve">
+    <value>กำหนดค่าไฟร์วอลล์ไม่ได้</value>
+  </data>
+</root>

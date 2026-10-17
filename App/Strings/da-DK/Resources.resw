@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>EasyHotspot</value>
+  </data>
+  <data name="NavHotspot" xml:space="preserve">
+    <value>Hotspot</value>
+  </data>
+  <data name="NavProxy" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>Indstillinger</value>
+  </data>
+  <data name="PageHotspot" xml:space="preserve">
+    <value>Hotspot</value>
+  </data>
+  <data name="PageProxy" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="PageSettings" xml:space="preserve">
+    <value>Indstillinger</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ClientsLabel" xml:space="preserve">
+    <value>Tilsluttede enheder</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>Hotspotadresse</value>
+  </data>
+  <data name="ModeLabel" xml:space="preserve">
+    <value>Forbindelsestilstand</value>
+  </data>
+  <data name="ModeOffline" xml:space="preserve">
+    <value>Offline-hotspot — kræver ikke internet</value>
+  </data>
+  <data name="ModeProxy" xml:space="preserve">
+    <value>Proxy-hotspot — del via denne pc</value>
+  </data>
+  <data name="ModeSharing" xml:space="preserve">
+    <value>Almindelig deling — brug det aktuelle netværk</value>
+  </data>
+  <data name="OfflineModeHelp" xml:space="preserve">
+    <value>Forbind enheder i nærheden, selv når internettet ikke er tilgængeligt.</value>
+  </data>
+  <data name="HotspotName" xml:space="preserve">
+    <value>Hotspotnavn</value>
+  </data>
+  <data name="HotspotPassword" xml:space="preserve">
+    <value>Hotspotadgangskode</value>
+  </data>
+  <data name="ToggleOff" xml:space="preserve">
+    <value>Fra</value>
+  </data>
+  <data name="ToggleOn" xml:space="preserve">
+    <value>Til</value>
+  </data>
+  <data name="StartHotspot" xml:space="preserve">
+    <value>Start hotspot</value>
+  </data>
+  <data name="StopHotspot" xml:space="preserve">
+    <value>Stop hotspot</value>
+  </data>
+  <data name="RefreshStatus" xml:space="preserve">
+    <value>Opdater status</value>
+  </data>
+  <data name="SaveHotspotInfo" xml:space="preserve">
+    <value>Gem navn og adgangskode</value>
+  </data>
+  <data name="DevicesHeading" xml:space="preserve">
+    <value>Tilsluttede enheder</value>
+  </data>
+  <data name="DiagnosticsHeading" xml:space="preserve">
+    <value>Diagnosticering</value>
+  </data>
+  <data name="StatusOn" xml:space="preserve">
+    <value>Til</value>
+  </data>
+  <data name="StatusOff" xml:space="preserve">
+    <value>Fra</value>
+  </data>
+  <data name="NoDevicesConnected" xml:space="preserve">
+    <value>Ingen enheder tilsluttet</value>
+  </data>
+  <data name="ProxyModeNoticeTitle" xml:space="preserve">
+    <value>Proxy-hotspot</value>
+  </data>
+  <data name="ProxyModeNotice" xml:space="preserve">
+    <value>Pc'en kan videresende HTTP- og SOCKS5-trafik. Kontrollér kompatibiliteten på en tilsluttet enhed.</value>
+  </data>
+  <data name="ProxyComputerHeading" xml:space="preserve">
+    <value>Pc-proxy</value>
+  </data>
+  <data name="ProxyEndpointsHelp" xml:space="preserve">
+    <value>HTTP CONNECT og SOCKS5 · Lytter på hotspotadressen</value>
+  </data>
+  <data name="CopyProxyAddress" xml:space="preserve">
+    <value>Kopiér proxyadresse</value>
+  </data>
+  <data name="ConfigureFirewall" xml:space="preserve">
+    <value>Konfigurer firewall</value>
+  </data>
+  <data name="PacHeading" xml:space="preserve">
+    <value>Automatisk PAC-proxy</value>
+  </data>
+  <data name="PacUrlHelp" xml:space="preserve">
+    <value>Brug denne adresse på enheder, der understøtter PAC og systemets proxyindstillinger.</value>
+  </data>
+  <data name="CopyPacAddress" xml:space="preserve">
+    <value>Kopiér PAC-adresse</value>
+  </data>
+  <data name="DhcpDiscoveryTitle" xml:space="preserve">
+    <value>Automatisk DHCP-registrering</value>
+  </data>
+  <data name="DhcpDiscoveryNote" xml:space="preserve">
+    <value>DHCP-indstilling 252 er ikke konfigureret. Nogle enheder eller apps ignorerer muligvis en manuelt angivet PAC-adresse.</value>
+  </data>
+  <data name="MobileDevicesHeading" xml:space="preserve">
+    <value>Telefoner og tablets</value>
+  </data>
+  <data name="MobileDevicesHelp" xml:space="preserve">
+    <value>Importér sing-box-profilen på Android, iPhone eller iPad for at videresende TCP- og UDP-trafik.</value>
+  </data>
+  <data name="ExportMobileProfile" xml:space="preserve">
+    <value>Eksportér mobilprofil</value>
+  </data>
+  <data name="JsonProfile" xml:space="preserve">
+    <value>JSON-profil</value>
+  </data>
+  <data name="StartupHeading" xml:space="preserve">
+    <value>Start med høj prioritet</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>Starter en Windows-tjeneste med høj prioritet ved opstart. Sikkerhedssoftware kan blokere den.</value>
+  </data>
+  <data name="StartupActionHeading" xml:space="preserve">
+    <value>Når tjenesten starter</value>
+  </data>
+  <data name="StartupActionHelp" xml:space="preserve">
+    <value>Som standard kører tjenesten i baggrunden uden at starte et hotspot.</value>
+  </data>
+  <data name="StartupNone" xml:space="preserve">
+    <value>Indlæs kun baggrundstjenesten</value>
+  </data>
+  <data name="StartupOffline" xml:space="preserve">
+    <value>Start offline-hotspot</value>
+  </data>
+  <data name="StartupProxy" xml:space="preserve">
+    <value>Start proxy-hotspot</value>
+  </data>
+  <data name="LanguageHeading" xml:space="preserve">
+    <value>Appens sprog</value>
+  </data>
+  <data name="LanguageHelp" xml:space="preserve">
+    <value>Genstart EasyHotspot for at anvende det valgte sprog.</value>
+  </data>
+  <data name="LanguageSavedTitle" xml:space="preserve">
+    <value>Sprog gemt</value>
+  </data>
+  <data name="LanguageSavedMessage" xml:space="preserve">
+    <value>Genstart EasyHotspot for at anvende det valgte sprog.</value>
+  </data>
+  <data name="StartupConflict" xml:space="preserve">
+    <value>Stop den lokale proxy, før du ændrer tjenestens startindstilling.</value>
+  </data>
+  <data name="StartupUpdatedTitle" xml:space="preserve">
+    <value>Startindstilling opdateret</value>
+  </data>
+  <data name="StartupEnabledMessage" xml:space="preserve">
+    <value>Windows-tjenesten er registreret til automatisk start. Som standard indlæses baggrunden uden at starte et hotspot.</value>
+  </data>
+  <data name="StartupDisabledMessage" xml:space="preserve">
+    <value>Tjenesten til start med høj prioritet blev fjernet.</value>
+  </data>
+  <data name="ConfirmStopTitle" xml:space="preserve">
+    <value>Stop den lokale proxy, og luk?</value>
+  </data>
+  <data name="ConfirmStopContent" xml:space="preserve">
+    <value>Proxyen kører i denne app. Baggrundstjenesten kan administrere hotspotten, når vinduet lukkes.</value>
+  </data>
+  <data name="ConfirmStopButton" xml:space="preserve">
+    <value>Stop og luk</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuller</value>
+  </data>
+  <data name="ExportedTitle" xml:space="preserve">
+    <value>Profil eksporteret</value>
+  </data>
+  <data name="ExportedMessage" xml:space="preserve">
+    <value>Importér den i sing-box-appen på din telefon eller tablet.</value>
+  </data>
+  <data name="CopiedTitle" xml:space="preserve">
+    <value>Kopieret</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>Kopieret til udklipsholderen.</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>Handlingen mislykkedes</value>
+  </data>
+  <data name="ServiceUnresponsive" xml:space="preserve">
+    <value>Baggrundstjenesten svarer ikke.</value>
+  </data>
+  <data name="ServiceNotReady" xml:space="preserve">
+    <value>Baggrundstjenesten er ikke klar. Vent et øjeblik, og prøv igen, eller aktivér tjenesten igen under Indstillinger.</value>
+  </data>
+  <data name="ServiceInstalledStatus" xml:space="preserve">
+    <value>Registreret · automatisk start · LocalSystem-tjeneste</value>
+  </data>
+  <data name="ServiceNotInstalledStatus" xml:space="preserve">
+    <value>Deaktiveret. Første aktivering kræver administratorgodkendelse og installerer tjenesten under Program Files.</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Ukendt</value>
+  </data>
+  <data name="InternetStatusLine" xml:space="preserve">
+    <value>Internetstatus: {0}</value>
+  </data>
+  <data name="CurrentSourceLine" xml:space="preserve">
+    <value>Aktuel kilde: {0}</value>
+  </data>
+  <data name="RunModeApp" xml:space="preserve">
+    <value>Kørselstilstand: app</value>
+  </data>
+  <data name="RunModeService" xml:space="preserve">
+    <value>Kørselstilstand: Windows-tjeneste</value>
+  </data>
+  <data name="Error_AccessHotspot" xml:space="preserve">
+    <value>Kunne ikke få adgang til Windows' hotspotkonfiguration.</value>
+  </data>
+  <data name="Error_AlreadyOn" xml:space="preserve">
+    <value>Hotspotten kører allerede.</value>
+  </data>
+  <data name="Error_LocalAdapter" xml:space="preserve">
+    <value>En lokal netværksadapter er ikke tilgængelig.</value>
+  </data>
+  <data name="Error_StartHotspot" xml:space="preserve">
+    <value>Hotspotten kunne ikke startes (Windows-statuskode {0}). {1}</value>
+    <comment>{0} is a Windows status code; {1} is optional additional detail.</comment>
+  </data>
+  <data name="Error_StopHotspot" xml:space="preserve">
+    <value>Hotspotten kunne ikke stoppes (Windows-statuskode {0}).</value>
+    <comment>{0} is a Windows status code.</comment>
+  </data>
+  <data name="Error_InvalidSsid" xml:space="preserve">
+    <value>Hotspotnavnet er ugyldigt.</value>
+  </data>
+  <data name="Error_InvalidPassword" xml:space="preserve">
+    <value>Hotspotadgangskoden er ugyldig.</value>
+  </data>
+  <data name="Error_StopBeforeConfigure" xml:space="preserve">
+    <value>Stop hotspotten, før du ændrer navn eller adgangskode.</value>
+  </data>
+  <data name="Error_InvalidMode" xml:space="preserve">
+    <value>Den valgte hotspottilstand er ugyldig.</value>
+  </data>
+  <data name="Error_InvalidStartup" xml:space="preserve">
+    <value>Start-handlingen er ugyldig.</value>
+  </data>
+  <data name="Error_InvalidRequest" xml:space="preserve">
+    <value>Tjenesteanmodningen er ugyldig.</value>
+  </data>
+  <data name="Error_UnknownCommand" xml:space="preserve">
+    <value>Tjenestekommandoen er ukendt.</value>
+  </data>
+  <data name="Error_HelperMissing" xml:space="preserve">
+    <value>Tjenestens hjælpeprogram mangler.</value>
+  </data>
+  <data name="Error_ElevationStart" xml:space="preserve">
+    <value>Kunne ikke starte anmodningen om administratorrettigheder.</value>
+  </data>
+  <data name="Error_AdminIncomplete" xml:space="preserve">
+    <value>Administratoropsætningen blev ikke fuldført.</value>
+  </data>
+  <data name="Error_RegisterService" xml:space="preserve">
+    <value>Windows-tjenesten kunne ikke registreres.</value>
+  </data>
+  <data name="Error_StartService" xml:space="preserve">
+    <value>Windows-tjenesten kunne ikke startes.</value>
+  </data>
+  <data name="Error_StopService" xml:space="preserve">
+    <value>Windows-tjenesten kunne ikke stoppes.</value>
+  </data>
+  <data name="Error_RemoveService" xml:space="preserve">
+    <value>Windows-tjenesten kunne ikke fjernes.</value>
+  </data>
+  <data name="Error_Firewall" xml:space="preserve">
+    <value>Firewallen kunne ikke konfigureres.</value>
+  </data>
+</root>

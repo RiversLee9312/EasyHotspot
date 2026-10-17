@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>EasyHotspot</value>
+  </data>
+  <data name="NavHotspot" xml:space="preserve">
+    <value>Hotspot</value>
+  </data>
+  <data name="NavProxy" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="PageHotspot" xml:space="preserve">
+    <value>Hotspot</value>
+  </data>
+  <data name="PageProxy" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="PageSettings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ClientsLabel" xml:space="preserve">
+    <value>Verbundene Geräte</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>Hotspot-Adresse</value>
+  </data>
+  <data name="ModeLabel" xml:space="preserve">
+    <value>Verbindungsmodus</value>
+  </data>
+  <data name="ModeOffline" xml:space="preserve">
+    <value>Offline-Hotspot — keine Internetverbindung erforderlich</value>
+  </data>
+  <data name="ModeProxy" xml:space="preserve">
+    <value>Proxy-Hotspot — über diesen PC teilen</value>
+  </data>
+  <data name="ModeSharing" xml:space="preserve">
+    <value>Standardfreigabe — aktuelles Netzwerk verwenden</value>
+  </data>
+  <data name="OfflineModeHelp" xml:space="preserve">
+    <value>Verbinden Sie Geräte in der Nähe auch ohne Internetverbindung.</value>
+  </data>
+  <data name="HotspotName" xml:space="preserve">
+    <value>Hotspotname</value>
+  </data>
+  <data name="HotspotPassword" xml:space="preserve">
+    <value>Hotspot-Passwort</value>
+  </data>
+  <data name="ToggleOff" xml:space="preserve">
+    <value>Aus</value>
+  </data>
+  <data name="ToggleOn" xml:space="preserve">
+    <value>Ein</value>
+  </data>
+  <data name="StartHotspot" xml:space="preserve">
+    <value>Hotspot starten</value>
+  </data>
+  <data name="StopHotspot" xml:space="preserve">
+    <value>Hotspot beenden</value>
+  </data>
+  <data name="RefreshStatus" xml:space="preserve">
+    <value>Status aktualisieren</value>
+  </data>
+  <data name="SaveHotspotInfo" xml:space="preserve">
+    <value>Name und Passwort speichern</value>
+  </data>
+  <data name="DevicesHeading" xml:space="preserve">
+    <value>Verbundene Geräte</value>
+  </data>
+  <data name="DiagnosticsHeading" xml:space="preserve">
+    <value>Diagnose</value>
+  </data>
+  <data name="StatusOn" xml:space="preserve">
+    <value>Ein</value>
+  </data>
+  <data name="StatusOff" xml:space="preserve">
+    <value>Aus</value>
+  </data>
+  <data name="NoDevicesConnected" xml:space="preserve">
+    <value>Keine Geräte verbunden</value>
+  </data>
+  <data name="ProxyModeNoticeTitle" xml:space="preserve">
+    <value>Proxy-Hotspot</value>
+  </data>
+  <data name="ProxyModeNotice" xml:space="preserve">
+    <value>Der PC kann HTTP- und SOCKS5-Datenverkehr weiterleiten. Prüfen Sie die Kompatibilität mit einem verbundenen Gerät.</value>
+  </data>
+  <data name="ProxyComputerHeading" xml:space="preserve">
+    <value>PC-Proxy</value>
+  </data>
+  <data name="ProxyEndpointsHelp" xml:space="preserve">
+    <value>HTTP CONNECT und SOCKS5 · Lauscht auf der Hotspot-Adresse</value>
+  </data>
+  <data name="CopyProxyAddress" xml:space="preserve">
+    <value>Proxy-Adresse kopieren</value>
+  </data>
+  <data name="ConfigureFirewall" xml:space="preserve">
+    <value>Firewall konfigurieren</value>
+  </data>
+  <data name="PacHeading" xml:space="preserve">
+    <value>PAC-Proxy</value>
+  </data>
+  <data name="PacUrlHelp" xml:space="preserve">
+    <value>Verwenden Sie diese Adresse auf Geräten, die PAC und Systemeinstellungen für Proxy unterstützen.</value>
+  </data>
+  <data name="CopyPacAddress" xml:space="preserve">
+    <value>PAC-Adresse kopieren</value>
+  </data>
+  <data name="DhcpDiscoveryTitle" xml:space="preserve">
+    <value>Automatische DHCP-Erkennung</value>
+  </data>
+  <data name="DhcpDiscoveryNote" xml:space="preserve">
+    <value>DHCP-Option 252 ist nicht konfiguriert. Einige Geräte oder Apps ignorieren möglicherweise eine manuell angegebene PAC-Adresse.</value>
+  </data>
+  <data name="MobileDevicesHeading" xml:space="preserve">
+    <value>Smartphones und Tablets</value>
+  </data>
+  <data name="MobileDevicesHelp" xml:space="preserve">
+    <value>Für die Weiterleitung von TCP und UDP importieren Sie das sing-box-Profil auf Android, iPhone oder iPad.</value>
+  </data>
+  <data name="ExportMobileProfile" xml:space="preserve">
+    <value>Mobilprofil exportieren</value>
+  </data>
+  <data name="JsonProfile" xml:space="preserve">
+    <value>JSON-Profil</value>
+  </data>
+  <data name="StartupHeading" xml:space="preserve">
+    <value>Start mit hoher Priorität</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>Startet beim Systemstart einen Windows-Dienst mit hoher Priorität. Sicherheitssoftware kann ihn blockieren.</value>
+  </data>
+  <data name="StartupActionHeading" xml:space="preserve">
+    <value>Aktion beim Dienststart</value>
+  </data>
+  <data name="StartupActionHelp" xml:space="preserve">
+    <value>Standardmäßig läuft der Dienst im Hintergrund, ohne einen Hotspot zu starten.</value>
+  </data>
+  <data name="StartupNone" xml:space="preserve">
+    <value>Nur Hintergrunddienst laden</value>
+  </data>
+  <data name="StartupOffline" xml:space="preserve">
+    <value>Offline-Hotspot starten</value>
+  </data>
+  <data name="StartupProxy" xml:space="preserve">
+    <value>Proxy-Hotspot starten</value>
+  </data>
+  <data name="LanguageHeading" xml:space="preserve">
+    <value>App-Sprache</value>
+  </data>
+  <data name="LanguageHelp" xml:space="preserve">
+    <value>Starten Sie EasyHotspot neu, um die ausgewählte Sprache anzuwenden.</value>
+  </data>
+  <data name="LanguageSavedTitle" xml:space="preserve">
+    <value>Sprache gespeichert</value>
+  </data>
+  <data name="LanguageSavedMessage" xml:space="preserve">
+    <value>Starten Sie EasyHotspot neu, um die ausgewählte Sprache anzuwenden.</value>
+  </data>
+  <data name="StartupConflict" xml:space="preserve">
+    <value>Beenden Sie den lokalen Proxy, bevor Sie die Dienststarteinstellung ändern.</value>
+  </data>
+  <data name="StartupUpdatedTitle" xml:space="preserve">
+    <value>Starteinstellung aktualisiert</value>
+  </data>
+  <data name="StartupEnabledMessage" xml:space="preserve">
+    <value>Der Windows-Dienst ist für den automatischen Start registriert. Standardmäßig wird der Hintergrund geladen, ohne einen Hotspot zu starten.</value>
+  </data>
+  <data name="StartupDisabledMessage" xml:space="preserve">
+    <value>Der Startdienst mit hoher Priorität wurde entfernt.</value>
+  </data>
+  <data name="ConfirmStopTitle" xml:space="preserve">
+    <value>Lokalen Proxy beenden und schließen?</value>
+  </data>
+  <data name="ConfirmStopContent" xml:space="preserve">
+    <value>Der Proxy läuft in dieser App. Mit dem Hintergrunddienst können Sie den Hotspot verwalten, wenn das Fenster geschlossen ist.</value>
+  </data>
+  <data name="ConfirmStopButton" xml:space="preserve">
+    <value>Beenden und schließen</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="ExportedTitle" xml:space="preserve">
+    <value>Profil exportiert</value>
+  </data>
+  <data name="ExportedMessage" xml:space="preserve">
+    <value>Importieren Sie es in die sing-box-App auf Ihrem Smartphone oder Tablet.</value>
+  </data>
+  <data name="CopiedTitle" xml:space="preserve">
+    <value>Kopiert</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>In die Zwischenablage kopiert.</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>Vorgang fehlgeschlagen</value>
+  </data>
+  <data name="ServiceUnresponsive" xml:space="preserve">
+    <value>Der Hintergrunddienst reagiert nicht.</value>
+  </data>
+  <data name="ServiceNotReady" xml:space="preserve">
+    <value>Der Hintergrunddienst ist noch nicht bereit. Warten Sie einen Moment und versuchen Sie es erneut oder aktivieren Sie ihn in den Einstellungen wieder.</value>
+  </data>
+  <data name="ServiceInstalledStatus" xml:space="preserve">
+    <value>Registriert · automatischer Start · LocalSystem-Dienst</value>
+  </data>
+  <data name="ServiceNotInstalledStatus" xml:space="preserve">
+    <value>Deaktiviert. Die erste Aktivierung erfordert eine Administratorbestätigung und installiert den Dienst unter Program Files.</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unbekannt</value>
+  </data>
+  <data name="InternetStatusLine" xml:space="preserve">
+    <value>Internetstatus: {0}</value>
+  </data>
+  <data name="CurrentSourceLine" xml:space="preserve">
+    <value>Aktuelle Quelle: {0}</value>
+  </data>
+  <data name="RunModeApp" xml:space="preserve">
+    <value>Ausführungsmodus: App</value>
+  </data>
+  <data name="RunModeService" xml:space="preserve">
+    <value>Ausführungsmodus: Windows-Dienst</value>
+  </data>
+  <data name="Error_AccessHotspot" xml:space="preserve">
+    <value>Auf die Windows-Hotspotkonfiguration konnte nicht zugegriffen werden.</value>
+  </data>
+  <data name="Error_AlreadyOn" xml:space="preserve">
+    <value>Der Hotspot läuft bereits.</value>
+  </data>
+  <data name="Error_LocalAdapter" xml:space="preserve">
+    <value>Ein lokaler Netzwerkadapter ist nicht verfügbar.</value>
+  </data>
+  <data name="Error_StartHotspot" xml:space="preserve">
+    <value>Der Hotspot konnte nicht gestartet werden (Windows-Status {0}). {1}</value>
+    <comment>{0} is a Windows status code; {1} is optional additional detail.</comment>
+  </data>
+  <data name="Error_StopHotspot" xml:space="preserve">
+    <value>Der Hotspot konnte nicht beendet werden (Windows-Status {0}).</value>
+    <comment>{0} is a Windows status code.</comment>
+  </data>
+  <data name="Error_InvalidSsid" xml:space="preserve">
+    <value>Der Hotspotname ist ungültig.</value>
+  </data>
+  <data name="Error_InvalidPassword" xml:space="preserve">
+    <value>Das Hotspot-Passwort ist ungültig.</value>
+  </data>
+  <data name="Error_StopBeforeConfigure" xml:space="preserve">
+    <value>Beenden Sie den Hotspot, bevor Sie Name oder Passwort ändern.</value>
+  </data>
+  <data name="Error_InvalidMode" xml:space="preserve">
+    <value>Der ausgewählte Hotspotmodus ist ungültig.</value>
+  </data>
+  <data name="Error_InvalidStartup" xml:space="preserve">
+    <value>Die ausgewählte Startaktion ist ungültig.</value>
+  </data>
+  <data name="Error_InvalidRequest" xml:space="preserve">
+    <value>Die Dienstanforderung ist ungültig.</value>
+  </data>
+  <data name="Error_UnknownCommand" xml:space="preserve">
+    <value>Der Dienstbefehl ist unbekannt.</value>
+  </data>
+  <data name="Error_HelperMissing" xml:space="preserve">
+    <value>Der Diensthelfer fehlt.</value>
+  </data>
+  <data name="Error_ElevationStart" xml:space="preserve">
+    <value>Die Administratorabfrage konnte nicht gestartet werden.</value>
+  </data>
+  <data name="Error_AdminIncomplete" xml:space="preserve">
+    <value>Die Administrator-Einrichtung wurde nicht abgeschlossen.</value>
+  </data>
+  <data name="Error_RegisterService" xml:space="preserve">
+    <value>Der Windows-Dienst konnte nicht registriert werden.</value>
+  </data>
+  <data name="Error_StartService" xml:space="preserve">
+    <value>Der Windows-Dienst konnte nicht gestartet werden.</value>
+  </data>
+  <data name="Error_StopService" xml:space="preserve">
+    <value>Der Windows-Dienst konnte nicht beendet werden.</value>
+  </data>
+  <data name="Error_RemoveService" xml:space="preserve">
+    <value>Der Windows-Dienst konnte nicht entfernt werden.</value>
+  </data>
+  <data name="Error_Firewall" xml:space="preserve">
+    <value>Die Firewall konnte nicht konfiguriert werden.</value>
+  </data>
+</root>

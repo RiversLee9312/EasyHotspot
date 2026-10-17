@@ -1,0 +1,21 @@
+{
+  "tool": "built-in image_gen / GPT-image",
+  "assets": [
+    {
+      "file": "app.png",
+      "prompt": "Use case: logo-brand. Asset type: Windows 11 desktop application icon for a native Wi-Fi hotspot utility named EasyHotspot (do not put any text in the artwork). A simple, exceptionally legible sculpted Wi-Fi bridge mark: three clean rounded rising arches over a small centered circular dot, subtly suggesting two devices connected. Fluent Windows 11 app-icon aesthetic, restrained cobalt blue to cyan material, very subtle depth and soft internal highlights, clean geometric silhouette, excellent at 32px, no tiny details, no badge, no surrounding square tile, no lettering, no shadows outside the icon. Centered on a genuinely transparent background, broad clean padding. One icon only."
+    },
+    {
+      "file": "hotspot.png",
+      "prompt": "Use case: logo-brand. Asset type: a single navigation icon for a native Windows 11 Fluent utility. One minimalist outlined Wi-Fi hotspot symbol: two round-ended arcs and one dot, consistent elegant 2px-style stroke geometry for 24px use, flat monochrome Windows accent blue #0067C0, perfectly centered, no gradients, no text, no tile, no shadow, no decorative objects, genuinely transparent background. One symbol only, clear and legible when reduced to 20px."
+    },
+    {
+      "file": "proxy.png",
+      "prompt": "Use case: logo-brand. Asset type: a single navigation icon for a native Windows 11 Fluent utility. One minimalist outlined network relay symbol: two small rounded endpoint nodes connected by a clean horizontal line with a tiny central routing node, consistent elegant 2px-style stroke geometry for 24px use, flat monochrome Windows accent blue #0067C0, perfectly centered, no gradients, no text, no tile, no shadow, no decorative objects, genuinely transparent background. One symbol only, clear and legible when reduced to 20px."
+    },
+    {
+      "file": "settings.png",
+      "prompt": "Use case: logo-brand. Asset type: a single navigation icon for a native Windows 11 Fluent utility. One minimalist outlined settings gear symbol, six generously rounded gear teeth and one simple circular opening, consistent elegant 2px-style stroke geometry for 24px use, flat monochrome Windows accent blue #0067C0, perfectly centered, no gradients, no text, no tile, no shadow, no decorative objects, genuinely transparent background. One symbol only, clear and legible when reduced to 20px."
+    }
+  ]
+}

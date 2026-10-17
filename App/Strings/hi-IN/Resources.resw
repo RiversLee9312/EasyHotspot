@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>EasyHotspot</value>
+  </data>
+  <data name="NavHotspot" xml:space="preserve">
+    <value>हॉटस्पॉट</value>
+  </data>
+  <data name="NavProxy" xml:space="preserve">
+    <value>प्रॉक्सी</value>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>सेटिंग</value>
+  </data>
+  <data name="PageHotspot" xml:space="preserve">
+    <value>हॉटस्पॉट</value>
+  </data>
+  <data name="PageProxy" xml:space="preserve">
+    <value>प्रॉक्सी</value>
+  </data>
+  <data name="PageSettings" xml:space="preserve">
+    <value>सेटिंग</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>स्थिति</value>
+  </data>
+  <data name="ClientsLabel" xml:space="preserve">
+    <value>कनेक्ट किए गए डिवाइस</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>हॉटस्पॉट का पता</value>
+  </data>
+  <data name="ModeLabel" xml:space="preserve">
+    <value>कनेक्शन मोड</value>
+  </data>
+  <data name="ModeOffline" xml:space="preserve">
+    <value>ऑफ़लाइन हॉटस्पॉट — इंटरनेट की आवश्यकता नहीं</value>
+  </data>
+  <data name="ModeProxy" xml:space="preserve">
+    <value>प्रॉक्सी हॉटस्पॉट — इस PC के ज़रिए साझा करें</value>
+  </data>
+  <data name="ModeSharing" xml:space="preserve">
+    <value>सामान्य साझाकरण — मौजूदा नेटवर्क का उपयोग करें</value>
+  </data>
+  <data name="OfflineModeHelp" xml:space="preserve">
+    <value>इंटरनेट उपलब्ध न होने पर भी आस-पास के डिवाइस कनेक्ट करें।</value>
+  </data>
+  <data name="HotspotName" xml:space="preserve">
+    <value>हॉटस्पॉट का नाम</value>
+  </data>
+  <data name="HotspotPassword" xml:space="preserve">
+    <value>हॉटस्पॉट का पासवर्ड</value>
+  </data>
+  <data name="ToggleOff" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="ToggleOn" xml:space="preserve">
+    <value>चालू</value>
+  </data>
+  <data name="StartHotspot" xml:space="preserve">
+    <value>हॉटस्पॉट शुरू करें</value>
+  </data>
+  <data name="StopHotspot" xml:space="preserve">
+    <value>हॉटस्पॉट रोकें</value>
+  </data>
+  <data name="RefreshStatus" xml:space="preserve">
+    <value>स्थिति रीफ़्रेश करें</value>
+  </data>
+  <data name="SaveHotspotInfo" xml:space="preserve">
+    <value>नाम और पासवर्ड सहेजें</value>
+  </data>
+  <data name="DevicesHeading" xml:space="preserve">
+    <value>कनेक्ट किए गए डिवाइस</value>
+  </data>
+  <data name="DiagnosticsHeading" xml:space="preserve">
+    <value>निदान</value>
+  </data>
+  <data name="StatusOn" xml:space="preserve">
+    <value>चालू</value>
+  </data>
+  <data name="StatusOff" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="NoDevicesConnected" xml:space="preserve">
+    <value>कोई डिवाइस कनेक्ट नहीं है</value>
+  </data>
+  <data name="ProxyModeNoticeTitle" xml:space="preserve">
+    <value>प्रॉक्सी हॉटस्पॉट</value>
+  </data>
+  <data name="ProxyModeNotice" xml:space="preserve">
+    <value>PC, HTTP और SOCKS5 ट्रैफ़िक रिले कर सकता है। कनेक्ट किए गए डिवाइस पर संगतता जाँचें।</value>
+  </data>
+  <data name="ProxyComputerHeading" xml:space="preserve">
+    <value>PC प्रॉक्सी</value>
+  </data>
+  <data name="ProxyEndpointsHelp" xml:space="preserve">
+    <value>HTTP CONNECT और SOCKS5 · हॉटस्पॉट पते पर सुनता है</value>
+  </data>
+  <data name="CopyProxyAddress" xml:space="preserve">
+    <value>प्रॉक्सी पता कॉपी करें</value>
+  </data>
+  <data name="ConfigureFirewall" xml:space="preserve">
+    <value>फ़ायरवॉल कॉन्फ़िगर करें</value>
+  </data>
+  <data name="PacHeading" xml:space="preserve">
+    <value>PAC ऑटो-प्रॉक्सी</value>
+  </data>
+  <data name="PacUrlHelp" xml:space="preserve">
+    <value>इस पते का उपयोग उन डिवाइस पर करें जो PAC और सिस्टम प्रॉक्सी सेटिंग का समर्थन करते हैं।</value>
+  </data>
+  <data name="CopyPacAddress" xml:space="preserve">
+    <value>PAC पता कॉपी करें</value>
+  </data>
+  <data name="DhcpDiscoveryTitle" xml:space="preserve">
+    <value>DHCP ऑटो-डिस्कवरी</value>
+  </data>
+  <data name="DhcpDiscoveryNote" xml:space="preserve">
+    <value>DHCP विकल्प 252 कॉन्फ़िगर नहीं है। कुछ डिवाइस या ऐप मैन्युअल PAC पते को अनदेखा कर सकते हैं।</value>
+  </data>
+  <data name="MobileDevicesHeading" xml:space="preserve">
+    <value>फ़ोन और टैबलेट</value>
+  </data>
+  <data name="MobileDevicesHelp" xml:space="preserve">
+    <value>TCP और UDP ट्रैफ़िक रूट करने के लिए Android, iPhone या iPad पर sing-box प्रोफ़ाइल इंपोर्ट करें।</value>
+  </data>
+  <data name="ExportMobileProfile" xml:space="preserve">
+    <value>मोबाइल प्रोफ़ाइल निर्यात करें</value>
+  </data>
+  <data name="JsonProfile" xml:space="preserve">
+    <value>JSON प्रोफ़ाइल</value>
+  </data>
+  <data name="StartupHeading" xml:space="preserve">
+    <value>उच्च प्राथमिकता वाला स्टार्टअप</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>बूट पर उच्च प्राथमिकता वाली Windows सेवा शुरू करता है। सुरक्षा सॉफ़्टवेयर इसे रोक सकता है।</value>
+  </data>
+  <data name="StartupActionHeading" xml:space="preserve">
+    <value>सेवा शुरू होने पर</value>
+  </data>
+  <data name="StartupActionHelp" xml:space="preserve">
+    <value>डिफ़ॉल्ट रूप से, सेवा बैकग्राउंड में चलती है और हॉटस्पॉट शुरू नहीं करती।</value>
+  </data>
+  <data name="StartupNone" xml:space="preserve">
+    <value>केवल बैकग्राउंड सेवा लोड करें</value>
+  </data>
+  <data name="StartupOffline" xml:space="preserve">
+    <value>ऑफ़लाइन हॉटस्पॉट शुरू करें</value>
+  </data>
+  <data name="StartupProxy" xml:space="preserve">
+    <value>प्रॉक्सी हॉटस्पॉट शुरू करें</value>
+  </data>
+  <data name="LanguageHeading" xml:space="preserve">
+    <value>ऐप की भाषा</value>
+  </data>
+  <data name="LanguageHelp" xml:space="preserve">
+    <value>चुनी गई भाषा लागू करने के लिए EasyHotspot रीस्टार्ट करें।</value>
+  </data>
+  <data name="LanguageSavedTitle" xml:space="preserve">
+    <value>भाषा सहेजी गई</value>
+  </data>
+  <data name="LanguageSavedMessage" xml:space="preserve">
+    <value>चुनी गई भाषा लागू करने के लिए EasyHotspot रीस्टार्ट करें।</value>
+  </data>
+  <data name="StartupConflict" xml:space="preserve">
+    <value>सेवा की स्टार्टअप सेटिंग बदलने से पहले स्थानीय प्रॉक्सी रोकें।</value>
+  </data>
+  <data name="StartupUpdatedTitle" xml:space="preserve">
+    <value>स्टार्टअप सेटिंग अपडेट की गई</value>
+  </data>
+  <data name="StartupEnabledMessage" xml:space="preserve">
+    <value>Windows सेवा को अपने-आप शुरू होने के लिए रजिस्टर किया गया है। डिफ़ॉल्ट रूप से यह बैकग्राउंड लोड करती है और हॉटस्पॉट शुरू नहीं करती।</value>
+  </data>
+  <data name="StartupDisabledMessage" xml:space="preserve">
+    <value>उच्च प्राथमिकता वाली स्टार्टअप सेवा हटाई गई।</value>
+  </data>
+  <data name="ConfirmStopTitle" xml:space="preserve">
+    <value>स्थानीय प्रॉक्सी रोककर बंद करें?</value>
+  </data>
+  <data name="ConfirmStopContent" xml:space="preserve">
+    <value>प्रॉक्सी इस ऐप में चल रही है। विंडो बंद होने पर बैकग्राउंड सेवा हॉटस्पॉट प्रबंधित कर सकती है।</value>
+  </data>
+  <data name="ConfirmStopButton" xml:space="preserve">
+    <value>रोकें और बंद करें</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>रद्द करें</value>
+  </data>
+  <data name="ExportedTitle" xml:space="preserve">
+    <value>प्रोफ़ाइल निर्यात की गई</value>
+  </data>
+  <data name="ExportedMessage" xml:space="preserve">
+    <value>इसे अपने फ़ोन या टैबलेट के sing-box ऐप में इंपोर्ट करें।</value>
+  </data>
+  <data name="CopiedTitle" xml:space="preserve">
+    <value>कॉपी किया गया</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>क्लिपबोर्ड पर कॉपी किया गया।</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>कार्रवाई विफल</value>
+  </data>
+  <data name="ServiceUnresponsive" xml:space="preserve">
+    <value>बैकग्राउंड सेवा जवाब नहीं दे रही है।</value>
+  </data>
+  <data name="ServiceNotReady" xml:space="preserve">
+    <value>बैकग्राउंड सेवा तैयार नहीं है। थोड़ी देर प्रतीक्षा करके फिर कोशिश करें, या सेटिंग में सेवा फिर से सक्षम करें।</value>
+  </data>
+  <data name="ServiceInstalledStatus" xml:space="preserve">
+    <value>रजिस्टर की गई · स्वचालित स्टार्टअप · LocalSystem सेवा</value>
+  </data>
+  <data name="ServiceNotInstalledStatus" xml:space="preserve">
+    <value>अक्षम है। पहली बार सक्षम करने के लिए व्यवस्थापक की अनुमति चाहिए और यह Program Files में इंस्टॉल होगी।</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>अज्ञात</value>
+  </data>
+  <data name="InternetStatusLine" xml:space="preserve">
+    <value>इंटरनेट स्थिति: {0}</value>
+  </data>
+  <data name="CurrentSourceLine" xml:space="preserve">
+    <value>मौजूदा स्रोत: {0}</value>
+  </data>
+  <data name="RunModeApp" xml:space="preserve">
+    <value>चलने का मोड: ऐप</value>
+  </data>
+  <data name="RunModeService" xml:space="preserve">
+    <value>चलने का मोड: Windows सेवा</value>
+  </data>
+  <data name="Error_AccessHotspot" xml:space="preserve">
+    <value>Windows हॉटस्पॉट कॉन्फ़िगरेशन तक पहुँचा नहीं जा सका।</value>
+  </data>
+  <data name="Error_AlreadyOn" xml:space="preserve">
+    <value>हॉटस्पॉट पहले से चल रहा है।</value>
+  </data>
+  <data name="Error_LocalAdapter" xml:space="preserve">
+    <value>स्थानीय नेटवर्क अडैप्टर उपलब्ध नहीं है।</value>
+  </data>
+  <data name="Error_StartHotspot" xml:space="preserve">
+    <value>हॉटस्पॉट शुरू नहीं हो सका (Windows स्थिति कोड {0})। {1}</value>
+    <comment>{0} is a Windows status code; {1} is optional additional detail.</comment>
+  </data>
+  <data name="Error_StopHotspot" xml:space="preserve">
+    <value>हॉटस्पॉट रोका नहीं जा सका (Windows स्थिति कोड {0})।</value>
+    <comment>{0} is a Windows status code.</comment>
+  </data>
+  <data name="Error_InvalidSsid" xml:space="preserve">
+    <value>हॉटस्पॉट का नाम अमान्य है।</value>
+  </data>
+  <data name="Error_InvalidPassword" xml:space="preserve">
+    <value>हॉटस्पॉट का पासवर्ड अमान्य है।</value>
+  </data>
+  <data name="Error_StopBeforeConfigure" xml:space="preserve">
+    <value>नाम या पासवर्ड बदलने से पहले हॉटस्पॉट रोकें।</value>
+  </data>
+  <data name="Error_InvalidMode" xml:space="preserve">
+    <value>चुना गया हॉटस्पॉट मोड अमान्य है।</value>
+  </data>
+  <data name="Error_InvalidStartup" xml:space="preserve">
+    <value>स्टार्टअप कार्रवाई अमान्य है।</value>
+  </data>
+  <data name="Error_InvalidRequest" xml:space="preserve">
+    <value>सेवा अनुरोध अमान्य है।</value>
+  </data>
+  <data name="Error_UnknownCommand" xml:space="preserve">
+    <value>सेवा कमांड अज्ञात है।</value>
+  </data>
+  <data name="Error_HelperMissing" xml:space="preserve">
+    <value>सेवा हेल्पर मौजूद नहीं है।</value>
+  </data>
+  <data name="Error_ElevationStart" xml:space="preserve">
+    <value>व्यवस्थापक अनुमति प्रॉम्प्ट शुरू नहीं हो सका।</value>
+  </data>
+  <data name="Error_AdminIncomplete" xml:space="preserve">
+    <value>व्यवस्थापक सेटअप पूरा नहीं हुआ।</value>
+  </data>
+  <data name="Error_RegisterService" xml:space="preserve">
+    <value>Windows सेवा रजिस्टर नहीं हो सकी।</value>
+  </data>
+  <data name="Error_StartService" xml:space="preserve">
+    <value>Windows सेवा शुरू नहीं हो सकी।</value>
+  </data>
+  <data name="Error_StopService" xml:space="preserve">
+    <value>Windows सेवा रोकी नहीं जा सकी।</value>
+  </data>
+  <data name="Error_RemoveService" xml:space="preserve">
+    <value>Windows सेवा हटाई नहीं जा सकी।</value>
+  </data>
+  <data name="Error_Firewall" xml:space="preserve">
+    <value>फ़ायरवॉल कॉन्फ़िगर नहीं हो सका।</value>
+  </data>
+</root>

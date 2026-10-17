@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>EasyHotspot</value>
+  </data>
+  <data name="NavHotspot" xml:space="preserve">
+    <value>Hotspot</value>
+  </data>
+  <data name="NavProxy" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>Nastavení</value>
+  </data>
+  <data name="PageHotspot" xml:space="preserve">
+    <value>Hotspot</value>
+  </data>
+  <data name="PageProxy" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="PageSettings" xml:space="preserve">
+    <value>Nastavení</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>Stav</value>
+  </data>
+  <data name="ClientsLabel" xml:space="preserve">
+    <value>Připojená zařízení</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>Adresa hotspotu</value>
+  </data>
+  <data name="ModeLabel" xml:space="preserve">
+    <value>Režim připojení</value>
+  </data>
+  <data name="ModeOffline" xml:space="preserve">
+    <value>Offline hotspot — internet není potřeba</value>
+  </data>
+  <data name="ModeProxy" xml:space="preserve">
+    <value>Proxy hotspot — sdílení přes tento počítač</value>
+  </data>
+  <data name="ModeSharing" xml:space="preserve">
+    <value>Standardní sdílení — použít aktuální síť</value>
+  </data>
+  <data name="OfflineModeHelp" xml:space="preserve">
+    <value>Připojte blízká zařízení, i když není dostupný internet.</value>
+  </data>
+  <data name="HotspotName" xml:space="preserve">
+    <value>Název hotspotu</value>
+  </data>
+  <data name="HotspotPassword" xml:space="preserve">
+    <value>Heslo hotspotu</value>
+  </data>
+  <data name="ToggleOff" xml:space="preserve">
+    <value>Vypnuto</value>
+  </data>
+  <data name="ToggleOn" xml:space="preserve">
+    <value>Zapnuto</value>
+  </data>
+  <data name="StartHotspot" xml:space="preserve">
+    <value>Spustit hotspot</value>
+  </data>
+  <data name="StopHotspot" xml:space="preserve">
+    <value>Zastavit hotspot</value>
+  </data>
+  <data name="RefreshStatus" xml:space="preserve">
+    <value>Obnovit stav</value>
+  </data>
+  <data name="SaveHotspotInfo" xml:space="preserve">
+    <value>Uložit název a heslo</value>
+  </data>
+  <data name="DevicesHeading" xml:space="preserve">
+    <value>Připojená zařízení</value>
+  </data>
+  <data name="DiagnosticsHeading" xml:space="preserve">
+    <value>Diagnostika</value>
+  </data>
+  <data name="StatusOn" xml:space="preserve">
+    <value>Zapnuto</value>
+  </data>
+  <data name="StatusOff" xml:space="preserve">
+    <value>Vypnuto</value>
+  </data>
+  <data name="NoDevicesConnected" xml:space="preserve">
+    <value>Žádná připojená zařízení</value>
+  </data>
+  <data name="ProxyModeNoticeTitle" xml:space="preserve">
+    <value>Proxy hotspot</value>
+  </data>
+  <data name="ProxyModeNotice" xml:space="preserve">
+    <value>Počítač může předávat provoz HTTP a SOCKS5. Ověřte kompatibilitu na připojeném zařízení.</value>
+  </data>
+  <data name="ProxyComputerHeading" xml:space="preserve">
+    <value>Proxy v počítači</value>
+  </data>
+  <data name="ProxyEndpointsHelp" xml:space="preserve">
+    <value>HTTP CONNECT a SOCKS5 · Naslouchá na adrese hotspotu</value>
+  </data>
+  <data name="CopyProxyAddress" xml:space="preserve">
+    <value>Kopírovat adresu proxy</value>
+  </data>
+  <data name="ConfigureFirewall" xml:space="preserve">
+    <value>Konfigurovat bránu firewall</value>
+  </data>
+  <data name="PacHeading" xml:space="preserve">
+    <value>Automatický proxy PAC</value>
+  </data>
+  <data name="PacUrlHelp" xml:space="preserve">
+    <value>Použijte tuto adresu na zařízeních, která podporují PAC a systémové nastavení proxy.</value>
+  </data>
+  <data name="CopyPacAddress" xml:space="preserve">
+    <value>Kopírovat adresu PAC</value>
+  </data>
+  <data name="DhcpDiscoveryTitle" xml:space="preserve">
+    <value>Automatické zjišťování DHCP</value>
+  </data>
+  <data name="DhcpDiscoveryNote" xml:space="preserve">
+    <value>Možnost DHCP 252 není nakonfigurována. Některá zařízení nebo aplikace mohou ručně zadanou adresu PAC ignorovat.</value>
+  </data>
+  <data name="MobileDevicesHeading" xml:space="preserve">
+    <value>Telefony a tablety</value>
+  </data>
+  <data name="MobileDevicesHelp" xml:space="preserve">
+    <value>Chcete-li směrovat provoz TCP a UDP, importujte profil sing-box do systému Android, iPhonu nebo iPadu.</value>
+  </data>
+  <data name="ExportMobileProfile" xml:space="preserve">
+    <value>Exportovat mobilní profil</value>
+  </data>
+  <data name="JsonProfile" xml:space="preserve">
+    <value>Profil JSON</value>
+  </data>
+  <data name="StartupHeading" xml:space="preserve">
+    <value>Spouštění s vysokou prioritou</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>Při spuštění systému spustí službu Windows s vysokou prioritou. Bezpečnostní software ji může zablokovat.</value>
+  </data>
+  <data name="StartupActionHeading" xml:space="preserve">
+    <value>Akce při spuštění služby</value>
+  </data>
+  <data name="StartupActionHelp" xml:space="preserve">
+    <value>Ve výchozím nastavení služba běží na pozadí a nespustí hotspot.</value>
+  </data>
+  <data name="StartupNone" xml:space="preserve">
+    <value>Načíst pouze službu na pozadí</value>
+  </data>
+  <data name="StartupOffline" xml:space="preserve">
+    <value>Spustit offline hotspot</value>
+  </data>
+  <data name="StartupProxy" xml:space="preserve">
+    <value>Spustit proxy hotspot</value>
+  </data>
+  <data name="LanguageHeading" xml:space="preserve">
+    <value>Jazyk aplikace</value>
+  </data>
+  <data name="LanguageHelp" xml:space="preserve">
+    <value>Restartujte EasyHotspot, aby se použil vybraný jazyk.</value>
+  </data>
+  <data name="LanguageSavedTitle" xml:space="preserve">
+    <value>Jazyk uložen</value>
+  </data>
+  <data name="LanguageSavedMessage" xml:space="preserve">
+    <value>Restartujte EasyHotspot, aby se použil vybraný jazyk.</value>
+  </data>
+  <data name="StartupConflict" xml:space="preserve">
+    <value>Před změnou nastavení spouštění služby zastavte místní proxy.</value>
+  </data>
+  <data name="StartupUpdatedTitle" xml:space="preserve">
+    <value>Nastavení spouštění aktualizováno</value>
+  </data>
+  <data name="StartupEnabledMessage" xml:space="preserve">
+    <value>Služba Windows je zaregistrována pro automatické spouštění. Ve výchozím nastavení se načte na pozadí bez spuštění hotspotu.</value>
+  </data>
+  <data name="StartupDisabledMessage" xml:space="preserve">
+    <value>Služba spouštění s vysokou prioritou byla odebrána.</value>
+  </data>
+  <data name="ConfirmStopTitle" xml:space="preserve">
+    <value>Zastavit místní proxy a zavřít aplikaci?</value>
+  </data>
+  <data name="ConfirmStopContent" xml:space="preserve">
+    <value>Proxy běží v této aplikaci. Služba na pozadí může spravovat hotspot po zavření okna.</value>
+  </data>
+  <data name="ConfirmStopButton" xml:space="preserve">
+    <value>Zastavit a zavřít</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Zrušit</value>
+  </data>
+  <data name="ExportedTitle" xml:space="preserve">
+    <value>Profil exportován</value>
+  </data>
+  <data name="ExportedMessage" xml:space="preserve">
+    <value>Importujte jej do aplikace sing-box v telefonu nebo tabletu.</value>
+  </data>
+  <data name="CopiedTitle" xml:space="preserve">
+    <value>Zkopírováno</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>Zkopírováno do schránky.</value>
+  </data>
+  <data name="OperationFailed" xml:space="preserve">
+    <value>Operace se nezdařila</value>
+  </data>
+  <data name="ServiceUnresponsive" xml:space="preserve">
+    <value>Služba na pozadí neodpovídá.</value>
+  </data>
+  <data name="ServiceNotReady" xml:space="preserve">
+    <value>Služba na pozadí není připravena. Chvíli počkejte a zkuste to znovu nebo ji znovu zapněte v Nastavení.</value>
+  </data>
+  <data name="ServiceInstalledStatus" xml:space="preserve">
+    <value>Zaregistrováno · automatické spouštění · služba LocalSystem</value>
+  </data>
+  <data name="ServiceNotInstalledStatus" xml:space="preserve">
+    <value>Zakázáno. První zapnutí vyžaduje potvrzení správce a nainstaluje službu do Program Files.</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Neznámé</value>
+  </data>
+  <data name="InternetStatusLine" xml:space="preserve">
+    <value>Stav internetu: {0}</value>
+  </data>
+  <data name="CurrentSourceLine" xml:space="preserve">
+    <value>Aktuální zdroj: {0}</value>
+  </data>
+  <data name="RunModeApp" xml:space="preserve">
+    <value>Režim spuštění: aplikace</value>
+  </data>
+  <data name="RunModeService" xml:space="preserve">
+    <value>Režim spuštění: služba Windows</value>
+  </data>
+  <data name="Error_AccessHotspot" xml:space="preserve">
+    <value>Nelze získat přístup ke konfiguraci hotspotu Windows.</value>
+  </data>
+  <data name="Error_AlreadyOn" xml:space="preserve">
+    <value>Hotspot je již spuštěný.</value>
+  </data>
+  <data name="Error_LocalAdapter" xml:space="preserve">
+    <value>Místní síťový adaptér není k dispozici.</value>
+  </data>
+  <data name="Error_StartHotspot" xml:space="preserve">
+    <value>Hotspot se nepodařilo spustit (stav Windows {0}). {1}</value>
+    <comment>{0} is a Windows status code; {1} is optional additional detail.</comment>
+  </data>
+  <data name="Error_StopHotspot" xml:space="preserve">
+    <value>Hotspot se nepodařilo zastavit (stav Windows {0}).</value>
+    <comment>{0} is a Windows status code.</comment>
+  </data>
+  <data name="Error_InvalidSsid" xml:space="preserve">
+    <value>Neplatný název hotspotu.</value>
+  </data>
+  <data name="Error_InvalidPassword" xml:space="preserve">
+    <value>Neplatné heslo hotspotu.</value>
+  </data>
+  <data name="Error_StopBeforeConfigure" xml:space="preserve">
+    <value>Před změnou názvu nebo hesla zastavte hotspot.</value>
+  </data>
+  <data name="Error_InvalidMode" xml:space="preserve">
+    <value>Vybraný režim hotspotu je neplatný.</value>
+  </data>
+  <data name="Error_InvalidStartup" xml:space="preserve">
+    <value>Vybraná akce spuštění je neplatná.</value>
+  </data>
+  <data name="Error_InvalidRequest" xml:space="preserve">
+    <value>Požadavek služby je neplatný.</value>
+  </data>
+  <data name="Error_UnknownCommand" xml:space="preserve">
+    <value>Příkaz služby není známý.</value>
+  </data>
+  <data name="Error_HelperMissing" xml:space="preserve">
+    <value>Pomocná služba chybí.</value>
+  </data>
+  <data name="Error_ElevationStart" xml:space="preserve">
+    <value>Nelze spustit výzvu správce.</value>
+  </data>
+  <data name="Error_AdminIncomplete" xml:space="preserve">
+    <value>Nastavení správcem nebylo dokončeno.</value>
+  </data>
+  <data name="Error_RegisterService" xml:space="preserve">
+    <value>Službu Windows se nepodařilo zaregistrovat.</value>
+  </data>
+  <data name="Error_StartService" xml:space="preserve">
+    <value>Službu Windows se nepodařilo spustit.</value>
+  </data>
+  <data name="Error_StopService" xml:space="preserve">
+    <value>Službu Windows se nepodařilo zastavit.</value>
+  </data>
+  <data name="Error_RemoveService" xml:space="preserve">
+    <value>Službu Windows se nepodařilo odebrat.</value>
+  </data>
+  <data name="Error_Firewall" xml:space="preserve">
+    <value>Firewall se nepodařilo nakonfigurovat.</value>
+  </data>
+</root>
