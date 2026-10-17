@@ -100,7 +100,7 @@
     <value>ฮอตสปอตพร็อกซี</value>
   </data>
   <data name="ProxyModeNotice" xml:space="preserve">
-    <value>พีซีสามารถส่งต่อทราฟฟิก HTTP และ SOCKS5 ได้ โปรดตรวจสอบความเข้ากันได้บนอุปกรณ์ที่เชื่อมต่อ</value>
+    <value>พีซีใช้เส้นทางปัจจุบัน รวมถึง TUN ตั้งค่าพร็อกซีบนอุปกรณ์หรือนำเข้าโปรไฟล์มือถือ</value>
   </data>
   <data name="ProxyComputerHeading" xml:space="preserve">
     <value>พร็อกซีบนพีซี</value>
@@ -133,7 +133,7 @@
     <value>โทรศัพท์และแท็บเล็ต</value>
   </data>
   <data name="MobileDevicesHelp" xml:space="preserve">
-    <value>หากต้องการกำหนดเส้นทางทราฟฟิก TCP และ UDP ให้นำเข้าโปรไฟล์ sing-box บน Android, iPhone หรือ iPad</value>
+    <value>หากเปิด VPN บนโทรศัพท์ ให้นำเข้าการกำหนดค่าการส่งต่อของ Clash หรือ sing-box เมื่อใช้พร็อกซี Wi-Fi ให้ปิด VPN อื่นก่อน</value>
   </data>
   <data name="ExportMobileProfile" xml:space="preserve">
     <value>ส่งออกโปรไฟล์มือถือ</value>
@@ -334,5 +334,32 @@
   </data>
   <data name="Error_DhcpRuntime" xml:space="preserve">
     <value>การค้นหา DHCP อัตโนมัติหยุดทำงาน: {0}</value>
+  </data>
+  <data name="CheckProxyConnection" xml:space="preserve">
+    <value>ทดสอบการเชื่อมต่อ</value>
+  </data>
+  <data name="ProxyCheckPassed" xml:space="preserve">
+    <value>การเชื่อมต่อพร็อกซีของพีซีใช้งานได้</value>
+  </data>
+  <data name="Error_ProxyNotRunning" xml:space="preserve">
+    <value>โปรดเริ่มฮอตสปอตพร็อกซีก่อน</value>
+  </data>
+  <data name="Error_ProxyCheckFailed" xml:space="preserve">
+    <value>การเชื่อมต่อพร็อกซีของพีซีล้มเหลว: {0}</value>
+  </data>
+  <data name="TunDetectedLine" xml:space="preserve">
+    <value>ตรวจพบ TUN: {0}</value>
+  </data>
+  <data name="NoTunDetected" xml:space="preserve">
+    <value>ไม่พบ TUN</value>
+  </data>
+  <data name="Error_ProxyAccept" xml:space="preserve">
+    <value>ตัวรับฟังพร็อกซีทำงานไม่สำเร็จ: {0}</value>
+  </data>
+  <data name="Error_ProxyRequest" xml:space="preserve">
+    <value>คำขอพร็อกซีล้มเหลว: {0}</value>
+  </data>
+  <data name="YamlProfile" xml:space="preserve">
+    <value>โปรไฟล์ Clash (YAML)</value>
   </data>
 </root>

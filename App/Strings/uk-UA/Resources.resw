@@ -100,7 +100,7 @@
     <value>Точка доступу з проксі</value>
   </data>
   <data name="ProxyModeNotice" xml:space="preserve">
-    <value>ПК може пересилати трафік HTTP і SOCKS5. Перевірте сумісність на підключеному пристрої.</value>
+    <value>Комп’ютер використовує поточні маршрути, зокрема TUN. Налаштуйте проксі на пристрої або імпортуйте мобільний профіль.</value>
   </data>
   <data name="ProxyComputerHeading" xml:space="preserve">
     <value>Проксі на ПК</value>
@@ -133,7 +133,7 @@
     <value>Телефони й планшети</value>
   </data>
   <data name="MobileDevicesHelp" xml:space="preserve">
-    <value>Щоб маршрутизувати трафік TCP і UDP, імпортуйте профіль sing-box на Android, iPhone або iPad.</value>
+    <value>Якщо на телефоні ввімкнено VPN, імпортуйте профіль Clash (YAML) або sing-box (JSON) для маршрутизації трафіку. Для проксі через Wi-Fi спочатку вимкніть інші VPN.</value>
   </data>
   <data name="ExportMobileProfile" xml:space="preserve">
     <value>Експортувати профіль для мобільного пристрою</value>
@@ -334,5 +334,32 @@
   </data>
   <data name="Error_DhcpAdapter" xml:space="preserve">
     <value>Активний адаптер точки доступу не знайдено.</value>
+  </data>
+  <data name="CheckProxyConnection" xml:space="preserve">
+    <value>Перевірити з’єднання</value>
+  </data>
+  <data name="ProxyCheckPassed" xml:space="preserve">
+    <value>Проксі-з’єднання комп’ютера працює.</value>
+  </data>
+  <data name="Error_ProxyNotRunning" xml:space="preserve">
+    <value>Спочатку запустіть точку доступу з проксі.</value>
+  </data>
+  <data name="Error_ProxyCheckFailed" xml:space="preserve">
+    <value>Не вдалося підключитися через проксі комп’ютера: {0}</value>
+  </data>
+  <data name="TunDetectedLine" xml:space="preserve">
+    <value>Виявлено TUN: {0}</value>
+  </data>
+  <data name="NoTunDetected" xml:space="preserve">
+    <value>TUN не виявлено</value>
+  </data>
+  <data name="Error_ProxyAccept" xml:space="preserve">
+    <value>Помилка прослуховування проксі: {0}</value>
+  </data>
+  <data name="Error_ProxyRequest" xml:space="preserve">
+    <value>Помилка запиту проксі: {0}</value>
+  </data>
+  <data name="YamlProfile" xml:space="preserve">
+    <value>Профіль Clash (YAML)</value>
   </data>
 </root>

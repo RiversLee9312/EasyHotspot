@@ -16,7 +16,7 @@ function Query([string]$sql,[string[]]$columns){
 try {
     $properties=@{};Query 'SELECT `Property`,`Value` FROM `Property`' @('Name','Value') | ForEach-Object {$properties[$_.Name]=$_.Value}
     Check ($properties.ProductName-eq'EasyHotspot') 'Product name'
-    Check ($properties.ProductVersion-eq'1.2.0') 'Product version'
+    Check ($properties.ProductVersion-eq'1.2.1') 'Product version'
     Check ($properties.ALLUSERS-eq'1') 'Per-machine installation'
     $summary=$database.SummaryInformation(0)
     Check ($summary.Property(7)-like'x64;*') 'x64 package template'

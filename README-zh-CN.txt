@@ -6,7 +6,9 @@ Windows 11 x64 热点工具。
 卸载：设置 → 应用 → 安装的应用 → EasyHotspot → 卸载。
 
 离线热点需要 WLAN 和现有的 Hyper-V Default Switch。
-代理模式提供 HTTP、SOCKS5 和 PAC；手机需要设置代理或导入导出的 sing-box 配置。
+代理模式提供 HTTP、SOCKS5 和 PAC；手机需要设置代理或导入 Clash / sing-box 中继配置。
+电脑端转发沿 Windows 当前路由运行，兼容 TUN。可在“代理”页面检测电脑端代理连接。
+手机端其他 VPN 可能阻止访问热点代理；使用 Wi-Fi 代理时请先关闭，或将其切换为电脑中继配置。
 DHCP 自动发现在“代理”页面启用，仅在代理热点运行时发布 PAC 地址。
 客户端须支持 DHCP WPAD；Android、iPhone 和 iPad 可能仍需手动设置 PAC。
 若 Windows 安全中心拦截组件，请放行安装目录 Native 下的 WinDivert.dll 和 WinDivert64.sys，再重试。

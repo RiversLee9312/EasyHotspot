@@ -27,11 +27,12 @@ public sealed class MainWindow:Window
     readonly ToggleSwitch startup=new();
     readonly ToggleSwitch dhcp=new();
     readonly TextBlock dhcpStatus=new(){TextWrapping=TextWrapping.Wrap};
+    readonly TextBlock tunStatus=new(){TextWrapping=TextWrapping.Wrap};
     readonly ComboBox bootMode=new(){MinWidth=260,SelectedIndex=0};
     readonly ComboBox language=new(){MinWidth=260};
     readonly Button start=new(),stop=new();
     readonly DispatcherTimer timer=new(){Interval=TimeSpan.FromSeconds(5)};
-    bool busy,refreshing,initial=true,updatingStartup,updatingDhcp;BackendState? latest;string page="hotspot";
+    bool busy,refreshing,initial=true,updatingStartup,updatingDhcp,updatingMode;BackendState? latest;string page="hotspot";
     public NavigationView Navigation=>nav;
     public MainWindow()
     {
@@ -41,10 +42,12 @@ public sealed class MainWindow:Window
         var icon=Path.Combine(AppContext.BaseDirectory,"Assets","app.ico");if(File.Exists(icon))AppWindow.SetIcon(icon);
         root.RowDefinitions.Add(new(){Height=new GridLength(48)});root.RowDefinitions.Add(new(){Height=new GridLength(1,GridUnitType.Star)});
         var title=new StackPanel{Orientation=Orientation.Horizontal,Spacing=12,Margin=new(16,0,140,0),VerticalAlignment=VerticalAlignment.Center};
-        title.Children.Add(Picture("app",24));title.Children.Add(Text(L("AppName"),14));root.Children.Add(title);
+        title.Children.Add(Picture("app",28));title.Children.Add(Text(L("AppName"),14));root.Children.Add(title);
         nav.IsSettingsVisible=false;nav.IsBackButtonVisible=NavigationViewBackButtonVisible.Collapsed;nav.PaneDisplayMode=NavigationViewPaneDisplayMode.Left;nav.OpenPaneLength=220;nav.IsPaneOpen=true;nav.IsTitleBarAutoPaddingEnabled=false;
         foreach(var item in new[]{("hotspot",L("NavHotspot")),("proxy",L("NavProxy")),("settings",L("NavSettings"))}) {
-            var n=new NavigationViewItem{Content=item.Item2,Tag=item.Item1,Icon=new BitmapIcon{UriSource=new Uri(Path.Combine(AppContext.BaseDirectory,"Assets",item.Item1+".png")),ShowAsMonochrome=true}};
+            // Keep the native icon slot; compensate for the generated images' transparent margins.
+            var iconScale=item.Item1=="proxy"?1.75:2.25;
+            var n=new NavigationViewItem{Content=item.Item2,Tag=item.Item1,Icon=new BitmapIcon{UriSource=new Uri(Path.Combine(AppContext.BaseDirectory,"Assets",item.Item1+".png")),ShowAsMonochrome=true,RenderTransformOrigin=new(0.5,0.5),RenderTransform=new ScaleTransform{ScaleX=iconScale,ScaleY=iconScale}}};
             AutomationProperties.SetAutomationId(n,"Nav"+item.Item1);nav.MenuItems.Add(n);
         }
         var shell=new Grid();shell.RowDefinitions.Add(new(){Height=GridLength.Auto});shell.RowDefinitions.Add(new(){Height=new(1,GridUnitType.Star)});notice.Margin=new(32,16,32,0);shell.Children.Add(notice);Grid.SetRow(host,1);shell.Children.Add(host);
@@ -72,7 +75,7 @@ public sealed class MainWindow:Window
         };
         mode.Items.Add(L("ModeOffline"));mode.Items.Add(L("ModeProxy"));mode.Items.Add(L("ModeSharing"));
         mode.SelectedIndex=0;
-        mode.SelectionChanged+=(_,_)=>{if(!initial && mode.SelectedIndex==1)Message(L("ProxyModeNoticeTitle"),L("ProxyModeNotice"),InfoBarSeverity.Informational);};
+        mode.SelectionChanged+=(_,_)=>{if(!initial && !updatingMode && mode.SelectedIndex==1)Message(L("ProxyModeNoticeTitle"),L("ProxyModeNotice"),InfoBarSeverity.Informational);};
         start.Style=(Style)Application.Current.Resources["AccentButtonStyle"];
         start.Click+=async(_,_)=>await Action(async()=>{var m=SelectedMode();if(m=="proxy" && !ServiceSetup.Installed)await ServiceSetup.ElevateAsync("--firewall");await Command(new("start",m));});
         stop.Click+=async(_,_)=>await Action(()=>Command(new("stop")));
@@ -144,7 +147,9 @@ public sealed class MainWindow:Window
     {
         var addr=latest?.Hotspot?.Address??"192.168.137.1";
         var endpoint=Text($"{addr}:18877",24);endpoint.FlowDirection=FlowDirection.LeftToRight;
-        content.Children.Add(Card(Stack(Text(L("ProxyComputerHeading"),16),endpoint,Secondary(L("ProxyEndpointsHelp")),Row(Button(L("CopyProxyAddress"),()=>Copy($"{addr}:18877")),Button(L("ConfigureFirewall"),()=>ServiceSetup.ElevateAsync("--firewall"))))));
+        AutomationProperties.SetAutomationId(tunStatus,"TunStatus");
+        var check=Button(L("CheckProxyConnection"),async()=>{await Command(new("checkproxy"));Message(L("CheckProxyConnection"),L("ProxyCheckPassed"),InfoBarSeverity.Success);});AutomationProperties.SetAutomationId(check,"CheckProxyConnection");
+        content.Children.Add(Card(Stack(Text(L("ProxyComputerHeading"),16),endpoint,Secondary(L("ProxyEndpointsHelp")),tunStatus,Row(Button(L("CopyProxyAddress"),()=>Copy($"{addr}:18877")),check,Button(L("ConfigureFirewall"),()=>ServiceSetup.ElevateAsync("--firewall"))))));
         var url=$"http://{addr}:18080/wpad.dat";
         var pacAddress=new TextBox{Text=url,IsReadOnly=true,FlowDirection=FlowDirection.LeftToRight};
         content.Children.Add(Card(Stack(Text(L("PacHeading"),16),pacAddress,Secondary(L("PacUrlHelp")),Button(L("CopyPacAddress"),()=>Copy(url)))));
@@ -164,8 +169,10 @@ public sealed class MainWindow:Window
     }
     async Task ExportMobile()
     {
-        var picker=new FileSavePicker{SuggestedFileName="Mobile-Relay"};picker.FileTypeChoices.Add(L("JsonProfile"),new List<string>{".json"});InitializeWithWindow.Initialize(picker,WindowNative.GetWindowHandle(this));var file=await picker.PickSaveFileAsync();if(file is null)return;
-        var text=await File.ReadAllTextAsync(Path.Combine(AppContext.BaseDirectory,"Assets","Mobile-Relay.json"));text=text.Replace("192.168.137.1",latest?.Hotspot?.Address??"192.168.137.1");await File.WriteAllTextAsync(file.Path,text);Message(L("ExportedTitle"),L("ExportedMessage"),InfoBarSeverity.Success);
+        var picker=new FileSavePicker{SuggestedFileName="EasyHotspot-Mobile"};picker.FileTypeChoices.Add(L("JsonProfile"),new List<string>{".json"});picker.FileTypeChoices.Add(L("YamlProfile"),new List<string>{".yaml"});InitializeWithWindow.Initialize(picker,WindowNative.GetWindowHandle(this));var file=await picker.PickSaveFileAsync();if(file is null)return;
+        var address=latest?.Hotspot?.Address??"192.168.137.1";
+        var text=file.FileType.Equals(".yaml",StringComparison.OrdinalIgnoreCase)?MobileProfiles.Clash(address):(await File.ReadAllTextAsync(Path.Combine(AppContext.BaseDirectory,"Assets","Mobile-Relay.json"))).Replace("192.168.137.1",address);
+        await File.WriteAllTextAsync(file.Path,text);Message(L("ExportedTitle"),L("ExportedMessage"),InfoBarSeverity.Success);
     }
     Task Copy(string value){var data=new DataPackage();data.SetText(value);Clipboard.SetContent(data);Message(L("CopiedTitle"),L("CopiedMessage"),InfoBarSeverity.Success);return Task.CompletedTask;}
     void Message(string title,string value,InfoBarSeverity severity){notice.Title=title;notice.Message=value;notice.Severity=severity;notice.IsOpen=true;}
@@ -180,7 +187,7 @@ public sealed class MainWindow:Window
         var reply=await ControlProtocol.Send(request,45000);
         if(reply is not null){if(!reply.Success)throw new InvalidOperationException(reply.Error);return;}
         if(ServiceSetup.Installed)throw new InvalidOperationException(L("ServiceNotReady"));
-        switch(request.Command){case "start":await local.StartAsync(request.Mode??"offline");break;case "stop":await local.StopAsync();break;case "configure":await local.Hotspot.ConfigureAsync(request.Ssid??"",request.Password??"");break;}
+        switch(request.Command){case "start":await local.StartAsync(request.Mode??"offline");break;case "stop":await local.StopAsync();break;case "configure":await local.Hotspot.ConfigureAsync(request.Ssid??"",request.Password??"");break;case "checkproxy":await local.CheckProxyAsync();break;}
     }
     public async Task Refresh()
     {
@@ -188,14 +195,16 @@ public sealed class MainWindow:Window
         try {
             var reply=await ControlProtocol.Send(new("status"),400);latest=reply?.State??await Task.Run(local.Read);
             var h=latest.Hotspot;status.Text=h?.State=="On"?L("StatusOn"):L("StatusOff");clients.Text=(h?.Clients??0).ToString(Localization.FormattingCulture);ip.Text=h?.Address??"—";
+            if(h?.State=="On"){updatingMode=true;mode.SelectedIndex=latest.Mode switch{"proxy"=>1,"sharing"=>2,_=>0};updatingMode=false;}
             deviceList.Text=h?.Devices.Length>0?string.Join("\n",h.Devices):L("NoDevicesConnected");
             if(initial&&h is not null){ssid.Text=h.Ssid;password.Password=h.Password;initial=false;}
-            diagnostic.Text=string.Join("\n",new[]{Localization.Format("InternetStatusLine",h?.Connectivity??L("Unknown")),Localization.Format("CurrentSourceLine",h?.Source??"—"),reply is null?L("RunModeApp"):L("RunModeService")}.Concat(latest.Logs.Select(Localization.Error)).Concat(latest.Error is null?[]:new[]{Localization.Error(latest.Error)}));
+            tunStatus.Text=latest.Tun is null?L("NoTunDetected"):Localization.Format("TunDetectedLine",latest.Tun);
+            diagnostic.Text=string.Join("\n",new[]{Localization.Format("InternetStatusLine",h?.Connectivity??L("Unknown")),Localization.Format("CurrentSourceLine",h?.Source??"—"),tunStatus.Text,reply is null?L("RunModeApp"):L("RunModeService")}.Concat(latest.Logs.Select(Localization.Log)).Concat(latest.Error is null?[]:new[]{Localization.Error(latest.Error)}));
             bootMode.IsEnabled=ServiceSetup.Installed;
             var discovery=latest.Dhcp;updatingDhcp=true;dhcp.IsOn=discovery.Enabled;updatingDhcp=false;
             dhcpStatus.Text=discovery.Error is not null?Localization.Error(discovery.Error):discovery.Running?Localization.Format("DhcpRunning",discovery.Advertisements):L(discovery.Enabled?"DhcpWaiting":"DhcpOff");
             UpdateControls();
         } finally {refreshing=false;}
     }
-    void UpdateControls(){var on=latest?.Hotspot?.State=="On";start.IsEnabled=!busy&&!on;stop.IsEnabled=!busy&&on;ssid.IsEnabled=password.IsEnabled=!on;dhcp.IsEnabled=!busy&&!on;startup.IsEnabled=!busy;}
+    void UpdateControls(){var on=latest?.Hotspot?.State=="On";start.IsEnabled=!busy&&!on;stop.IsEnabled=!busy&&on;mode.IsEnabled=!busy&&!on;ssid.IsEnabled=password.IsEnabled=!on;dhcp.IsEnabled=!busy&&!on;startup.IsEnabled=!busy;}
 }

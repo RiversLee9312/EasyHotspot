@@ -100,7 +100,7 @@
     <value>Proxy hotspot</value>
   </data>
   <data name="ProxyModeNotice" xml:space="preserve">
-    <value>Počítač může předávat provoz HTTP a SOCKS5. Ověřte kompatibilitu na připojeném zařízení.</value>
+    <value>Počítač používá aktuální trasy včetně TUN. Nastavte proxy na zařízení nebo importujte mobilní profil.</value>
   </data>
   <data name="ProxyComputerHeading" xml:space="preserve">
     <value>Proxy v počítači</value>
@@ -133,7 +133,7 @@
     <value>Telefony a tablety</value>
   </data>
   <data name="MobileDevicesHelp" xml:space="preserve">
-    <value>Chcete-li směrovat provoz TCP a UDP, importujte profil sing-box do systému Android, iPhonu nebo iPadu.</value>
+    <value>Pokud je v telefonu zapnutá VPN, importujte profil Clash (YAML) nebo sing-box (JSON) pro směrování provozu. Před použitím proxy přes Wi-Fi nejprve vypněte ostatní VPN.</value>
   </data>
   <data name="ExportMobileProfile" xml:space="preserve">
     <value>Exportovat mobilní profil</value>
@@ -334,5 +334,32 @@
   </data>
   <data name="Error_DhcpAdapter" xml:space="preserve">
     <value>Nebyl nalezen žádný aktivní adaptér hotspotu.</value>
+  </data>
+  <data name="CheckProxyConnection" xml:space="preserve">
+    <value>Otestovat připojení</value>
+  </data>
+  <data name="ProxyCheckPassed" xml:space="preserve">
+    <value>Proxy připojení počítače funguje.</value>
+  </data>
+  <data name="Error_ProxyNotRunning" xml:space="preserve">
+    <value>Nejprve spusťte hotspot s proxy.</value>
+  </data>
+  <data name="Error_ProxyCheckFailed" xml:space="preserve">
+    <value>Proxy připojení počítače selhalo: {0}</value>
+  </data>
+  <data name="TunDetectedLine" xml:space="preserve">
+    <value>Zjištěno TUN: {0}</value>
+  </data>
+  <data name="NoTunDetected" xml:space="preserve">
+    <value>TUN nebylo zjištěno</value>
+  </data>
+  <data name="Error_ProxyAccept" xml:space="preserve">
+    <value>Naslouchání proxy selhalo: {0}</value>
+  </data>
+  <data name="Error_ProxyRequest" xml:space="preserve">
+    <value>Požadavek proxy selhal: {0}</value>
+  </data>
+  <data name="YamlProfile" xml:space="preserve">
+    <value>Profil Clash (YAML)</value>
   </data>
 </root>

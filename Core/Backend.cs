@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace EasyHotspot.Core;
 public record AppSettings(string StartupMode = "none",bool DhcpDiscovery=false);
-public record BackendState(HotspotState? Hotspot, bool Relay, string Mode, string[] Logs, string? Error,DhcpDiscoveryState Dhcp);
+public record BackendState(HotspotState? Hotspot, bool Relay, string Mode, string[] Logs, string? Error,DhcpDiscoveryState Dhcp,string? Tun=null);
 public sealed class Backend : IAsyncDisposable
 {
     public readonly HotspotController Hotspot = new();
@@ -14,7 +14,8 @@ public sealed class Backend : IAsyncDisposable
     public string Mode { get; private set; } = "offline";
     public Backend() { Relay = new RelayServer(Log);Dhcp=new DhcpDiscovery(Log); }
     public void Log(string value) { logs.Enqueue($"{DateTime.Now:HH:mm:ss}  {value}"); while (logs.Count > 40) logs.TryDequeue(out _); }
-    public BackendState Read() { try { return new(Hotspot.Read(), Relay.Running, Mode, logs.ToArray(), null,Dhcp.Read()); } catch(Exception ex) { return new(null, Relay.Running, Mode, logs.ToArray(), ex.Message,Dhcp.Read()); } }
+    public BackendState Read() { try { return new(Hotspot.Read(), Relay.Running, Mode, logs.ToArray(), null,Dhcp.Read(),NetworkDiagnostics.ActiveTun()); } catch(Exception ex) { return new(null, Relay.Running, Mode, logs.ToArray(), ex.Message,Dhcp.Read()); } }
+    public Task CheckProxyAsync(){if(!Relay.Running)throw new InvalidOperationException("Error_ProxyNotRunning");return NetworkDiagnostics.CheckProxyAsync(HotspotController.FindHotspotAddress());}
     public async Task SetDhcpAsync(bool enabled)
     {
         await gate.WaitAsync();

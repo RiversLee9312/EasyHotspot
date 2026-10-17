@@ -100,7 +100,7 @@
     <value>प्रॉक्सी हॉटस्पॉट</value>
   </data>
   <data name="ProxyModeNotice" xml:space="preserve">
-    <value>PC, HTTP और SOCKS5 ट्रैफ़िक रिले कर सकता है। कनेक्ट किए गए डिवाइस पर संगतता जाँचें।</value>
+    <value>PC, TUN सहित मौजूदा रूट का पालन करता है। डिवाइस पर प्रॉक्सी सेट करें या मोबाइल प्रोफ़ाइल इंपोर्ट करें।</value>
   </data>
   <data name="ProxyComputerHeading" xml:space="preserve">
     <value>PC प्रॉक्सी</value>
@@ -133,7 +133,7 @@
     <value>फ़ोन और टैबलेट</value>
   </data>
   <data name="MobileDevicesHelp" xml:space="preserve">
-    <value>TCP और UDP ट्रैफ़िक रूट करने के लिए Android, iPhone या iPad पर sing-box प्रोफ़ाइल इंपोर्ट करें।</value>
+    <value>अगर फ़ोन पर VPN चालू है, तो Clash या sing-box का रिले कॉन्फ़िगरेशन इंपोर्ट करें। Wi-Fi प्रॉक्सी का उपयोग करते समय पहले अन्य VPN बंद करें।</value>
   </data>
   <data name="ExportMobileProfile" xml:space="preserve">
     <value>मोबाइल प्रोफ़ाइल निर्यात करें</value>
@@ -334,5 +334,32 @@
   </data>
   <data name="Error_DhcpRuntime" xml:space="preserve">
     <value>DHCP स्वतः खोज रुक गई: {0}</value>
+  </data>
+  <data name="CheckProxyConnection" xml:space="preserve">
+    <value>कनेक्शन जाँचें</value>
+  </data>
+  <data name="ProxyCheckPassed" xml:space="preserve">
+    <value>PC का प्रॉक्सी कनेक्शन काम कर रहा है।</value>
+  </data>
+  <data name="Error_ProxyNotRunning" xml:space="preserve">
+    <value>पहले प्रॉक्सी हॉटस्पॉट शुरू करें।</value>
+  </data>
+  <data name="Error_ProxyCheckFailed" xml:space="preserve">
+    <value>PC का प्रॉक्सी कनेक्शन विफल हुआ: {0}</value>
+  </data>
+  <data name="TunDetectedLine" xml:space="preserve">
+    <value>TUN मिला: {0}</value>
+  </data>
+  <data name="NoTunDetected" xml:space="preserve">
+    <value>कोई TUN नहीं मिला</value>
+  </data>
+  <data name="Error_ProxyAccept" xml:space="preserve">
+    <value>प्रॉक्सी लिसनर शुरू नहीं हो सका: {0}</value>
+  </data>
+  <data name="Error_ProxyRequest" xml:space="preserve">
+    <value>प्रॉक्सी अनुरोध विफल हुआ: {0}</value>
+  </data>
+  <data name="YamlProfile" xml:space="preserve">
+    <value>Clash प्रोफ़ाइल (YAML)</value>
   </data>
 </root>

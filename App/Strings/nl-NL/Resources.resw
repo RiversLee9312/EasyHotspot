@@ -100,7 +100,7 @@
     <value>Proxy-hotspot</value>
   </data>
   <data name="ProxyModeNotice" xml:space="preserve">
-    <value>De pc kan HTTP- en SOCKS5-verkeer doorsturen. Controleer de compatibiliteit op een verbonden apparaat.</value>
+    <value>De pc volgt de huidige routes, inclusief TUN. Stel een proxy in op het apparaat of importeer een mobiel profiel.</value>
   </data>
   <data name="ProxyComputerHeading" xml:space="preserve">
     <value>Proxy op pc</value>
@@ -133,13 +133,16 @@
     <value>Telefoons en tablets</value>
   </data>
   <data name="MobileDevicesHelp" xml:space="preserve">
-    <value>Importeer het sing-box-profiel op Android, iPhone of iPad om TCP- en UDP-verkeer te routeren.</value>
+    <value>Als er een VPN is ingeschakeld op de telefoon, importeer dan een relayprofiel van Clash of sing-box. Schakel voor een Wi-Fi-proxy eerst andere VPN's uit.</value>
   </data>
   <data name="ExportMobileProfile" xml:space="preserve">
     <value>Mobiel profiel exporteren</value>
   </data>
   <data name="JsonProfile" xml:space="preserve">
     <value>JSON-profiel</value>
+  </data>
+  <data name="YamlProfile" xml:space="preserve">
+    <value>Clash-profiel (YAML)</value>
   </data>
   <data name="StartupHeading" xml:space="preserve">
     <value>Opstarten met hoge prioriteit</value>
@@ -334,5 +337,29 @@
   </data>
   <data name="Error_DhcpRuntime" xml:space="preserve">
     <value>Automatische DHCP-detectie is gestopt: {0}</value>
+  </data>
+  <data name="CheckProxyConnection" xml:space="preserve">
+    <value>Verbinding testen</value>
+  </data>
+  <data name="Error_ProxyAccept" xml:space="preserve">
+    <value>Fout bij het accepteren van de proxyverbinding: {0}</value>
+  </data>
+  <data name="ProxyCheckPassed" xml:space="preserve">
+    <value>De proxyverbinding van de pc werkt.</value>
+  </data>
+  <data name="Error_ProxyNotRunning" xml:space="preserve">
+    <value>Start eerst een proxyhotspot.</value>
+  </data>
+  <data name="TunDetectedLine" xml:space="preserve">
+    <value>TUN gedetecteerd: {0}</value>
+  </data>
+  <data name="Error_ProxyCheckFailed" xml:space="preserve">
+    <value>De proxyverbinding van de pc is mislukt: {0}</value>
+  </data>
+  <data name="NoTunDetected" xml:space="preserve">
+    <value>Geen TUN gedetecteerd</value>
+  </data>
+  <data name="Error_ProxyRequest" xml:space="preserve">
+    <value>Proxyverzoek mislukt: {0}</value>
   </data>
 </root>

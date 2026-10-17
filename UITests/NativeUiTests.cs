@@ -17,9 +17,10 @@ public sealed class NativeUiTests
     {
         await Task.Yield();Assert.IsTrue(Window.DispatcherQueue.HasThreadAccess);Assert.IsInstanceOfType<MicaBackdrop>(Window.SystemBackdrop);Assert.AreEqual(3,Window.Navigation.MenuItems.Count);
     }
-    [UITestMethod] public void OfflineIsTheDefaultMode()
+    [UITestMethod] public async Task ModeMatchesTheRunningBackendOrDefaultsToOffline()
     {
-        Show("hotspot");var combo=Elements(Window.Content).OfType<ComboBox>().Single(x=>AutomationProperties.GetAutomationId(x)=="HotspotMode");Assert.AreEqual(0,combo.SelectedIndex);
+        await Window.Refresh();var reply=await ControlProtocol.Send(new("status"));Show("hotspot");var combo=Elements(Window.Content).OfType<ComboBox>().Single(x=>AutomationProperties.GetAutomationId(x)=="HotspotMode");
+        var running=reply?.State?.Hotspot?.State=="On";Assert.AreEqual(running?reply!.State!.Mode switch{"proxy"=>1,"sharing"=>2,_=>0}:0,combo.SelectedIndex);Assert.AreEqual(!running,combo.IsEnabled);
     }
     [UITestMethod] public void ProxyPageShowsPacAndCompatibilityLimits()
     {
@@ -66,6 +67,11 @@ public sealed class NativeUiTests
     {
         Assert.AreEqual(FlowDirection.LeftToRight,((FrameworkElement)Window.Content).FlowDirection);
         Assert.AreEqual(Localization.IsRightToLeft(Localization.CurrentLanguage)?FlowDirection.RightToLeft:FlowDirection.LeftToRight,Window.Navigation.FlowDirection);
+    }
+    [UITestMethod] public void ProxyPageOffersAConnectionCheckAndTunStatus()
+    {
+        Show("proxy");var nodes=Elements(Window.Content).ToArray();Assert.AreEqual(1,nodes.OfType<Button>().Count(x=>AutomationProperties.GetAutomationId(x)=="CheckProxyConnection"));Assert.AreEqual(1,nodes.OfType<TextBlock>().Count(x=>AutomationProperties.GetAutomationId(x)=="TunStatus"));
+        StringAssert.Contains(Localization.Log("12:34:56  Error_ProxyRequest|ConnectionRefused (10061)"),"ConnectionRefused (10061)");Assert.IsFalse(Localization.Log("12:34:56  Error_ProxyRequest|test").Contains("Error_ProxyRequest"));
     }
     void Show(string page){Window.ShowPage(page);((FrameworkElement)Window.Content).UpdateLayout();}
     static Microsoft.Windows.ApplicationModel.Resources.ResourceContext CreateContext(ResourceManager manager,string language){var context=manager.CreateResourceContext();context.QualifierValues["Language"]=language;return context;}

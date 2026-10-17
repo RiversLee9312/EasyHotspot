@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
@@ -100,7 +100,7 @@
     <value>代理热点</value>
   </data>
   <data name="ProxyModeNotice" xml:space="preserve">
-    <value>电脑可以转发 HTTP 和 SOCKS5 流量。请在已连接的设备上确认兼容性。</value>
+    <value>电脑沿当前路由转发，包括 TUN。手机需设置代理，或导入移动设备配置。</value>
   </data>
   <data name="ProxyComputerHeading" xml:space="preserve">
     <value>电脑代理</value>
@@ -133,7 +133,7 @@
     <value>手机和平板</value>
   </data>
   <data name="MobileDevicesHelp" xml:space="preserve">
-    <value>如需转发 TCP 和 UDP 流量，请在 Android、iPhone 或 iPad 上导入 sing-box 配置。</value>
+    <value>若手机已开启 VPN，请导入 Clash 或 sing-box 中继配置。使用 Wi-Fi 代理时请先关闭其他 VPN。</value>
   </data>
   <data name="ExportMobileProfile" xml:space="preserve">
     <value>导出移动设备配置</value>
@@ -334,5 +334,32 @@
   </data>
   <data name="Error_DhcpRuntime" xml:space="preserve">
     <value>DHCP 自动发现已停止：{0}</value>
+  </data>
+  <data name="CheckProxyConnection" xml:space="preserve">
+    <value>检测连接</value>
+  </data>
+  <data name="Error_ProxyAccept" xml:space="preserve">
+    <value>代理监听失败：{0}</value>
+  </data>
+  <data name="ProxyCheckPassed" xml:space="preserve">
+    <value>电脑端代理连接正常。</value>
+  </data>
+  <data name="Error_ProxyNotRunning" xml:space="preserve">
+    <value>请先开启代理热点。</value>
+  </data>
+  <data name="TunDetectedLine" xml:space="preserve">
+    <value>已检测到 TUN：{0}</value>
+  </data>
+  <data name="Error_ProxyCheckFailed" xml:space="preserve">
+    <value>电脑端代理连接失败：{0}</value>
+  </data>
+  <data name="NoTunDetected" xml:space="preserve">
+    <value>未检测到 TUN</value>
+  </data>
+  <data name="Error_ProxyRequest" xml:space="preserve">
+    <value>代理请求失败：{0}</value>
+  </data>
+  <data name="YamlProfile" xml:space="preserve">
+    <value>Clash 配置（YAML）</value>
   </data>
 </root>

@@ -100,7 +100,7 @@
     <value>Proxy etkin noktası</value>
   </data>
   <data name="ProxyModeNotice" xml:space="preserve">
-    <value>Bilgisayar, HTTP ve SOCKS5 trafiğini aktarabilir. Uyumluluğu bağlı bir cihazda kontrol edin.</value>
+    <value>Bilgisayar, TUN dahil geçerli yönlendirmeleri izler. Cihazda bir proxy ayarlayın veya mobil profili içe aktarın.</value>
   </data>
   <data name="ProxyComputerHeading" xml:space="preserve">
     <value>Bilgisayar proxy'si</value>
@@ -133,7 +133,7 @@
     <value>Telefonlar ve tabletler</value>
   </data>
   <data name="MobileDevicesHelp" xml:space="preserve">
-    <value>TCP ve UDP trafiğini yönlendirmek için sing-box profilini Android, iPhone veya iPad'e aktarın.</value>
+    <value>Telefonda VPN açıksa trafiği yönlendirmek için Clash (YAML) veya sing-box (JSON) profilini içe aktarın. Wi-Fi proxy’si kullanırken önce diğer VPN’leri kapatın.</value>
   </data>
   <data name="ExportMobileProfile" xml:space="preserve">
     <value>Mobil profili dışa aktar</value>
@@ -334,5 +334,32 @@
   </data>
   <data name="Error_DhcpAdapter" xml:space="preserve">
     <value>Etkin bir etkin nokta bağdaştırıcısı bulunamadı.</value>
+  </data>
+  <data name="CheckProxyConnection" xml:space="preserve">
+    <value>Bağlantıyı test et</value>
+  </data>
+  <data name="ProxyCheckPassed" xml:space="preserve">
+    <value>Bilgisayarın proxy bağlantısı çalışıyor.</value>
+  </data>
+  <data name="Error_ProxyNotRunning" xml:space="preserve">
+    <value>Önce proxy erişim noktasını başlatın.</value>
+  </data>
+  <data name="Error_ProxyCheckFailed" xml:space="preserve">
+    <value>Bilgisayarın proxy bağlantısı başarısız: {0}</value>
+  </data>
+  <data name="TunDetectedLine" xml:space="preserve">
+    <value>TUN algılandı: {0}</value>
+  </data>
+  <data name="NoTunDetected" xml:space="preserve">
+    <value>TUN algılanmadı</value>
+  </data>
+  <data name="Error_ProxyAccept" xml:space="preserve">
+    <value>Proxy dinleyicisi başarısız: {0}</value>
+  </data>
+  <data name="Error_ProxyRequest" xml:space="preserve">
+    <value>Proxy isteği başarısız: {0}</value>
+  </data>
+  <data name="YamlProfile" xml:space="preserve">
+    <value>Clash profili (YAML)</value>
   </data>
 </root>

@@ -100,7 +100,7 @@
     <value>Proxy-hotspot</value>
   </data>
   <data name="ProxyModeNotice" xml:space="preserve">
-    <value>Pc'en kan videresende HTTP- og SOCKS5-trafik. Kontrollér kompatibiliteten på en tilsluttet enhed.</value>
+    <value>Pc’en følger de aktuelle ruter, herunder TUN. Konfigurér en proxy på enheden, eller importér en mobilprofil.</value>
   </data>
   <data name="ProxyComputerHeading" xml:space="preserve">
     <value>Pc-proxy</value>
@@ -133,7 +133,7 @@
     <value>Telefoner og tablets</value>
   </data>
   <data name="MobileDevicesHelp" xml:space="preserve">
-    <value>Importér sing-box-profilen på Android, iPhone eller iPad for at videresende TCP- og UDP-trafik.</value>
+    <value>Hvis VPN er aktiveret på telefonen, skal du importere en Clash-profil (YAML) eller sing-box-profil (JSON) til videresendelse af trafik. Slå først andre VPN-forbindelser fra, når du bruger Wi-Fi-proxy.</value>
   </data>
   <data name="ExportMobileProfile" xml:space="preserve">
     <value>Eksportér mobilprofil</value>
@@ -334,5 +334,32 @@
   </data>
   <data name="Error_DhcpAdapter" xml:space="preserve">
     <value>Der blev ikke fundet nogen aktiv hotspotadapter.</value>
+  </data>
+  <data name="CheckProxyConnection" xml:space="preserve">
+    <value>Test forbindelsen</value>
+  </data>
+  <data name="ProxyCheckPassed" xml:space="preserve">
+    <value>Pc’ens proxyforbindelse fungerer.</value>
+  </data>
+  <data name="Error_ProxyNotRunning" xml:space="preserve">
+    <value>Start først et proxy-hotspot.</value>
+  </data>
+  <data name="Error_ProxyCheckFailed" xml:space="preserve">
+    <value>Pc’ens proxyforbindelse mislykkedes: {0}</value>
+  </data>
+  <data name="TunDetectedLine" xml:space="preserve">
+    <value>TUN registreret: {0}</value>
+  </data>
+  <data name="NoTunDetected" xml:space="preserve">
+    <value>Ingen TUN registreret</value>
+  </data>
+  <data name="Error_ProxyAccept" xml:space="preserve">
+    <value>Proxy-lytteren mislykkedes: {0}</value>
+  </data>
+  <data name="Error_ProxyRequest" xml:space="preserve">
+    <value>Proxyanmodningen mislykkedes: {0}</value>
+  </data>
+  <data name="YamlProfile" xml:space="preserve">
+    <value>Clash-profil (YAML)</value>
   </data>
 </root>

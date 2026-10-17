@@ -29,7 +29,7 @@ public sealed class RelayServer(Action<string>? log = null)
         while (!ct.IsCancellationRequested) {
             try { var client = await listener.AcceptTcpClientAsync(ct); _ = ServeAsync(client,pacOnly,ct); }
             catch (Exception) when(ct.IsCancellationRequested) { break; }
-            catch(Exception ex) { log?.Invoke("监听连接失败："+ex.GetType().Name); await Task.Delay(500,ct).ConfigureAwait(false); }
+            catch(Exception ex) { log?.Invoke("Error_ProxyAccept|"+Describe(ex)); await Task.Delay(500,ct).ConfigureAwait(false); }
         }
     }
     async Task ServeAsync(TcpClient client,bool pacOnly,CancellationToken ct)
@@ -43,7 +43,9 @@ public sealed class RelayServer(Action<string>? log = null)
                 if (!pacOnly && first[0] == 5) await SocksAsync(client,s,peer,ct);
                 else await HttpAsync(client,s,first[0],pacOnly,headerTimeout.Token,ct);
             } catch(OperationCanceledException) { }
-            catch(Exception ex) { log?.Invoke("一次转发未完成："+ex.GetType().Name); }
+            catch(EndOfStreamException) { }
+            catch(IOException ex) when(IsPeerDisconnect(ex)) { }
+            catch(Exception ex) { log?.Invoke("Error_ProxyRequest|"+Describe(ex)); }
         }
     }
     async Task HttpAsync(TcpClient client,NetworkStream s,byte first,bool pacOnly,CancellationToken readToken,CancellationToken ct)
@@ -58,15 +60,19 @@ public sealed class RelayServer(Action<string>? log = null)
         var lines=Encoding.ASCII.GetString(buffer.ToArray()).Split("\r\n"); var parts=lines[0].Split(' ');
         if(parts.Length!=3) return;
         if(pacOnly) {
-            var valid=parts[0] is "GET" or "HEAD" && parts[1].Split('?')[0] is "/wpad.dat" or "/proxy.pac";
-            var body=Encoding.UTF8.GetBytes(valid?Pac:"Not found");
-            await s.WriteAsync(Encoding.ASCII.GetBytes($"HTTP/1.1 {(valid?"200 OK":"404 Not Found")}\r\nContent-Type: {(valid?"application/x-ns-proxy-autoconfig":"text/plain")}\r\nContent-Length: {body.Length}\r\nCache-Control: no-cache\r\nConnection: close\r\n\r\n"),ct);
+            var path=parts[1].Split('?')[0];var profile=path=="/mobile-clash.yaml";
+            var valid=parts[0] is "GET" or "HEAD" && (profile || path is "/wpad.dat" or "/proxy.pac");
+            var body=Encoding.UTF8.GetBytes(valid?(profile?MobileProfiles.Clash(address):Pac):"Not found");
+            var mime=valid?(profile?"text/yaml; charset=utf-8":"application/x-ns-proxy-autoconfig"):"text/plain";
+            await s.WriteAsync(Encoding.ASCII.GetBytes($"HTTP/1.1 {(valid?"200 OK":"404 Not Found")}\r\nContent-Type: {mime}\r\nContent-Length: {body.Length}\r\nCache-Control: no-cache\r\nConnection: close\r\n\r\n"),ct);
             if(parts[0]!="HEAD") await s.WriteAsync(body,ct); return;
         }
         var connect=parts[0]=="CONNECT";
         var uri=new Uri(connect?"https://"+parts[1]:parts[1]);
         if(uri.Scheme is not ("http" or "https")) return;
-        using var outbound=new TcpClient(); await outbound.ConnectAsync(uri.Host,uri.Port,ct);
+        using var outbound=new TcpClient();
+        try {await ConnectOutbound(outbound,uri.Host,uri.Port,ct);}
+        catch(SocketException){await s.WriteAsync("HTTP/1.1 502 Bad Gateway\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"u8.ToArray(),ct);throw;}
         if(connect) await s.WriteAsync("HTTP/1.1 200 Connection Established\r\n\r\n"u8.ToArray(),ct);
         else {
             var h=new StringBuilder($"{parts[0]} {uri.PathAndQuery} HTTP/1.1\r\n");
@@ -94,7 +100,9 @@ public sealed class RelayServer(Action<string>? log = null)
         var host=await ReadHost(s,h[3],ct); var portBytes=await Read(s,2,ct); int port=portBytes[0]*256+portBytes[1];
         if(h[1]==1) {
             using var outbound=new TcpClient();
-            try { await outbound.ConnectAsync(host,port,ct); } catch { await s.WriteAsync(new byte[]{5,5,0,1,0,0,0,0,0,0},ct); return; }
+            try {await ConnectOutbound(outbound,host,port,ct);}
+            catch(OperationCanceledException) when(ct.IsCancellationRequested){throw;}
+            catch(Exception ex){await s.WriteAsync(new byte[]{5,5,0,1,0,0,0,0,0,0},ct);log?.Invoke("Error_ProxyRequest|"+Describe(ex));return;}
             await s.WriteAsync(new byte[]{5,0,0,1,0,0,0,0,0,0},ct); await Tunnel(s,outbound.GetStream(),ct);
         } else if(h[1]==3) await UdpAssociate(s,peer,ct);
         else await s.WriteAsync(new byte[]{5,7,0,1,0,0,0,0,0,0},ct);
@@ -103,8 +111,28 @@ public sealed class RelayServer(Action<string>? log = null)
     {
         using var stop=CancellationTokenSource.CreateLinkedTokenSource(ct);
         var ab=a.CopyToAsync(b,stop.Token); var ba=b.CopyToAsync(a,stop.Token);
-        await Task.WhenAny(ab,ba); stop.Cancel();
-        try { await Task.WhenAll(ab,ba); } catch(OperationCanceledException) { }
+        var completed=await Task.WhenAny(ab,ba);
+        // Inspect the first completion before cancelling its peer. Cancelling a NetworkStream
+        // can surface as IOException/SocketException, which is an expected tunnel shutdown.
+        try {await completed;}catch(IOException ex) when(IsPeerDisconnect(ex)){}
+        finally {
+            stop.Cancel();
+            try {await Task.WhenAll(ab,ba);}catch(OperationCanceledException){}catch(IOException ex) when(IsPeerDisconnect(ex)){}
+        }
+    }
+    static async Task ConnectOutbound(TcpClient client,string host,int port,CancellationToken ct)
+    {
+        using var timeout=CancellationTokenSource.CreateLinkedTokenSource(ct);timeout.CancelAfter(TimeSpan.FromSeconds(15));
+        try {await client.ConnectAsync(host,port,timeout.Token);}
+        catch(OperationCanceledException) when(!ct.IsCancellationRequested){throw new SocketException((int)SocketError.TimedOut);}
+    }
+    public static bool IsPeerDisconnect(Exception error)=>error is EndOfStreamException ||
+        (error is SocketException socket && socket.SocketErrorCode is SocketError.ConnectionReset or SocketError.ConnectionAborted or SocketError.OperationAborted or SocketError.Shutdown) ||
+        (error.InnerException is not null && IsPeerDisconnect(error.InnerException));
+    static string Describe(Exception error)
+    {
+        var socket=error as SocketException ?? error.InnerException as SocketException;
+        return socket is null?$"{error.GetType().Name}: {error.Message.Replace('|',' ')}":$"{socket.SocketErrorCode} ({socket.NativeErrorCode}): {socket.Message.Replace('|',' ')}";
     }
     async Task UdpAssociate(NetworkStream control,IPEndPoint peer,CancellationToken outer)
     {

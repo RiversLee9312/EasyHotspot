@@ -100,7 +100,7 @@
     <value>프록시 핫스팟</value>
   </data>
   <data name="ProxyModeNotice" xml:space="preserve">
-    <value>PC에서 HTTP 및 SOCKS5 트래픽을 중계할 수 있습니다. 연결된 장치에서 호환성을 확인하세요.</value>
+    <value>PC는 TUN을 포함한 현재 경로를 따릅니다. 기기에서 프록시를 설정하거나 모바일 프로필을 가져오세요.</value>
   </data>
   <data name="ProxyComputerHeading" xml:space="preserve">
     <value>PC 프록시</value>
@@ -133,7 +133,7 @@
     <value>휴대폰 및 태블릿</value>
   </data>
   <data name="MobileDevicesHelp" xml:space="preserve">
-    <value>TCP 및 UDP 트래픽을 라우팅하려면 Android, iPhone 또는 iPad에서 sing-box 프로필을 가져오세요.</value>
+    <value>휴대폰에서 VPN을 사용 중이면 Clash 또는 sing-box의 중계 프로필을 가져오세요. Wi-Fi 프록시를 사용할 때는 다른 VPN을 먼저 끄세요.</value>
   </data>
   <data name="ExportMobileProfile" xml:space="preserve">
     <value>모바일 프로필 내보내기</value>
@@ -334,5 +334,32 @@
   </data>
   <data name="Error_DhcpRuntime" xml:space="preserve">
     <value>DHCP 자동 검색이 중지되었습니다: {0}</value>
+  </data>
+  <data name="CheckProxyConnection" xml:space="preserve">
+    <value>연결 테스트</value>
+  </data>
+  <data name="ProxyCheckPassed" xml:space="preserve">
+    <value>PC 프록시 연결이 정상적으로 작동합니다.</value>
+  </data>
+  <data name="Error_ProxyNotRunning" xml:space="preserve">
+    <value>먼저 프록시 핫스팟을 시작하세요.</value>
+  </data>
+  <data name="Error_ProxyCheckFailed" xml:space="preserve">
+    <value>PC 프록시 연결 실패: {0}</value>
+  </data>
+  <data name="TunDetectedLine" xml:space="preserve">
+    <value>TUN 감지됨: {0}</value>
+  </data>
+  <data name="NoTunDetected" xml:space="preserve">
+    <value>TUN이 감지되지 않았습니다</value>
+  </data>
+  <data name="Error_ProxyAccept" xml:space="preserve">
+    <value>프록시 리스너 시작 실패: {0}</value>
+  </data>
+  <data name="Error_ProxyRequest" xml:space="preserve">
+    <value>프록시 요청 실패: {0}</value>
+  </data>
+  <data name="YamlProfile" xml:space="preserve">
+    <value>Clash 프로필(YAML)</value>
   </data>
 </root>

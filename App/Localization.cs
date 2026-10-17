@@ -85,6 +85,9 @@ public static class Localization
         }
     }
 
+    public static string Log(string raw)=>raw.Length>=10 && raw[2]==':' && raw[5]==':' && raw.Substring(8,2)=="  "
+        ?raw[..10]+Error(raw[10..]):Error(raw);
+
     private static string? ReadPreferredLanguage()
     {
         try

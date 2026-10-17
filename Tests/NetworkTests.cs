@@ -8,7 +8,8 @@ using EasyHotspot.Core;
 [TestClass,DoNotParallelize]
 public sealed class NetworkTests
 {
-    static readonly RelayServer relay=new();
+    static readonly System.Collections.Concurrent.ConcurrentQueue<string> logs=new();
+    static readonly RelayServer relay=new(logs.Enqueue);
     [ClassInitialize] public static async Task Setup(TestContext _)=>await relay.StartAsync("127.0.0.1");
     [ClassCleanup] public static async Task Cleanup()=>await relay.StopAsync();
     [TestMethod] public async Task PacIsServedWithCorrectMimeAndProxy()
@@ -85,6 +86,47 @@ public sealed class NetworkTests
     {
         if(ServiceSetup.IsAdmin){Assert.Inconclusive("此用例需要普通用户令牌。");return;}
         Assert.ThrowsExactly<UnauthorizedAccessException>(()=>ServiceSetup.Install("unused",WindowsIdentity.GetCurrent().User!.Value));
+    }
+    [TestMethod] public async Task ShortSocksProbeDoesNotGenerateAFalseFailure()
+    {
+        logs.Clear();using(var client=new TcpClient()){await client.ConnectAsync("127.0.0.1",18877);await client.GetStream().WriteAsync(new byte[]{5,2,0});}
+        await Task.Delay(150);Assert.HasCount(0,logs);
+    }
+    [TestMethod] public async Task FailedHttpUpstreamReturns502AndLogsSocketError()
+    {
+        logs.Clear();var target=new TcpListener(IPAddress.Loopback,0);target.Start();int port=((IPEndPoint)target.LocalEndpoint).Port;target.Stop();
+        using var client=new TcpClient();await client.ConnectAsync("127.0.0.1",18877);await client.GetStream().WriteAsync(Encoding.ASCII.GetBytes($"CONNECT 127.0.0.1:{port} HTTP/1.1\r\n\r\n"));
+        StringAssert.StartsWith(await Header(client.GetStream()),"HTTP/1.1 502");await Task.Delay(100);
+        Assert.IsTrue(logs.Any(x=>x.StartsWith("Error_ProxyRequest|")&&x.Contains("ConnectionRefused")),string.Join("\n",logs));
+    }
+    [TestMethod] public async Task FailedSocksUpstreamHasADiagnosticInsteadOfBeingSilent()
+    {
+        logs.Clear();var target=new TcpListener(IPAddress.Loopback,0);target.Start();int port=((IPEndPoint)target.LocalEndpoint).Port;target.Stop();
+        using var client=await Socks();await client.GetStream().WriteAsync(new byte[]{5,1,0,1,127,0,0,1,(byte)(port>>8),(byte)port});
+        var reply=new byte[10];await client.GetStream().ReadExactlyAsync(reply);Assert.AreEqual((byte)5,reply[1]);await Task.Delay(100);
+        Assert.IsTrue(logs.Any(x=>x.Contains("ConnectionRefused")),string.Join("\n",logs));
+    }
+    [TestMethod] public async Task ClientResetClosesTunnelWithoutAFailureLog()
+    {
+        logs.Clear();var target=new TcpListener(IPAddress.Loopback,0);target.Start();
+        try {
+            using var client=new TcpClient();await client.ConnectAsync("127.0.0.1",18877);int port=((IPEndPoint)target.LocalEndpoint).Port;
+            await client.GetStream().WriteAsync(Encoding.ASCII.GetBytes($"CONNECT 127.0.0.1:{port} HTTP/1.1\r\n\r\n"));using var peer=await target.AcceptTcpClientAsync();await Header(client.GetStream());
+            await client.GetStream().WriteAsync("data"u8.ToArray());var body=new byte[4];await peer.GetStream().ReadExactlyAsync(body);
+            client.Client.LingerState=new LingerOption(true,0);client.Close();
+            Assert.AreEqual(0,await peer.GetStream().ReadAsync(new byte[1]).AsTask().WaitAsync(TimeSpan.FromSeconds(3)));await Task.Delay(100);Assert.HasCount(0,logs);
+        }finally{target.Stop();}
+    }
+    [TestMethod] public async Task ConnectivityCheckRequiresAProxyHotspot()
+    {
+        await using var backend=new Backend();var error=await Assert.ThrowsExactlyAsync<InvalidOperationException>(()=>backend.CheckProxyAsync());Assert.AreEqual("Error_ProxyNotRunning",error.Message);
+    }
+    [TestMethod] public async Task ClashProfileUsesTheActualHotspotAddressAndProxyDns()
+    {
+        using var http=new HttpClient(new HttpClientHandler{UseProxy=false});using var response=await http.GetAsync("http://127.0.0.1:18080/mobile-clash.yaml");
+        Assert.AreEqual(HttpStatusCode.OK,response.StatusCode);Assert.AreEqual("text/yaml",response.Content.Headers.ContentType?.MediaType);
+        var profile=await response.Content.ReadAsStringAsync();StringAssert.Contains(profile,"server: 127.0.0.1");StringAssert.Contains(profile,"https://223.5.5.5/dns-query#EasyHotspot");StringAssert.Contains(profile,"MATCH,EasyHotspot");
+        Assert.ThrowsExactly<FormatException>(()=>MobileProfiles.Clash("127.0.0.1\nextra: value"));
     }
     static async Task<TcpClient> Socks(){var c=new TcpClient();await c.ConnectAsync("127.0.0.1",18877);await c.GetStream().WriteAsync(new byte[]{5,1,0});var b=new byte[2];await c.GetStream().ReadExactlyAsync(b);Assert.AreEqual((byte)0,b[1]);return c;}
     static async Task<string> Header(NetworkStream s){using var timeout=new CancellationTokenSource(TimeSpan.FromSeconds(5));var b=new List<byte>();var one=new byte[1];while(b.Count<65536){await s.ReadExactlyAsync(one,timeout.Token);b.Add(one[0]);if(b.Count>=4&&b.TakeLast(4).SequenceEqual(new byte[]{13,10,13,10}))return Encoding.ASCII.GetString(b.ToArray());}throw new IOException();}

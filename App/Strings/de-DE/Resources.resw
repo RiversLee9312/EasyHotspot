@@ -100,7 +100,7 @@
     <value>Proxy-Hotspot</value>
   </data>
   <data name="ProxyModeNotice" xml:space="preserve">
-    <value>Der PC kann HTTP- und SOCKS5-Datenverkehr weiterleiten. Prüfen Sie die Kompatibilität mit einem verbundenen Gerät.</value>
+    <value>Der PC folgt den aktuellen Routen, einschließlich TUN. Richten Sie auf dem Gerät einen Proxy ein oder importieren Sie ein mobiles Profil.</value>
   </data>
   <data name="ProxyComputerHeading" xml:space="preserve">
     <value>PC-Proxy</value>
@@ -133,13 +133,16 @@
     <value>Smartphones und Tablets</value>
   </data>
   <data name="MobileDevicesHelp" xml:space="preserve">
-    <value>Für die Weiterleitung von TCP und UDP importieren Sie das sing-box-Profil auf Android, iPhone oder iPad.</value>
+    <value>Wenn auf dem Smartphone ein VPN aktiviert ist, importieren Sie ein Relay-Profil für Clash oder sing-box. Deaktivieren Sie für einen Wi-Fi-Proxy zuerst andere VPNs.</value>
   </data>
   <data name="ExportMobileProfile" xml:space="preserve">
     <value>Mobilprofil exportieren</value>
   </data>
   <data name="JsonProfile" xml:space="preserve">
     <value>JSON-Profil</value>
+  </data>
+  <data name="YamlProfile" xml:space="preserve">
+    <value>Clash-Profil (YAML)</value>
   </data>
   <data name="StartupHeading" xml:space="preserve">
     <value>Start mit hoher Priorität</value>
@@ -334,5 +337,29 @@
   </data>
   <data name="Error_DhcpRuntime" xml:space="preserve">
     <value>DHCP-Autoerkennung beendet: {0}</value>
+  </data>
+  <data name="CheckProxyConnection" xml:space="preserve">
+    <value>Verbindung testen</value>
+  </data>
+  <data name="Error_ProxyAccept" xml:space="preserve">
+    <value>Fehler beim Annehmen der Proxyverbindung: {0}</value>
+  </data>
+  <data name="ProxyCheckPassed" xml:space="preserve">
+    <value>Die Proxyverbindung des PCs funktioniert.</value>
+  </data>
+  <data name="Error_ProxyNotRunning" xml:space="preserve">
+    <value>Starten Sie zuerst einen Proxy-Hotspot.</value>
+  </data>
+  <data name="TunDetectedLine" xml:space="preserve">
+    <value>TUN erkannt: {0}</value>
+  </data>
+  <data name="Error_ProxyCheckFailed" xml:space="preserve">
+    <value>Die Proxyverbindung des PCs ist fehlgeschlagen: {0}</value>
+  </data>
+  <data name="NoTunDetected" xml:space="preserve">
+    <value>Kein TUN erkannt</value>
+  </data>
+  <data name="Error_ProxyRequest" xml:space="preserve">
+    <value>Proxy-Anfrage fehlgeschlagen: {0}</value>
   </data>
 </root>

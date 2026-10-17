@@ -100,7 +100,7 @@
     <value>Välityspalvelintukiasema</value>
   </data>
   <data name="ProxyModeNotice" xml:space="preserve">
-    <value>Tietokone voi välittää HTTP- ja SOCKS5-liikennettä. Tarkista yhteensopivuus yhdistetyllä laitteella.</value>
+    <value>Tietokone käyttää nykyisiä reittejä, myös TUN-reittiä. Määritä laitteeseen välityspalvelin tai tuo mobiiliprofiili.</value>
   </data>
   <data name="ProxyComputerHeading" xml:space="preserve">
     <value>Tietokoneen välityspalvelin</value>
@@ -133,7 +133,7 @@
     <value>Puhelimet ja tabletit</value>
   </data>
   <data name="MobileDevicesHelp" xml:space="preserve">
-    <value>Reititä TCP- ja UDP-liikenne tuomalla sing-box-profiili Androidiin, iPhoneen tai iPadiin.</value>
+    <value>Jos puhelimen VPN on käytössä, tuo YAML-muotoinen Clash-profiili tai JSON-muotoinen sing-box-profiili liikenteen reititystä varten. Poista muut VPN-yhteydet käytöstä ennen Wi-Fi-välityspalvelimen käyttöä.</value>
   </data>
   <data name="ExportMobileProfile" xml:space="preserve">
     <value>Vie mobiiliprofiili</value>
@@ -334,5 +334,32 @@
   </data>
   <data name="Error_DhcpAdapter" xml:space="preserve">
     <value>Aktiivista tukiaseman verkkosovitinta ei löytynyt.</value>
+  </data>
+  <data name="CheckProxyConnection" xml:space="preserve">
+    <value>Testaa yhteys</value>
+  </data>
+  <data name="ProxyCheckPassed" xml:space="preserve">
+    <value>Tietokoneen välityspalvelinyhteys toimii.</value>
+  </data>
+  <data name="Error_ProxyNotRunning" xml:space="preserve">
+    <value>Käynnistä ensin välityspalvelimen sisältävä tukiasema.</value>
+  </data>
+  <data name="Error_ProxyCheckFailed" xml:space="preserve">
+    <value>Tietokoneen välityspalvelinyhteys epäonnistui: {0}</value>
+  </data>
+  <data name="TunDetectedLine" xml:space="preserve">
+    <value>TUN havaittu: {0}</value>
+  </data>
+  <data name="NoTunDetected" xml:space="preserve">
+    <value>TUN-yhteyttä ei havaittu</value>
+  </data>
+  <data name="Error_ProxyAccept" xml:space="preserve">
+    <value>Välityspalvelimen kuuntelu epäonnistui: {0}</value>
+  </data>
+  <data name="Error_ProxyRequest" xml:space="preserve">
+    <value>Välityspalvelinpyyntö epäonnistui: {0}</value>
+  </data>
+  <data name="YamlProfile" xml:space="preserve">
+    <value>Clash-profiili (YAML)</value>
   </data>
 </root>

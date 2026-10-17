@@ -100,7 +100,7 @@
     <value>Điểm phát sóng proxy</value>
   </data>
   <data name="ProxyModeNotice" xml:space="preserve">
-    <value>PC có thể chuyển tiếp lưu lượng HTTP và SOCKS5. Hãy kiểm tra khả năng tương thích trên thiết bị đã kết nối.</value>
+    <value>PC tuân theo các tuyến hiện tại, bao gồm TUN. Hãy thiết lập proxy trên thiết bị hoặc nhập cấu hình di động.</value>
   </data>
   <data name="ProxyComputerHeading" xml:space="preserve">
     <value>Proxy trên PC</value>
@@ -133,7 +133,7 @@
     <value>Điện thoại và máy tính bảng</value>
   </data>
   <data name="MobileDevicesHelp" xml:space="preserve">
-    <value>Để định tuyến lưu lượng TCP và UDP, hãy nhập cấu hình sing-box trên Android, iPhone hoặc iPad.</value>
+    <value>Nếu điện thoại đang bật VPN, hãy nhập cấu hình chuyển tiếp của Clash hoặc sing-box. Khi dùng proxy Wi-Fi, hãy tắt các VPN khác trước.</value>
   </data>
   <data name="ExportMobileProfile" xml:space="preserve">
     <value>Xuất cấu hình di động</value>
@@ -334,5 +334,32 @@
   </data>
   <data name="Error_DhcpRuntime" xml:space="preserve">
     <value>Tính năng tự động phát hiện DHCP đã dừng: {0}</value>
+  </data>
+  <data name="CheckProxyConnection" xml:space="preserve">
+    <value>Kiểm tra kết nối</value>
+  </data>
+  <data name="ProxyCheckPassed" xml:space="preserve">
+    <value>Kết nối proxy trên PC đang hoạt động.</value>
+  </data>
+  <data name="Error_ProxyNotRunning" xml:space="preserve">
+    <value>Trước tiên, hãy khởi động điểm phát sóng proxy.</value>
+  </data>
+  <data name="Error_ProxyCheckFailed" xml:space="preserve">
+    <value>Kết nối proxy trên PC thất bại: {0}</value>
+  </data>
+  <data name="TunDetectedLine" xml:space="preserve">
+    <value>Đã phát hiện TUN: {0}</value>
+  </data>
+  <data name="NoTunDetected" xml:space="preserve">
+    <value>Không phát hiện TUN</value>
+  </data>
+  <data name="Error_ProxyAccept" xml:space="preserve">
+    <value>Trình lắng nghe proxy gặp lỗi: {0}</value>
+  </data>
+  <data name="Error_ProxyRequest" xml:space="preserve">
+    <value>Yêu cầu proxy thất bại: {0}</value>
+  </data>
+  <data name="YamlProfile" xml:space="preserve">
+    <value>Cấu hình Clash (YAML)</value>
   </data>
 </root>
