@@ -173,6 +173,37 @@ public sealed class NativeUiTests
             }
         }
     }
+    [UITestMethod] public async Task CardsKeepReadableContrastWhenCachedPagesChangeTheme()
+    {
+        var root=(FrameworkElement)Window.Content;var original=root.RequestedTheme;
+        try {
+            foreach(var theme in new[]{ElementTheme.Dark,ElementTheme.Light,ElementTheme.Dark}){
+                root.RequestedTheme=theme;
+                foreach(var page in new[]{"hotspot","proxy","settings","about"}){
+                    Show(page);await Task.Delay(60);
+                    var content=Elements(root).OfType<StackPanel>().Single(x=>AutomationProperties.GetAutomationId(x)=="PageContent-"+page);
+                    var cards=Elements(content).OfType<Border>().Where(x=>x.Child is StackPanel).ToArray();Assert.IsTrue(cards.Length>0);
+                    foreach(var card in cards){
+                        var brush=card.Background as SolidColorBrush;Assert.IsNotNull(brush);
+                        double backdrop=theme==ElementTheme.Dark?32:243;
+                        var color=brush.Color;double alpha=color.A/255.0*brush.Opacity;
+                        var rgb=new[]{color.R,color.G,color.B}.Select(x=>(x*alpha+backdrop*(1-alpha))/255.0).ToArray();
+                        double brightness=rgb.Average();
+                        Assert.IsTrue(theme==ElementTheme.Dark?brightness<0.3:brightness>0.8,$"{page}/{theme} card brightness is {brightness:0.000}; theme brushes are inconsistent.");
+                        foreach(var label in Elements(card).OfType<TextBlock>().Where(x=>x.Parent is StackPanel)){
+                            if(label.Foreground is not SolidColorBrush foreground)continue;
+                            var ink=foreground.Color;double inkAlpha=ink.A/255.0*foreground.Opacity;
+                            var text=new[]{ink.R,ink.G,ink.B}.Select((x,i)=>x/255.0*inkAlpha+rgb[i]*(1-inkAlpha)).ToArray();
+                            double light=Luminance(rgb),dark=Luminance(text);double contrast=(Math.Max(light,dark)+0.05)/(Math.Min(light,dark)+0.05);
+                            Assert.IsTrue(contrast>=4.5,$"{page}/{theme}: '{label.Text}' contrast is {contrast:0.00}.");
+                        }
+                    }
+                }
+                Assert.AreEqual(theme==ElementTheme.Dark?Microsoft.UI.Colors.White:Microsoft.UI.Colors.Black,Window.AppWindow.TitleBar.ButtonForegroundColor);
+            }
+        }finally{root.RequestedTheme=original;Show("hotspot");}
+        static double Luminance(double[] rgb){var linear=rgb.Select(x=>x<=0.04045?x/12.92:Math.Pow((x+0.055)/1.055,2.4)).ToArray();return linear[0]*0.2126+linear[1]*0.7152+linear[2]*0.0722;}
+    }
     void Show(string page){Window.ShowPage(page);((FrameworkElement)Window.Content).UpdateLayout();}
     static Microsoft.Windows.ApplicationModel.Resources.ResourceContext CreateContext(ResourceManager manager,string language){var context=manager.CreateResourceContext();context.QualifierValues["Language"]=language;return context;}
     static IEnumerable<DependencyObject> Elements(DependencyObject root)

@@ -54,7 +54,7 @@ Requires Windows, .NET SDK 10.0.400, Windows SDK and PowerShell 7.2+. The first 
 
 UI tests require an unlocked interactive desktop.
 
-The build creates `dist/EasyHotspot-1.3.1-x64.msi` and a static MSI verification report. Intermediate publish outputs are under `artifacts/`; reusable tool caches are under `.tools/`. Neither these directories nor `bin/obj` belong in source control. Release downloads include `SHA256SUMS.txt` for the MSI; GitHub's source archives contain the corresponding application source and build scripts.
+The build creates `dist/EasyHotspot-1.3.2-x64.msi` and a static MSI verification report. Intermediate publish outputs are under `artifacts/`; reusable tool caches are under `.tools/`. Neither these directories nor `bin/obj` belong in source control. Release downloads include `SHA256SUMS.txt` for the MSI; GitHub's source archives contain the corresponding application source and build scripts.
 
 Localization uses Microsoft's [RESW and MRT Core](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/mrtcore/localize-strings), with `ApplicationLanguages.PrimaryLanguageOverride` applied at startup. Language changes take effect after restarting the app.
 

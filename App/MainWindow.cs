@@ -37,6 +37,7 @@ public sealed class MainWindow:Window
     readonly ComboBox language=new(){HorizontalAlignment=HorizontalAlignment.Stretch};
     readonly Button start=new(),stop=new();
     readonly DispatcherTimer timer=new(){Interval=TimeSpan.FromSeconds(5)};
+    readonly Windows.UI.ViewManagement.AccessibilitySettings accessibility=new();
     bool busy,refreshing,initial=true,updatingStartup,updatingDhcp,updatingMode,serviceInstalled;BackendState? latest;string page="hotspot";Task? refreshTask;
     TrayIcon? tray;bool exiting;
     public void EnableTray(){tray??=new TrayIcon(this,ShowFromTray,()=>_ = ExitFromTray());}
@@ -74,6 +75,7 @@ public sealed class MainWindow:Window
         AutomationProperties.SetAutomationId(progress,"BusyIndicator");AutomationProperties.SetAutomationId(operationStatus,"OperationStatus");
         nav.Content=shell;nav.SelectionChanged+=(_,e)=>{if(e.SelectedItemContainer?.Tag is string value)ShowPage(value);};Grid.SetRow(nav,1);root.Children.Add(nav);
         Content=root;SetTitleBar(title);AutomationProperties.SetAutomationId(root,"AppRoot");
+        root.Loaded+=(_,_)=>UpdateTitleBar();root.ActualThemeChanged+=(_,_)=>UpdateTitleBar();
         mode.Header=L("ModeLabel");ssid.Header=L("HotspotName");password.Header=L("HotspotPassword");
         startup.OffContent=L("ToggleOff");startup.OnContent=L("ToggleOn");
         dhcp.OffContent=L("ToggleOff");dhcp.OnContent=L("ToggleOn");
@@ -122,7 +124,7 @@ public sealed class MainWindow:Window
             if(language.SelectedItem is not ComboBoxItem item||item.Tag is not string tag)return;
             await Action(async()=>{await Task.Run(()=>Localization.SavePreferredLanguage(tag));Message(L("LanguageSavedTitle"),L("LanguageSavedMessage"),InfoBarSeverity.Informational);});
         };
-        nav.SelectedItem=nav.MenuItems[0];timer.Tick+=async(_,_)=>await Refresh();timer.Start();_ = Refresh();
+        nav.SelectedItem=nav.MenuItems[0];timer.Tick+=async(_,_)=>{UpdateTitleBar();await Refresh();};timer.Start();_ = Refresh();
         Closed+=(_,_)=>{timer.Stop();tray?.Dispose();_ = Task.Run(async()=>await local.DisposeAsync());};
         AppWindow.Closing+=async(_,e)=>{
             if(tray is not null && !tray.SessionEnding && !exiting){e.Cancel=true;await Action(async()=>{if(await tray.EnsureAsync())AppWindow.Hide();else {Message(L("AppName"),L("TrayRecovering"),InfoBarSeverity.Warning);var exitButton=new Button{Content=L("TrayExit")};exitButton.Click+=async(_,_)=>await ExitFromTray();notice.ActionButton=exitButton;}});return;}
@@ -130,13 +132,30 @@ public sealed class MainWindow:Window
         };
     }
     string SelectedMode()=>mode.SelectedIndex switch{1=>"proxy",2=>"sharing",3=>"transparent",_=>"offline"};
+    void UpdateTitleBar()
+    {
+        if(!Microsoft.UI.Windowing.AppWindowTitleBar.IsCustomizationSupported())return;
+        var titleBar=AppWindow.TitleBar;
+        if(accessibility.HighContrast){
+            titleBar.ButtonForegroundColor=null;titleBar.ButtonInactiveForegroundColor=null;
+            titleBar.ButtonBackgroundColor=null;titleBar.ButtonInactiveBackgroundColor=null;
+            titleBar.ButtonHoverForegroundColor=null;titleBar.ButtonHoverBackgroundColor=null;
+            titleBar.ButtonPressedForegroundColor=null;titleBar.ButtonPressedBackgroundColor=null;return;
+        }
+        bool dark=root.ActualTheme==ElementTheme.Dark;
+        var ink=dark?Microsoft.UI.Colors.White:Microsoft.UI.Colors.Black;
+        titleBar.ButtonForegroundColor=ink;titleBar.ButtonHoverForegroundColor=ink;titleBar.ButtonPressedForegroundColor=ink;
+        titleBar.ButtonInactiveForegroundColor=Color.FromArgb(255,128,128,128);
+        titleBar.ButtonBackgroundColor=Microsoft.UI.Colors.Transparent;titleBar.ButtonInactiveBackgroundColor=Microsoft.UI.Colors.Transparent;
+        titleBar.ButtonHoverBackgroundColor=dark?Color.FromArgb(25,255,255,255):Color.FromArgb(20,0,0,0);
+        titleBar.ButtonPressedBackgroundColor=dark?Color.FromArgb(40,255,255,255):Color.FromArgb(30,0,0,0);
+    }
     static string L(string key)=>Localization.Get(key);
     static BitmapImage Bitmap(string name)=>new(new Uri(Path.Combine(AppContext.BaseDirectory,"Assets",name+".png")));
     static Image Picture(string name,double size)=>new(){Source=Bitmap(name),Width=size,Height=size};
-    static Brush Brush(string key)=>(Brush)Application.Current.Resources[key];
     static TextBlock Text(string value,double size=14)=>new(){Text=value,FontSize=size,TextWrapping=TextWrapping.Wrap};
-    static TextBlock Secondary(string value)=>new(){Text=value,FontSize=14,TextWrapping=TextWrapping.Wrap,Foreground=Brush("TextFillColorSecondaryBrush")};
-    static Border Card(UIElement child)=>new(){Child=child,Padding=new(20),CornerRadius=new(8),BorderThickness=new(1),BorderBrush=Brush("CardStrokeColorDefaultBrush"),Background=Brush("CardBackgroundFillColorDefaultBrush")};
+    static TextBlock Secondary(string value)=>new(){Text=value,FontSize=14,TextWrapping=TextWrapping.Wrap,Style=(Style)Application.Current.Resources["AppSecondaryTextStyle"]};
+    static Border Card(UIElement child)=>new(){Child=child,Padding=new(20),CornerRadius=new(8),BorderThickness=new(1),Style=(Style)Application.Current.Resources["AppCardStyle"]};
     static StackPanel Stack(params UIElement[] items){var s=new StackPanel{Spacing=12};foreach(var i in items)s.Children.Add(i);return s;}
     static ActionPanel Row(params UIElement[] items){var s=new ActionPanel();foreach(var i in items)s.Children.Add(i);return s;}
     static Grid Columns(double minimumWidth,int maximumColumns,double gap,params FrameworkElement[] items)

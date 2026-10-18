@@ -52,7 +52,7 @@ Android、iOS 不会把 DHCP WPAD 应用于所有应用；显式代理模式可�
 ./build.ps1
 ```
 
-UI 测试需要已解锁的交互式桌面。构建输出为 `dist/EasyHotspot-1.3.1-x64.msi`，同时生成 MSI 静态校验报告。发布中间文件位于 `artifacts/`，工具缓存位于 `.tools/`，这些目录及 `bin/obj` 不属于源码。
+UI 测试需要已解锁的交互式桌面。构建输出为 `dist/EasyHotspot-1.3.2-x64.msi`，同时生成 MSI 静态校验报告。发布中间文件位于 `artifacts/`，工具缓存位于 `.tools/`，这些目录及 `bin/obj` 不属于源码。
 
 语言资源使用微软 RESW / MRT Core，切换语言后重启应用生效。图标生成记录位于 `App/Assets/image-generation.json`。
 

@@ -31,7 +31,7 @@ try {
     dotnet publish Service/Service.csproj -c Release -r win-x64 --self-contained true -p:Platform=x64 -o artifacts/service
     if($LASTEXITCODE-ne0){throw 'Service publishing failed.'}
     Copy-Item -Path artifacts/service/* -Destination artifacts/app -Recurse -Force
-    & ./build-msi.ps1 -WixPath $WixPath -Destination (Join-Path $Destination 'EasyHotspot-1.3.1-x64.msi')
-    & ./verify-msi.ps1 -Path (Join-Path $Destination 'EasyHotspot-1.3.1-x64.msi') -Report (Join-Path $Destination 'MSI-verification.txt')
+    & ./build-msi.ps1 -WixPath $WixPath -Destination (Join-Path $Destination 'EasyHotspot-1.3.2-x64.msi')
+    & ./verify-msi.ps1 -Path (Join-Path $Destination 'EasyHotspot-1.3.2-x64.msi') -Report (Join-Path $Destination 'MSI-verification.txt')
     Copy-Item -LiteralPath README-zh-CN.txt -Destination $Destination -Force
 } finally {Pop-Location}
