@@ -362,4 +362,70 @@
   <data name="YamlProfile" xml:space="preserve">
     <value>Profil Clash (YAML)</value>
   </data>
+  <data name="ModeTransparent" xml:space="preserve">
+    <value>Penerusan transparan</value>
+  </data>
+  <data name="TransparentHelp" xml:space="preserve">
+    <value>Connect devices to this hotspot with Wi-Fi proxy set to None. Automatically uses the system proxy and existing TUN routes on this PC. The forwarding service requires administrator setup.</value>
+  </data>
+  <data name="TransparentRunning" xml:space="preserve">
+    <value>Forwarding · {0} packets received · {1} sent · {2}</value>
+  </data>
+  <data name="Error_TransparentAdmin" xml:space="preserve">
+    <value>Set up the forwarding service as an administrator first.</value>
+  </data>
+  <data name="Error_TransparentComponent" xml:space="preserve">
+    <value>The packet forwarding component could not start. Rebuild or reinstall EasyHotspot.</value>
+  </data>
+  <data name="Error_TransparentFlow" xml:space="preserve">
+    <value>Forwarding connection failed: {0}</value>
+  </data>
+  <data name="Error_TransparentRuntime" xml:space="preserve">
+    <value>Transparent forwarding stopped: {0}</value>
+  </data>
+  <data name="Error_TransparentStarted" xml:space="preserve">
+    <value>Transparent forwarding is running.</value>
+  </data>
+  <data name="Error_UpstreamProtocol" xml:space="preserve">
+    <value>The Windows proxy protocol is unsupported.</value>
+  </data>
+  <data name="Error_UpstreamPac" xml:space="preserve">
+    <value>The Windows PAC lookup failed: {0}</value>
+  </data>
+  <data name="Error_UpstreamConnect" xml:space="preserve">
+    <value>The Windows proxy rejected the connection: {0}</value>
+  </data>
+  <data name="Error_UpstreamAuthentication" xml:space="preserve">
+    <value>The Windows proxy requires supported credentials.</value>
+  </data>
+  <data name="Error_UpstreamLoop" xml:space="preserve">
+    <value>The Windows proxy points back to EasyHotspot. Select your existing proxy application instead.</value>
+  </data>
+  <data name="Error_UpstreamUdp" xml:space="preserve">
+    <value>The system proxy cannot carry UDP. Use an existing TUN or a SOCKS5/mixed proxy with UDP support.</value>
+  </data>
+  <data name="TrayShow" xml:space="preserve">
+    <value>Tampilkan jendela</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Keluar</value>
+  </data>
+  <data name="Working" xml:space="preserve">
+    <value>Memproses…</value>
+  </data>
+  <data name="TrayRecovering" xml:space="preserve"><value>The tray is temporarily unavailable and will retry automatically. The window will stay visible; try closing it to the tray again shortly.</value></data>
+  <data name="Error_TransparentCapture" xml:space="preserve"><value>Cannot start hotspot packet capture: {0}</value></data>
+  <data name="Error_TransparentIsolation" xml:space="preserve"><value>Cannot configure or restore hotspot forwarding isolation: {0}</value></data>
+  <data name="PageAbout" xml:space="preserve"><value>Tentang</value></data>
+  <data name="VersionLine" xml:space="preserve"><value>Versi {0}</value></data>
+  <data name="RepositoryLink" xml:space="preserve"><value>Repositori sumber</value></data>
+  <data name="ReleaseLink" xml:space="preserve"><value>Rilis terbaru</value></data>
+  <data name="ProjectLicense" xml:space="preserve"><value>Lisensi proyek</value></data>
+  <data name="LicenseScope" xml:space="preserve"><value>Kode asli EasyHotspot berlisensi MIT. Dependensi yang disertakan tetap memakai lisensinya masing-masing.</value></data>
+  <data name="DocumentationHeading" xml:space="preserve"><value>Dokumentasi dan lisensi</value></data>
+  <data name="DocumentLabel" xml:space="preserve"><value>Dokumen</value></data>
+  <data name="PreviousPage" xml:space="preserve"><value>Sebelumnya</value></data>
+  <data name="NextPage" xml:space="preserve"><value>Berikutnya</value></data>
+  <data name="DocumentPage" xml:space="preserve"><value>Halaman {0} dari {1}</value></data>
+  <data name="DocumentLoadError" xml:space="preserve"><value>Dokumen yang disertakan ini tidak dapat dibaca.</value></data>
 </root>

@@ -15,14 +15,23 @@ try {
             if($LASTEXITCODE-ne0){throw 'WiX installation failed.'}
         }
     }
+    # Publish into clean output folders so removed dependencies are not carried
+    # into the next MSI. Only these two generated workspace folders are allowed.
+    $artifactRoot=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot 'artifacts'))
+    foreach($folderName in @('app','service')){
+        $outputFolder=[IO.Path]::GetFullPath((Join-Path $artifactRoot $folderName))
+        if([IO.Path]::GetRelativePath($artifactRoot,$outputFolder)-ne$folderName){throw 'Invalid publish output path.'}
+        if(Test-Path -LiteralPath $outputFolder){
+            if((Get-Item -LiteralPath $outputFolder).Attributes-band[IO.FileAttributes]::ReparsePoint){throw 'Publish output cannot be a link.'}
+            Remove-Item -LiteralPath $outputFolder -Recurse -Force
+        }
+    }
     dotnet publish App/App.csproj -c Release -p:Platform=x64 -o artifacts/app
     if($LASTEXITCODE-ne0){throw 'App publishing failed.'}
     dotnet publish Service/Service.csproj -c Release -r win-x64 --self-contained true -p:Platform=x64 -o artifacts/service
     if($LASTEXITCODE-ne0){throw 'Service publishing failed.'}
     Copy-Item -Path artifacts/service/* -Destination artifacts/app -Recurse -Force
-    Copy-Item -LiteralPath README-zh-CN.txt -Destination artifacts/app -Force
-    Copy-Item -LiteralPath ThirdParty -Destination artifacts/app -Recurse -Force
-    & ./build-msi.ps1 -WixPath $WixPath -Destination (Join-Path $Destination 'EasyHotspot-1.2.2-x64.msi')
-    & ./verify-msi.ps1 -Path (Join-Path $Destination 'EasyHotspot-1.2.2-x64.msi') -Report (Join-Path $Destination 'MSI-verification.txt')
+    & ./build-msi.ps1 -WixPath $WixPath -Destination (Join-Path $Destination 'EasyHotspot-1.3.1-x64.msi')
+    & ./verify-msi.ps1 -Path (Join-Path $Destination 'EasyHotspot-1.3.1-x64.msi') -Report (Join-Path $Destination 'MSI-verification.txt')
     Copy-Item -LiteralPath README-zh-CN.txt -Destination $Destination -Force
 } finally {Pop-Location}

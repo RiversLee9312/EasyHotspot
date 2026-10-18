@@ -14,6 +14,8 @@ public static class Localization
     ];
 
     private static ResourceLoader? loader;
+    private static string? preferredLanguage;
+    private static bool preferenceLoaded;
     private static readonly string languageFile = Path.Combine(
         Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
         "EasyHotspot", "language.txt");
@@ -21,7 +23,7 @@ public static class Localization
     public static IReadOnlyList<string> SupportedLanguages => supportedLanguages;
     public static CultureInfo FormattingCulture => CultureInfo.GetCultureInfo(CurrentLanguage);
 
-    public static string CurrentLanguage => ReadPreferredLanguage() ?? ResolveSystemLanguage();
+    public static string CurrentLanguage => preferredLanguage ?? ResolveSystemLanguage();
 
     public static bool IsRightToLeft(string language) =>
         language.StartsWith("ar", StringComparison.OrdinalIgnoreCase)
@@ -29,9 +31,15 @@ public static class Localization
 
     public static void ApplyPreferredLanguage()
     {
-        var language = ReadPreferredLanguage();
+        if(!preferenceLoaded){preferredLanguage=ReadPreferredLanguage();preferenceLoaded=true;}
+        var language = preferredLanguage;
         if (language is not null)
             ApplicationLanguages.PrimaryLanguageOverride = language;
+    }
+    public static async Task InitializeAsync()
+    {
+        if(!preferenceLoaded){preferredLanguage=await Task.Run(ReadPreferredLanguage);preferenceLoaded=true;}
+        ApplyPreferredLanguage();
     }
 
     public static void SavePreferredLanguage(string language)
@@ -41,6 +49,7 @@ public static class Localization
 
         Directory.CreateDirectory(Path.GetDirectoryName(languageFile)!);
         File.WriteAllText(languageFile, language);
+        preferredLanguage=language;preferenceLoaded=true;
     }
 
     public static string NativeName(string language)

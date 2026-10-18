@@ -26,7 +26,7 @@ public static class ServiceSetup
         var helper=Path.Combine(AppContext.BaseDirectory,"EasyHotspot.Service.exe");
         if(!File.Exists(helper))throw new FileNotFoundException("Error_HelperMissing",helper);
         var args=$"{action} --source \"{AppContext.BaseDirectory.TrimEnd(Path.DirectorySeparatorChar)}\" --owner {WindowsIdentity.GetCurrent().User!.Value}";
-        using var p=Process.Start(new ProcessStartInfo(helper,args){UseShellExecute=true,Verb="runas",WindowStyle=ProcessWindowStyle.Hidden}) ?? throw new IOException("Error_ElevationStart");
+        using var p=await Task.Run(()=>Process.Start(new ProcessStartInfo(helper,args){UseShellExecute=true,Verb="runas",WindowStyle=ProcessWindowStyle.Hidden})) ?? throw new IOException("Error_ElevationStart");
         await p.WaitForExitAsync();if(p.ExitCode!=0){var path=Path.Combine(DataDirectory,"setup-result.txt");var result=File.Exists(path)?await File.ReadAllTextAsync(path):null;throw new InvalidOperationException(result?.StartsWith("Error_",StringComparison.Ordinal)==true?result:"Error_AdminIncomplete");}
     }
     public static void Install(string source,string owner,bool automatic=true)
@@ -36,9 +36,12 @@ public static class ServiceSetup
         _=new SecurityIdentifier(owner);
         var dest=InstallDirectory;Directory.CreateDirectory(dest);
         if(!Path.GetFullPath(source).TrimEnd('\\').Equals(Path.GetFullPath(dest).TrimEnd('\\'),StringComparison.OrdinalIgnoreCase))
+        {
+            if(Installed){using var existing=new ServiceController(ServiceName);existing.Refresh();if(existing.Status!=ServiceControllerStatus.Stopped){if(existing.Status!=ServiceControllerStatus.StopPending)existing.Stop();existing.WaitForStatus(ServiceControllerStatus.Stopped,TimeSpan.FromSeconds(30));}}
             foreach(var file in Directory.EnumerateFiles(source,"*",SearchOption.AllDirectories)) {
                 var relative=Path.GetRelativePath(source,file);var target=Path.Combine(dest,relative);Directory.CreateDirectory(Path.GetDirectoryName(target)!);File.Copy(file,target,true);
             }
+        }
         using(var key=Registry.LocalMachine.CreateSubKey(@"SOFTWARE\EasyHotspot"))key.SetValue("OwnerSid",owner);
         Directory.CreateDirectory(DataDirectory);
         if(fresh && !File.Exists(Path.Combine(DataDirectory,"settings.json")))ServiceSettings.Save("none");
@@ -56,8 +59,7 @@ public static class ServiceSetup
     public static void DisableStartup()
     {
         if(!IsAdmin)throw new UnauthorizedAccessException();
-        if(ServiceSettings.Read().DhcpDiscovery){if(Run("sc.exe","config",ServiceName,"start=","demand")!=0)throw new IOException("Error_RegisterService");}
-        else Uninstall();
+        if(Installed && Run("sc.exe","config",ServiceName,"start=","demand")!=0)throw new IOException("Error_RegisterService");
     }
     public static async Task ConfigureDhcp(string source,string owner,bool enabled)
     {
@@ -102,12 +104,14 @@ public static class ServiceSetup
     public static void Cleanup()
     {
         Uninstall();
+        HotspotPacketCapture.RecoverAsync(true).GetAwaiter().GetResult();
+        HotspotIsolation.RecoverAsync().GetAwaiter().GetResult();
         StopDhcpDriver();var driverRemoved=Run("sc.exe","delete",DriverName);if(driverRemoved is not (0 or 1060))throw new IOException("Error_DhcpDriverStop");
         var script="$ErrorActionPreference='Stop';Get-NetFirewallRule -Name 'EasyHotspot-*' -ErrorAction SilentlyContinue|Remove-NetFirewallRule -ErrorAction Stop";
         var encoded=Convert.ToBase64String(System.Text.Encoding.Unicode.GetBytes(script));
         if(Run(Path.Combine(Environment.SystemDirectory,@"WindowsPowerShell\v1.0\powershell.exe"),"-NoProfile","-EncodedCommand",encoded)!=0)throw new IOException("Error_Firewall");
         Registry.LocalMachine.DeleteSubKeyTree(@"SOFTWARE\EasyHotspot",false);
-        foreach(var name in new[]{"settings.json","settings.json.tmp","setup-error.txt","setup-result.txt"})File.Delete(Path.Combine(DataDirectory,name));
+        foreach(var name in new[]{"settings.json","settings.json.tmp","setup-error.txt","setup-result.txt","forwarding-restore.json.tmp"})File.Delete(Path.Combine(DataDirectory,name));
         if(Directory.Exists(DataDirectory)&&!Directory.EnumerateFileSystemEntries(DataDirectory).Any())Directory.Delete(DataDirectory);
     }
     public static void Firewall(string program,string suffix="App")

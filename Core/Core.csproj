@@ -1,1 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><AssemblyName>EasyHotspot.Core</AssemblyName></PropertyGroup><ItemGroup><PackageReference Include="System.ServiceProcess.ServiceController" Version="10.0.0"/><Content Include="Native\**\*"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory><CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory></Content></ItemGroup></Project>
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><AssemblyName>EasyHotspot.Core</AssemblyName></PropertyGroup>
+ <ItemGroup>
+  <PackageReference Include="System.ServiceProcess.ServiceController" Version="10.0.0"/>
+  <PackageReference Include="Microsoft.Diagnostics.Tracing.TraceEvent" Version="3.2.8"/>
+  <Content Include="Native\**\*" Exclude="Native\EasyHotspot.PacketStack.exe"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory><CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory></Content>
+  <Content Include="Native\EasyHotspot.PacketStack.exe"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory><CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory></Content>
+ </ItemGroup>
+ <Target Name="BuildPacketStack" BeforeTargets="PrepareForBuild" Condition="'$(DesignTimeBuild)' != 'true'" Inputs="$(MSBuildProjectDirectory)\..\PacketStack\main.go;$(MSBuildProjectDirectory)\..\PacketStack\go.mod;$(MSBuildProjectDirectory)\..\PacketStack\go.sum;$(MSBuildProjectDirectory)\..\build-packet-stack.ps1" Outputs="$(MSBuildProjectDirectory)\Native\EasyHotspot.PacketStack.exe">
+  <Exec Command="pwsh -NoProfile -File &quot;$(MSBuildProjectDirectory)\..\build-packet-stack.ps1&quot;"/>
+ </Target>
+</Project>

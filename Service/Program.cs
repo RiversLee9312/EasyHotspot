@@ -20,7 +20,7 @@ sealed class HotspotService:ServiceBase
 {
     readonly Backend backend=new();CancellationTokenSource? stop;
     public HotspotService(){ServiceName=ServiceSetup.ServiceName;CanStop=true;AutoLog=true;}
-    protected override void OnStart(string[] args){stop=new();_ = Run(stop.Token);_ = AutoStart(stop.Token);}
+    protected override void OnStart(string[] args){stop=new();_ = Run(stop.Token);}
     async Task AutoStart(CancellationToken ct)
     {
         var mode=ServiceSettings.Read().StartupMode;if(mode=="none" || !ServiceSetup.AutoStartEnabled)return;
@@ -31,7 +31,7 @@ sealed class HotspotService:ServiceBase
     }
     async Task Run(CancellationToken ct)
     {
-        try {await ControlProtocol.Serve(backend,ServiceSetup.OwnerSid,ct);}catch(OperationCanceledException){}catch(Exception ex){backend.Log("后台服务："+ex.Message);}
+        try {try{await HotspotPacketCapture.RecoverAsync();await HotspotIsolation.RecoverAsync();}catch(Exception ex){backend.Log(ex.Message);}_ = AutoStart(ct);await ControlProtocol.Serve(backend,ServiceSetup.OwnerSid,ct);}catch(OperationCanceledException){}catch(Exception ex){backend.Log("后台服务："+ex.Message);}
     }
     protected override void OnStop(){stop?.Cancel();try{backend.StopAsync().GetAwaiter().GetResult();}catch{}backend.DisposeAsync().AsTask().GetAwaiter().GetResult();stop?.Dispose();}
 }

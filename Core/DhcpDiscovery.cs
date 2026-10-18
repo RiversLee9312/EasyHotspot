@@ -76,11 +76,11 @@ internal static class DhcpNative
         public IntPtr Detach(){var result=Value;Value=IntPtr.Zero;return result;}
         public void Dispose(){if(Value!=IntPtr.Zero)WinDivertClose(Value);Value=IntPtr.Zero;}
     }
-    internal static Handle Open(string filter)
+    internal static Handle Open(string filter,int layer=0,short priority=100,ulong flags=0x10)
     {
         try {
-            var h=WinDivertOpen(filter,0,100,0x10); // NO_INSTALL: own driver service is registered explicitly.
-            if(h==new IntPtr(-1) && Marshal.GetLastWin32Error()==1060){ServiceSetup.StartDhcpDriver();h=WinDivertOpen(filter,0,100,0x10);}
+            var h=WinDivertOpen(filter,layer,priority,flags); // NO_INSTALL: own driver service is registered explicitly.
+            if(h==new IntPtr(-1) && Marshal.GetLastWin32Error()==1060){ServiceSetup.StartDhcpDriver();h=WinDivertOpen(filter,layer,priority,flags);}
             if(h==new IntPtr(-1))throw new Win32Exception(Marshal.GetLastWin32Error());return new(h);
         }catch(Exception ex) when(ex is DllNotFoundException or BadImageFormatException or Win32Exception or EntryPointNotFoundException){throw new IOException(DependencyError,ex);}
     }

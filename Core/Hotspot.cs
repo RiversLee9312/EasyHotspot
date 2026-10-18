@@ -33,7 +33,7 @@ public sealed class HotspotController
         var adapters = NetworkInterface.GetAllNetworkInterfaces();
         var profiles = Profiles().Where(p => p.NetworkAdapter is not null && p.GetNetworkConnectivityLevel() != NetworkConnectivityLevel.None).ToList();
         ConnectionProfile? selected;
-        if (mode is "offline" or "proxy")
+        if (mode is "offline" or "proxy" or "transparent")
             selected = profiles.Where(p => p.GetNetworkConnectivityLevel() == NetworkConnectivityLevel.LocalAccess)
                 .OrderBy(p => p.ProfileName == "vEthernet (Default Switch)" ? 0 : 1)
                 .FirstOrDefault(p => adapters.Any(n => Guid.TryParse(n.Id, out var id) && id == p.NetworkAdapter.NetworkAdapterId &&

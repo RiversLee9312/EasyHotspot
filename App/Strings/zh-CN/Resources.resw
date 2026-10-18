@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
@@ -362,4 +362,70 @@
   <data name="YamlProfile" xml:space="preserve">
     <value>Clash 配置（YAML）</value>
   </data>
+  <data name="ModeTransparent" xml:space="preserve">
+    <value>透明转发</value>
+  </data>
+  <data name="TransparentHelp" xml:space="preserve">
+    <value>设备连接热点即可使用，Wi-Fi 代理设为“无”。自动使用电脑已有的系统代理及 TUN 路由，首次使用需要管理员配置转发服务。</value>
+  </data>
+  <data name="TransparentRunning" xml:space="preserve">
+    <value>转发中 · 收到 {0} 个数据包 · 发出 {1} 个 · {2}</value>
+  </data>
+  <data name="Error_TransparentAdmin" xml:space="preserve">
+    <value>请先以管理员权限配置透明转发服务。</value>
+  </data>
+  <data name="Error_TransparentComponent" xml:space="preserve">
+    <value>无法启动数据包转发组件，请重新构建或安装 EasyHotspot。</value>
+  </data>
+  <data name="Error_TransparentFlow" xml:space="preserve">
+    <value>转发连接失败：{0}</value>
+  </data>
+  <data name="Error_TransparentRuntime" xml:space="preserve">
+    <value>透明转发已停止：{0}</value>
+  </data>
+  <data name="Error_TransparentStarted" xml:space="preserve">
+    <value>透明转发已启动。</value>
+  </data>
+  <data name="Error_UpstreamProtocol" xml:space="preserve">
+    <value>不支持 Windows 当前配置的代理协议。</value>
+  </data>
+  <data name="Error_UpstreamPac" xml:space="preserve">
+    <value>Windows PAC 解析失败：{0}</value>
+  </data>
+  <data name="Error_UpstreamConnect" xml:space="preserve">
+    <value>本机代理拒绝了连接：{0}</value>
+  </data>
+  <data name="Error_UpstreamAuthentication" xml:space="preserve">
+    <value>本机代理需要受支持的身份验证。</value>
+  </data>
+  <data name="Error_UpstreamLoop" xml:space="preserve">
+    <value>Windows 系统代理指向了 EasyHotspot 自身，请改用本机已有的代理应用。</value>
+  </data>
+  <data name="Error_UpstreamUdp" xml:space="preserve">
+    <value>系统代理无法承载 UDP，请使用已有的 TUN 或支持 UDP 的 SOCKS5/混合代理。</value>
+  </data>
+  <data name="TrayShow" xml:space="preserve">
+    <value>显示窗口</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="Working" xml:space="preserve">
+    <value>正在处理，请稍候…</value>
+  </data>
+  <data name="TrayRecovering" xml:space="preserve"><value>托盘暂时不可用，正在自动重试。窗口将保持可见，稍后可再次关闭到托盘。</value></data>
+  <data name="Error_TransparentCapture" xml:space="preserve"><value>无法启动热点数据包转发：{0}</value></data>
+  <data name="Error_TransparentIsolation" xml:space="preserve"><value>无法配置或还原热点转发隔离：{0}</value></data>
+  <data name="PageAbout" xml:space="preserve"><value>关于</value></data>
+  <data name="VersionLine" xml:space="preserve"><value>版本 {0}</value></data>
+  <data name="RepositoryLink" xml:space="preserve"><value>源代码仓库</value></data>
+  <data name="ReleaseLink" xml:space="preserve"><value>最新版本</value></data>
+  <data name="ProjectLicense" xml:space="preserve"><value>项目许可证</value></data>
+  <data name="LicenseScope" xml:space="preserve"><value>EasyHotspot 自身代码采用 MIT 许可证，随附依赖保留各自的许可证。</value></data>
+  <data name="DocumentationHeading" xml:space="preserve"><value>文档与开源许可证</value></data>
+  <data name="DocumentLabel" xml:space="preserve"><value>文档</value></data>
+  <data name="PreviousPage" xml:space="preserve"><value>上一页</value></data>
+  <data name="NextPage" xml:space="preserve"><value>下一页</value></data>
+  <data name="DocumentPage" xml:space="preserve"><value>第 {0} 页，共 {1} 页</value></data>
+  <data name="DocumentLoadError" xml:space="preserve"><value>无法读取此随附文档。</value></data>
 </root>

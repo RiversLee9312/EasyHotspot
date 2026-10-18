@@ -362,4 +362,70 @@
   <data name="Error_ProxyRequest" xml:space="preserve">
     <value>Falha na solicitação do proxy: {0}</value>
   </data>
+  <data name="ModeTransparent" xml:space="preserve">
+    <value>Encaminhamento transparente</value>
+  </data>
+  <data name="TransparentHelp" xml:space="preserve">
+    <value>Connect devices to this hotspot with Wi-Fi proxy set to None. Automatically uses the system proxy and existing TUN routes on this PC. The forwarding service requires administrator setup.</value>
+  </data>
+  <data name="TransparentRunning" xml:space="preserve">
+    <value>Forwarding · {0} packets received · {1} sent · {2}</value>
+  </data>
+  <data name="Error_TransparentAdmin" xml:space="preserve">
+    <value>Set up the forwarding service as an administrator first.</value>
+  </data>
+  <data name="Error_TransparentComponent" xml:space="preserve">
+    <value>The packet forwarding component could not start. Rebuild or reinstall EasyHotspot.</value>
+  </data>
+  <data name="Error_TransparentFlow" xml:space="preserve">
+    <value>Forwarding connection failed: {0}</value>
+  </data>
+  <data name="Error_TransparentRuntime" xml:space="preserve">
+    <value>Transparent forwarding stopped: {0}</value>
+  </data>
+  <data name="Error_TransparentStarted" xml:space="preserve">
+    <value>Transparent forwarding is running.</value>
+  </data>
+  <data name="Error_UpstreamProtocol" xml:space="preserve">
+    <value>The Windows proxy protocol is unsupported.</value>
+  </data>
+  <data name="Error_UpstreamPac" xml:space="preserve">
+    <value>The Windows PAC lookup failed: {0}</value>
+  </data>
+  <data name="Error_UpstreamConnect" xml:space="preserve">
+    <value>The Windows proxy rejected the connection: {0}</value>
+  </data>
+  <data name="Error_UpstreamAuthentication" xml:space="preserve">
+    <value>The Windows proxy requires supported credentials.</value>
+  </data>
+  <data name="Error_UpstreamLoop" xml:space="preserve">
+    <value>The Windows proxy points back to EasyHotspot. Select your existing proxy application instead.</value>
+  </data>
+  <data name="Error_UpstreamUdp" xml:space="preserve">
+    <value>The system proxy cannot carry UDP. Use an existing TUN or a SOCKS5/mixed proxy with UDP support.</value>
+  </data>
+  <data name="TrayShow" xml:space="preserve">
+    <value>Mostrar janela</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="Working" xml:space="preserve">
+    <value>Processando…</value>
+  </data>
+  <data name="TrayRecovering" xml:space="preserve"><value>The tray is temporarily unavailable and will retry automatically. The window will stay visible; try closing it to the tray again shortly.</value></data>
+  <data name="Error_TransparentCapture" xml:space="preserve"><value>Cannot start hotspot packet capture: {0}</value></data>
+  <data name="Error_TransparentIsolation" xml:space="preserve"><value>Cannot configure or restore hotspot forwarding isolation: {0}</value></data>
+  <data name="PageAbout" xml:space="preserve"><value>Sobre</value></data>
+  <data name="VersionLine" xml:space="preserve"><value>Versão {0}</value></data>
+  <data name="RepositoryLink" xml:space="preserve"><value>Código-fonte</value></data>
+  <data name="ReleaseLink" xml:space="preserve"><value>Versão mais recente</value></data>
+  <data name="ProjectLicense" xml:space="preserve"><value>Licença do projeto</value></data>
+  <data name="LicenseScope" xml:space="preserve"><value>O código próprio do EasyHotspot usa a licença MIT. As dependências incluídas mantêm suas respectivas licenças.</value></data>
+  <data name="DocumentationHeading" xml:space="preserve"><value>Documentação e licenças</value></data>
+  <data name="DocumentLabel" xml:space="preserve"><value>Documento</value></data>
+  <data name="PreviousPage" xml:space="preserve"><value>Anterior</value></data>
+  <data name="NextPage" xml:space="preserve"><value>Próxima</value></data>
+  <data name="DocumentPage" xml:space="preserve"><value>Página {0} de {1}</value></data>
+  <data name="DocumentLoadError" xml:space="preserve"><value>Não foi possível ler este documento incluído.</value></data>
 </root>

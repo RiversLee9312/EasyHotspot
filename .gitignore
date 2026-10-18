@@ -8,3 +8,4 @@ TestResults/
 Installer.wxs
 *.wixpdb
 artifacts/
+Core/Native/EasyHotspot.PacketStack.exe
